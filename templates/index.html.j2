@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>Pronostici Top 5</title>
+{% include "_style.html.j2" %}
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div><h1>Pronostici Top 5</h1>
+  <div class="muted small">Aggiornato il {{ generated }} · partite dei prossimi {{ days_ahead }} giorni</div></div>
+  <nav class="nav"><a href="index.html">Pronostici</a><a href="storico.html">Storico</a></nav>
+</header>
+
+<div class="note">Le percentuali sono stime statistiche, non certezze. Una schedina a quota 2-3 vince, in media,
+tra 1 volta su 3 e 1 volta su 2. Le quote con l'etichetta <span class="tag real">reale</span> sono la media dei bookmaker;
+le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle della tua agenzia.</div>
+
+{% macro slipcard(s, title) %}
+<div class="card slip">
+  <div class="slip-head">
+    <h3 style="margin:0">{{ title }}</h3>
+    <div><span class="big">{{ s.odds|num }}</span> <span class="muted small">quota</span></div>
+  </div>
+  <div class="muted small">Probabilità stimata che vinca: <b>{{ s.prob|pct }}</b> · quota "giusta" {{ s.fair|num }}</div>
+  {% for l in s.legs %}
+  <div class="leg">
+    <div><div class="small muted">{{ l.flag }} {{ l.league }} · {{ l.kickoff }}</div>
+    <div><b>{{ l.home }} – {{ l.away }}</b></div>
+    <div class="pick">{{ l.pick }}</div></div>
+    <div style="text-align:right"><div class="big" style="font-size:22px">{{ l.odds|num }}</div>
+    <div class="small muted">{{ l.p|pct }}</div>
+    {% if l.is_real %}<span class="tag real">reale</span>{% else %}<span class="tag">stimata</span>{% endif %}</div>
+  </div>
+  {% endfor %}
+</div>
+{% endmacro %}
+
+<h2>Schedina del giorno</h2>
+{% if slips_day %}{{ slipcard(slips_day[0], "La più probabile di oggi") }}
+{% else %}<div class="card muted">Oggi non ci sono partite adatte nei 5 campionati (o sono già iniziate).</div>{% endif %}
+
+<h2>Schedine dei prossimi giorni</h2>
+{% for s in slips_window %}{{ slipcard(s, ["La più probabile", "Alternativa", "Seconda alternativa"][loop.index0]) }}
+{% else %}<div class="card muted">Nessuna combinazione con quota tra 2 e 3 rispetta i criteri di affidabilità.</div>{% endfor %}
+
+<h2>I pronostici più probabili</h2>
+<div class="card scroll"><table>
+<tr><th>Partita</th><th>Pronostico</th><th class="r">Prob.</th><th class="r">Quota</th></tr>
+{% for b in best %}
+<tr><td><div class="small muted">{{ b.flag }} {{ b.kickoff }}</div>{{ b.home }} – {{ b.away }}</td>
+<td class="pick">{{ b.name }}</td><td class="r">{{ b.p|pct }}</td>
+<td class="r">{{ b.used|num }} {% if b.is_real %}<span class="tag real">reale</span>{% endif %}</td></tr>
+{% endfor %}
+</table></div>
+
+<h2>Tutte le partite</h2>
+<div class="chips" id="flt">
+  <button class="on" data-l="">Tutte</button>
+  {% for l in leagues %}<button data-l="{{ l.name }}">{{ l.flag }} {{ l.name }}</button>{% endfor %}
+</div>
+
+{% for m in matches %}
+<details class="match" data-l="{{ m.league }}">
+<summary>
+  <div class="mrow"><span class="small muted">{{ m.flag }} {{ m.league }} · {{ m.kickoff_local }}</span>
+  <span class="rel muted">affidabilità {{ m.reliability }}/100</span></div>
+  <div class="teams">{{ m.home }} – {{ m.away }}</div>
+  <div class="bar"><i style="width:{{ m.p1x2[0]*100 }}%;background:var(--home)"></i><i style="width:{{ m.p1x2[1]*100 }}%;background:var(--draw)"></i><i style="width:{{ m.p1x2[2]*100 }}%;background:var(--away)"></i></div>
+  <div class="legend"><span>1 · {{ m.p1x2[0]|pct }}</span><span>X · {{ m.p1x2[1]|pct }}</span><span>2 · {{ m.p1x2[2]|pct }}</span></div>
+  <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>{{ m.lh|num }} – {{ m.la|num }}</b></span>
+  {% if m.top %}<span>Top: <span class="pick">{{ m.top[0].name }}</span> {{ m.top[0].p|pct }}</span>{% endif %}</div>
+</summary>
+<div class="body">
+  <h3>Analisi</h3>
+  <ul class="an">{% for t in m.analysis %}<li>{{ t }}</li>{% endfor %}</ul>
+
+  <h3>Gol</h3>
+  <div class="grid2">
+  {% for lab, g, lam in [(m.home, m.goals_home, m.lh), (m.away, m.goals_away, m.la), ("Totale partita", m.goals_tot, m.lh + m.la)] %}
+    <div><div class="small"><b>{{ lab }}</b> · attesi {{ lam|num }} · più probabile {{ g.mode }} · range {{ g.rng|rng }}</div>
+    {% set mx = g.dist|max %}
+    <div class="dist">{% for p in g.dist %}<div style="height:{{ (p / mx * 100)|round }}%" title="{{ loop.index0 }} gol: {{ p|pct }}"></div>{% endfor %}</div>
+    <div class="dist-l">{% for p in g.dist %}<span>{{ loop.index0 }}{% if loop.last %}+{% endif %}<br>{{ p|pct }}</span>{% endfor %}</div></div>
+  {% endfor %}
+  <div><div class="small"><b>Risultati esatti più probabili</b></div>
+  <table>{% for e in m.exact %}<tr><td>{{ e.score }}</td><td class="r">{{ e.p|pct(1) }}</td><td class="r muted">quota giusta {{ e.fair }}</td></tr>{% endfor %}</table></div>
+  </div>
+
+  <h3>Pronostici più probabili</h3>
+  <div class="scroll"><table>
+  <tr><th>Pronostico</th><th class="r">Prob.</th><th class="r">Quota giusta</th><th class="r">Quota</th></tr>
+  {% for t in m.top %}<tr><td class="pick">{{ t.name }}</td><td class="r">{{ t.p|pct }}</td><td class="r">{{ t.fair|num }}</td>
+  <td class="r">{{ t.used|num }} {% if t.is_real %}<span class="tag real">reale</span>{% else %}<span class="tag">stimata</span>{% endif %}</td></tr>{% endfor %}
+  </table></div>
+
+  <h3>Tutti i mercati</h3>
+  {% for fam, ms in m.markets|grouped %}
+  <details class="fam"><summary>{{ fam }}</summary><div class="scroll"><table>
+  {% for x in ms %}<tr><td>{{ x.name }}</td><td class="r">{{ x.p|pct(1) }}</td><td class="r muted">{{ (1 / x.p)|num if x.p > 0.005 else "–" }}</td></tr>{% endfor %}
+  </table></div></details>
+  {% endfor %}
+
+  <h3>Formazioni e assenze</h3>
+  {% if m.lineup_source %}<div class="small muted">Fonte: {{ m.lineup_source }}</div>{% endif %}
+  <div class="grid2">
+  {% for team, side, ab in [(m.home, m.lineup_home, m.abs_home), (m.away, m.lineup_away, m.abs_away)] %}
+    <div><b>{{ team }}</b> <span class="tag">formazione {{ side.status }}</span>
+    {% if side.lineup %}<div class="small">{{ side.lineup|map(attribute="name")|join(", ") }}</div>{% else %}<div class="small muted">Formazione non ancora disponibile.</div>{% endif %}
+    {% if ab.details %}<div class="small" style="margin-top:6px"><b>Assenti / in dubbio:</b>
+    <ul class="an">{% for d in ab.details %}<li>{{ d.name }} ({{ d.status|status }}{% if d.role %}, {{ d.role }}{% endif %}){% if d.share %} – {{ d.share }}% della produzione offensiva{% endif %}{% if d.desc %}<br><span class="muted">{{ d.desc }}</span>{% endif %}</li>{% endfor %}</ul>
+    <div class="muted">Effetto: attacco al {{ (ab.att_mult*100)|round|int }}%{% if ab.def_mult > 1.005 %}, gol subiti +{{ ((ab.def_mult-1)*100)|round|int }}%{% endif %}</div></div>
+    {% else %}<div class="small muted">Nessuna assenza segnalata.</div>{% endif %}</div>
+  {% endfor %}
+  </div>
+
+  <h3>Statistiche (stagione in corso)</h3>
+  <div class="scroll"><table>
+  <tr><th></th><th class="r">{{ m.home }}</th><th class="r">{{ m.away }}</th></tr>
+  {% set a = m.stats_home %}{% set b = m.stats_away %}
+  <tr><td>Partite giocate</td><td class="r">{{ a.played }}</td><td class="r">{{ b.played }}</td></tr>
+  <tr><td>Forma (ultime 5)</td><td class="r">{{ a.form or "–" }}</td><td class="r">{{ b.form or "–" }}</td></tr>
+  <tr><td>Gol fatti / subiti a partita</td><td class="r">{{ a.gf|num }} / {{ a.ga|num }}</td><td class="r">{{ b.gf|num }} / {{ b.ga|num }}</td></tr>
+  <tr><td>xG creati / concessi a partita</td><td class="r">{{ a.xg|num }} / {{ a.xga|num }}</td><td class="r">{{ b.xg|num }} / {{ b.xga|num }}</td></tr>
+  <tr><td>xG ultime 5 (creati / concessi)</td><td class="r">{{ a.xg5|num }} / {{ a.xga5|num }}</td><td class="r">{{ b.xg5|num }} / {{ b.xga5|num }}</td></tr>
+  <tr><td>{{ m.home }} in casa / {{ m.away }} in trasferta: xG</td><td class="r">{{ a.xg_h|num }} / {{ a.xga_h|num }}</td><td class="r">{{ b.xg_a|num }} / {{ b.xga_a|num }}</td></tr>
+  <tr><td>Tiri / in porta a partita</td><td class="r">{{ a.shots|num(1) }} / {{ a.sot|num(1) }}</td><td class="r">{{ b.shots|num(1) }} / {{ b.sot|num(1) }}</td></tr>
+  <tr><td>Tiri concessi a partita</td><td class="r">{{ a.shots_ag|num(1) }}</td><td class="r">{{ b.shots_ag|num(1) }}</td></tr>
+  <tr><td>Conversione (gol / tiri in porta)</td><td class="r">{{ a.conv|num(0) }}%</td><td class="r">{{ b.conv|num(0) }}%</td></tr>
+  <tr><td>Possesso palla (ultime 5)</td><td class="r">{{ m.possession.get(m.home)|num(0) }}%</td><td class="r">{{ m.possession.get(m.away)|num(0) }}%</td></tr>
+  <tr><td>Pressing PPDA (più basso = più aggressivo)</td><td class="r">{{ a.ppda|num(1) }}</td><td class="r">{{ b.ppda|num(1) }}</td></tr>
+  <tr><td>Angoli a partita</td><td class="r">{{ a.corners|num(1) }}</td><td class="r">{{ b.corners|num(1) }}</td></tr>
+  <tr><td>Porta inviolata</td><td class="r">{{ a.clean }}</td><td class="r">{{ b.clean }}</td></tr>
+  </table></div>
+
+  <h3>Meteo{% if m.venue %} · {{ m.venue }}{% if m.city %}, {{ m.city }}{% endif %}{% endif %}</h3>
+  <div class="small">{{ m.weather_text }}</div>
+
+  {% if m.market %}<h3>Modello contro bookmaker</h3>
+  <div class="small">Modello puro: 1 {{ m.p1x2_model[0]|pct }} · X {{ m.p1x2_model[1]|pct }} · 2 {{ m.p1x2_model[2]|pct }}<br>
+  Bookmaker (senza margine): 1 {{ m.market.H|pct }} · X {{ m.market.D|pct }} · 2 {{ m.market.A|pct }}{% if m.market.O25 %} · Over 2.5 {{ m.market.O25|pct }}{% endif %}<br>
+  Quote medie reali: 1 {{ m.odds.H|num }} · X {{ m.odds.D|num }} · 2 {{ m.odds.A|num }}{% if m.odds.O25 %} · Over 2.5 {{ m.odds.O25|num }} · Under 2.5 {{ m.odds.U25|num }}{% endif %}</div>{% endif %}
+
+  {% if m.reliability_why %}<div class="small muted" style="margin-top:10px">Affidabilità ridotta: {{ m.reliability_why|join(", ") }}.</div>{% endif %}
+</div>
+</details>
+{% else %}
+<div class="card muted">Nessuna partita nei prossimi {{ days_ahead }} giorni.</div>
+{% endfor %}
+
+<footer>
+<p><b>Come funziona:</b> la forza di attacco e difesa di ogni squadra è calcolata dagli expected goals (70%) e dai gol reali (30%),
+dando più peso alle partite recenti. Da qui il modello di Poisson (con correzione Dixon-Coles) calcola la probabilità di ogni risultato
+e quindi di ogni mercato. I gol attesi vengono corretti per assenze, meteo e vantaggio del campo, e poi avvicinati alle quote
+reali dei bookmaker quando sono disponibili.</p>
+<p>Fonti: Understat, football-data.co.uk, ESPN, RotoWire, Fantacalcio.it, Open-Meteo.</p>
+{% for l in leagues %}{% if not l.ok or l.notes %}<p>{{ l.flag }} {{ l.name }}: {% if not l.ok %}dati non disponibili{% endif %} {{ l.notes|join(", ") }}</p>{% endif %}{% endfor %}
+{% for w in warnings %}<p>⚠ {{ w }}</p>{% endfor %}
+</footer>
+</div>
+<script>
+document.querySelectorAll('#flt button').forEach(function(b){b.addEventListener('click',function(){
+  document.querySelectorAll('#flt button').forEach(function(x){x.classList.remove('on')});b.classList.add('on');
+  var l=b.getAttribute('data-l');
+  document.querySelectorAll('details.match').forEach(function(d){d.style.display=(!l||d.getAttribute('data-l')===l)?'':'none'});
+})});
+</script>
+</body>
+</html>

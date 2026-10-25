@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>Storico pronostici</title>
+{% include "_style.html.j2" %}
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div><h1>Storico</h1><div class="muted small">Aggiornato il {{ generated }}</div></div>
+  <nav class="nav"><a href="index.html">Pronostici</a><a href="storico.html">Storico</a></nav>
+</header>
+{% set s = summary %}
+<div class="note">Qui il sistema si mette alla prova da solo: ogni pronostico viene salvato prima della partita e controllato
+dopo il risultato. Servono almeno 50-100 schedine prima di giudicare: su pochi casi conta soprattutto la fortuna.</div>
+
+<h2>Schedine ufficiali</h2>
+<div class="card">
+{% if s.n_slips %}
+<div class="grid2">
+<div><div class="big">{{ s.won }} / {{ s.n_slips }}</div><div class="muted small">schedine vinte ({{ s.rate|num(0) }}%, il modello si aspettava {{ s.exp_rate|num(0) }}%)</div></div>
+<div><div class="big {{ 'ok' if s.profit >= 0 else 'ko' }}">{{ "%+.2f"|format(s.profit) }}</div><div class="muted small">guadagno teorico puntando 1 € a schedina (ROI {{ s.roi|num(0) }}%)</div></div>
+</div>
+{% else %}<div class="muted">Ancora nessuna schedina conclusa. La prima schedina ufficiale è quella generata alla prima esecuzione di ogni giorno.</div>{% endif %}
+</div>
+
+<h2>Precisione delle probabilità</h2>
+<div class="card scroll">
+{% if s.cal %}
+<div class="small muted">Se il modello è ben tarato, i pronostici dati al 70% devono riuscire circa 7 volte su 10.</div>
+<table><tr><th>Fascia</th><th class="r">Pronostici</th><th class="r">Atteso</th><th class="r">Riusciti</th></tr>
+{% for c in s.cal %}<tr><td>{{ c.label }}</td><td class="r">{{ c.n }}</td><td class="r">{{ c.expected|num(0) }}%</td><td class="r"><b>{{ c.actual|num(0) }}%</b></td></tr>{% endfor %}
+</table>
+{% if s.n_first %}<div class="small" style="margin-top:8px">Pronostico n.1 di ogni partita: riuscito nel {{ s.first_rate|num(0) }}% di {{ s.n_first }} partite.</div>{% endif %}
+{% else %}<div class="muted">Dati insufficienti: tornerà utile dopo le prime giornate.</div>{% endif %}
+</div>
+
+<h2>Ultime schedine</h2>
+{% for sl in s.recent_slips %}
+<div class="card">
+<div class="slip-head"><b>{{ sl.day }} · {{ "del giorno" if sl.kind == "giorno" else "prossimi giorni" }}</b>
+<span>quota {{ sl.odds|num }} · {% if not sl.done %}<span class="tag">in corso</span>{% elif sl.won %}<span class="ok">VINTA</span>{% else %}<span class="ko">PERSA</span>{% endif %}</span></div>
+{% for l in sl.legs %}<div class="small">{{ l.home }} – {{ l.away }}: <b>{{ l.pick }}</b>
+{% if l.ok is none %}<span class="muted">(da giocare)</span>{% elif l.ok %}<span class="ok">✓ {{ l.score }}</span>{% else %}<span class="ko">✗ {{ l.score }}</span>{% endif %}</div>{% endfor %}
+</div>
+{% else %}<div class="card muted">Nessuna schedina registrata.</div>{% endfor %}
+
+<h2>Ultimi pronostici verificati</h2>
+<div class="card scroll"><table>
+<tr><th>Data</th><th>Partita</th><th>Pronostico</th><th class="r">Prob.</th><th class="r">Esito</th></tr>
+{% for r in s.recent_picks %}<tr><td class="small">{{ r.day[5:] }}</td><td class="small">{{ r.match }}</td><td>{{ r.pick }}</td><td class="r">{{ r.p|pct }}</td>
+<td class="r">{% if r.ok %}<span class="ok">✓</span>{% else %}<span class="ko">✗</span>{% endif %} {{ r.score }}</td></tr>
+{% else %}<tr><td colspan="5" class="muted">Ancora nessun pronostico verificato.</td></tr>{% endfor %}
+</table></div>
+</div>
+</body>
+</html>
