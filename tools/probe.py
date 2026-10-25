@@ -1,5 +1,5 @@
-"""Script di prova: controlla quali fonti dati rispondono da GitHub e salva dei campioni."""
-import json, os, re, sys, datetime as dt
+"""Script di prova 2: fonti per assenze e formazioni degli altri campionati."""
+import json, os, re, datetime as dt
 import requests
 
 OUT = "probe_out"
@@ -8,55 +8,33 @@ UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.3
       "Accept-Language": "it-IT,it;q=0.9,en;q=0.8"}
 today = dt.date.today()
 
-def get(name, url, headers=None, show=600):
+def get(name, url, headers=None, show=400):
     h = dict(UA); h.update(headers or {})
     try:
         r = requests.get(url, headers=h, timeout=30)
-        txt = r.text
         with open(os.path.join(OUT, name), "w", encoding="utf-8") as f:
-            f.write(txt)
-        print(f"\n===== {name} | {r.status_code} | {len(txt)} chars | {url}")
-        print(txt[:show].replace("\r", ""))
+            f.write(r.text)
+        print(f"\n===== {name} | {r.status_code} | {len(r.text)} chars | {url}")
+        print(r.text[:show].replace("\r", ""))
         return r
     except Exception as e:
         print(f"\n===== {name} | ERRORE {e} | {url}")
 
-get("fd_fixtures.csv", "https://www.football-data.co.uk/fixtures.csv", show=1500)
-for code in ["I1", "E0", "SP1", "D1", "F1"]:
-    get(f"fd_2627_{code}.csv", f"https://www.football-data.co.uk/mmz4281/2627/{code}.csv", show=700)
-get("fd_2526_I1.csv", "https://www.football-data.co.uk/mmz4281/2526/I1.csv", show=300)
-
-r = get("us_league_page.html", "https://understat.com/league/Serie_A/2026", show=300)
-if r is not None:
-    for var in ["datesData", "teamsData", "playersData"]:
-        m = re.search(var + r"\s*=\s*JSON\.parse\('(.+?)'\)", r.text)
-        print(var, "trovato nel html" if m else "NON trovato nel html")
-get("us_getLeagueData.json", "https://understat.com/getLeagueData/Serie_A/2026",
-    headers={"X-Requested-With": "XMLHttpRequest", "Referer": "https://understat.com/league/Serie_A/2026"}, show=800)
-
-get("om.json", "https://api.open-meteo.com/v1/forecast?latitude=41.93&longitude=12.45&hourly=temperature_2m,precipitation,wind_speed_10m&forecast_days=7", show=300)
-get("om_geo.json", "https://geocoding-api.open-meteo.com/v1/search?name=Bergamo&count=1", show=300)
-
-r = get("espn_scoreboard.json", "https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/scoreboard", show=300)
-try:
-    ev = r.json()["events"]
-    print("ESPN eventi:", [(e["id"], e["name"], e["date"]) for e in ev[:5]])
-    eid = ev[0]["id"]
-    s = get("espn_summary.json", f"https://site.api.espn.com/apis/site/v2/sports/soccer/ita.1/summary?event={eid}", show=200)
-    sj = s.json()
-    print("ESPN summary chiavi:", list(sj.keys()))
-    for k in ["rosters", "injuries", "odds", "gameInfo"]:
-        if k in sj:
-            print(k, json.dumps(sj[k])[:700])
-except Exception as e:
-    print("ESPN parse errore", e)
-d = (today + dt.timedelta(days=0)).strftime("%Y%m%d")
-get("espn_scoreboard_dates.json", f"https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates={d}-{(today+dt.timedelta(days=7)).strftime('%Y%m%d')}", show=200)
-
-get("clubelo_fixtures.csv", "http://api.clubelo.com/Fixtures", show=800)
-get("clubelo_today.csv", f"http://api.clubelo.com/{today.isoformat()}", show=300)
-
-get("tm_injuries.html", "https://www.transfermarkt.it/serie-a/verletztespieler/wettbewerb/IT1", show=200)
-get("fc_probabili.html", "https://www.fantacalcio.it/probabili-formazioni-serie-a", show=200)
-get("sofa_events.json", f"https://api.sofascore.com/api/v1/sport/football/scheduled-events/{today.isoformat()}", show=300)
-get("fbref_seriea.html", "https://fbref.com/en/comps/11/Serie-A-Stats", show=200)
+get("rw_epl.html", "https://www.rotowire.com/soccer/lineups.php?league=EPL")
+get("rw_liga.html", "https://www.rotowire.com/soccer/lineups.php?league=LIGA")
+get("rw_inj_epl.html", "https://www.rotowire.com/soccer/injury-report.php?league=EPL")
+get("sg_inj_epl.html", "https://www.sportsgambler.com/injuries/football/england-premier-league/")
+get("sg_lu_epl.html", "https://www.sportsgambler.com/lineups/football/england-premier-league/")
+get("espn_roster.json", "https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/359/roster", show=200)
+get("espn_core_inj.json", "https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/359/injuries", show=400)
+get("fc_premier.html", "https://www.fantacalcio.it/probabili-formazioni-premier-league", show=200)
+d1 = (today + dt.timedelta(days=1)).strftime("%Y%m%d")
+get("espn_eng_day.json", f"https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates={d1}", show=200)
+for lg in ["esp.1", "ger.1", "fra.1"]:
+    get(f"espn_{lg}.json", f"https://site.api.espn.com/apis/site/v2/sports/soccer/{lg}/scoreboard", show=150)
+for lg in ["EPL", "La_liga", "Bundesliga", "Ligue_1"]:
+    get(f"us_{lg}.json", f"https://understat.com/getLeagueData/{lg}/2026",
+        headers={"X-Requested-With": "XMLHttpRequest", "Referer": f"https://understat.com/league/{lg}/2026"}, show=100)
+for lg in ["EPL", "Serie_A"]:
+    get(f"us_{lg}_2025.json", f"https://understat.com/getLeagueData/{lg}/2025",
+        headers={"X-Requested-With": "XMLHttpRequest", "Referer": f"https://understat.com/league/{lg}/2025"}, show=100)
