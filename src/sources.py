@@ -205,12 +205,15 @@ def geocode(city, country):
         return cache[key]
     res = None
     for cc in (country, None):
-        url = "https://geocoding-api.open-meteo.com/v1/search?count=1&language=en&name=" + requests_quote(city)
+        url = "https://geocoding-api.open-meteo.com/v1/search?count=10&language=en&name=" + requests_quote(city)
         if cc:
             url += f"&countryCode={cc}"
         d = get_json(url, tries=2)
         if d and d.get("results"):
-            r = d["results"][0]
+            # tra le località omonime prende la più popolosa (es. Roma città e non una frazione)
+            rank = {"PPLC": 3, "PPLA": 2, "PPLA2": 1}
+            r = max(d["results"], key=lambda x: (rank.get(x.get("feature_code"), 0) > 0,
+                                                 x.get("population") or 0))
             res = [r["latitude"], r["longitude"]]
             break
     cache[key] = res
