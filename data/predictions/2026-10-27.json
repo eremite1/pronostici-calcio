@@ -1,6 +1,6 @@
 {
  "31647": {
-  "generated": "2026-10-25T10:26:27.495588+00:00",
+  "generated": "2026-10-25T10:28:21.374599+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Sassuolo",
@@ -194,7 +194,7 @@
   }
  },
  "31641": {
-  "generated": "2026-10-25T10:26:27.495588+00:00",
+  "generated": "2026-10-25T10:28:21.374599+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Roma",
@@ -217,7 +217,7 @@
    },
    {
     "name": "Multigol casa 1-3",
-    "p": 0.719,
+    "p": 0.7191,
     "odds": 1.25
    },
    {
@@ -285,7 +285,7 @@
    "Multigol 7+": 0.0327,
    "Multigol casa 0-1": 0.3917,
    "Multigol casa 1-2": 0.5339,
-   "Multigol casa 1-3": 0.719,
+   "Multigol casa 1-3": 0.7191,
    "Multigol casa 1-4": 0.8141,
    "Multigol casa 2-3": 0.4556,
    "Multigol casa 2-4": 0.5507,
@@ -388,7 +388,7 @@
   }
  },
  "31648": {
-  "generated": "2026-10-25T10:26:27.495588+00:00",
+  "generated": "2026-10-25T10:28:21.374599+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Torino",

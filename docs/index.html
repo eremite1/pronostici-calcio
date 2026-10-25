@@ -27,10 +27,10 @@ h3{font-size:17px;margin:14px 0 6px}
 .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
 .slip{border:2px solid var(--accent)}
 .slip-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
-.big{font-family:"Barlow Condensed";font-size:30px;font-weight:700;line-height:1}
+.big{font-family:"Barlow Condensed",Inter,system-ui,sans-serif;font-size:30px;font-weight:700;line-height:1}
 .leg{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:9px 0;border-top:1px dashed var(--line)}
 .leg:first-of-type{border-top:0}
-.pick{font-weight:600;color:var(--accent)}
+.pick{font-weight:600;color:var(--accent)}td.pick{white-space:nowrap}
 .tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:var(--chip);color:var(--muted);white-space:nowrap}
 .tag.real{background:var(--accent-soft);color:var(--accent)}
 table{width:100%;border-collapse:collapse;font-size:14px}
@@ -66,7 +66,7 @@ footer{margin-top:30px;font-size:12px;color:var(--muted)}
 <div class="wrap">
 <header class="top">
   <div><h1>Pronostici Top 5</h1>
-  <div class="muted small">Aggiornato il 25/10/2026 alle 11:26 · partite dei prossimi 4 giorni</div></div>
+  <div class="muted small">Aggiornato il 25/10/2026 alle 11:28 · partite dei prossimi 4 giorni</div></div>
   <nav class="nav"><a href="index.html">Pronostici</a><a href="storico.html">Storico</a></nav>
 </header>
 
@@ -108,38 +108,11 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
 
 
 <h2>Schedine dei prossimi giorni</h2>
+<div class="muted small">Alternative con partite diverse da quelle della schedina del giorno.</div>
 
 <div class="card slip">
   <div class="slip-head">
     <h3 style="margin:0">La più probabile</h3>
-    <div><span class="big">2.00</span> <span class="muted small">quota</span></div>
-  </div>
-  <div class="muted small">Probabilità stimata che vinca: <b>45%</b> · quota "giusta" 2.21</div>
-  
-  <div class="leg">
-    <div><div class="small muted">🇮🇹 Serie A · dom 25/10 15:00</div>
-    <div><b>Atalanta – Frosinone</b></div>
-    <div class="pick">Over 2.5</div></div>
-    <div style="text-align:right"><div class="big" style="font-size:22px">1.38</div>
-    <div class="small muted">70%</div>
-    <span class="tag real">reale</span></div>
-  </div>
-  
-  <div class="leg">
-    <div><div class="small muted">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League · dom 25/10 15:00</div>
-    <div><b>Liverpool – Brighton</b></div>
-    <div class="pick">Under 3.5</div></div>
-    <div style="text-align:right"><div class="big" style="font-size:22px">1.45</div>
-    <div class="small muted">65%</div>
-    <span class="tag">stimata</span></div>
-  </div>
-  
-</div>
-
-
-<div class="card slip">
-  <div class="slip-head">
-    <h3 style="margin:0">Alternativa</h3>
     <div><span class="big">2.01</span> <span class="muted small">quota</span></div>
   </div>
   <div class="muted small">Probabilità stimata che vinca: <b>45%</b> · quota "giusta" 2.24</div>
@@ -176,7 +149,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
 
 <div class="card slip">
   <div class="slip-head">
-    <h3 style="margin:0">Seconda alternativa</h3>
+    <h3 style="margin:0">Alternativa</h3>
     <div><span class="big">2.01</span> <span class="muted small">quota</span></div>
   </div>
   <div class="muted small">Probabilità stimata che vinca: <b>44%</b> · quota "giusta" 2.27</div>
@@ -196,6 +169,34 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
     <div class="pick">Goal</div></div>
     <div style="text-align:right"><div class="big" style="font-size:22px">1.47</div>
     <div class="small muted">64%</div>
+    <span class="tag">stimata</span></div>
+  </div>
+  
+</div>
+
+
+<div class="card slip">
+  <div class="slip-head">
+    <h3 style="margin:0">Seconda alternativa</h3>
+    <div><span class="big">2.02</span> <span class="muted small">quota</span></div>
+  </div>
+  <div class="muted small">Probabilità stimata che vinca: <b>44%</b> · quota "giusta" 2.29</div>
+  
+  <div class="leg">
+    <div><div class="small muted">🇪🇸 LaLiga · dom 25/10 14:00</div>
+    <div><b>Athletic Club – Getafe</b></div>
+    <div class="pick">Over 1.5</div></div>
+    <div style="text-align:right"><div class="big" style="font-size:22px">1.40</div>
+    <div class="small muted">67%</div>
+    <span class="tag">stimata</span></div>
+  </div>
+  
+  <div class="leg">
+    <div><div class="small muted">🇮🇹 Serie A · mar 27/10 20:45</div>
+    <div><b>Roma – Cagliari</b></div>
+    <div class="pick">Under 3.5</div></div>
+    <div style="text-align:right"><div class="big" style="font-size:22px">1.44</div>
+    <div class="small muted">65%</div>
     <span class="tag">stimata</span></div>
   </div>
   
@@ -281,7 +282,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · dom 25/10 12:30</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Inter – Fiorentina</div>
-  <div class="bar"><i style="width:70.48720420621584%;background:var(--home)"></i><i style="width:17.406300888369934%;background:var(--draw)"></i><i style="width:12.106494905414229%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:70.4871134972146%;background:var(--home)"></i><i style="width:17.406326556751626%;background:var(--draw)"></i><i style="width:12.10655994603379%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 70%</span><span>X · 17%</span><span>2 · 12%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>2.52 – 0.98</b></span>
   <span>Top: <span class="pick">Under 4.5</span> 73%</span></div>
@@ -433,7 +434,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇪🇸 LaLiga · dom 25/10 14:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Athletic Club – Getafe</div>
-  <div class="bar"><i style="width:56.0865060779869%;background:var(--home)"></i><i style="width:26.937333144136193%;background:var(--draw)"></i><i style="width:16.9761607778769%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:56.08649639174102%;background:var(--home)"></i><i style="width:26.93733094508405%;background:var(--draw)"></i><i style="width:16.97617266317492%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 56%</span><span>X · 27%</span><span>2 · 17%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.55 – 0.73</b></span>
   <span>Top: <span class="pick">1° tempo Under 1.5</span> 73%</span></div>
@@ -585,7 +586,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · dom 25/10 15:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Atalanta – Frosinone</div>
-  <div class="bar"><i style="width:49.58791623998577%;background:var(--home)"></i><i style="width:22.24949390653648%;background:var(--draw)"></i><i style="width:28.162589853477737%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:49.58628999098556%;background:var(--home)"></i><i style="width:22.249187249443104%;background:var(--draw)"></i><i style="width:28.16452275957133%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 50%</span><span>X · 22%</span><span>2 · 28%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>2.07 – 1.53</b></span>
   <span>Top: <span class="pick">1X</span> 72%</span></div>
@@ -641,7 +642,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   </table></div></details>
   
   <details class="fam"><summary>Under/Over</summary><div class="scroll"><table>
-  <tr><td>Over 0.5</td><td class="r">96.7%</td><td class="r muted">1.03</td></tr><tr><td>Under 0.5</td><td class="r">3.3%</td><td class="r muted">30.73</td></tr><tr><td>Over 1.5</td><td class="r">87.9%</td><td class="r muted">1.14</td></tr><tr><td>Under 1.5</td><td class="r">12.1%</td><td class="r muted">8.29</td></tr><tr><td>Over 2.5</td><td class="r">69.7%</td><td class="r muted">1.43</td></tr><tr><td>Under 2.5</td><td class="r">30.3%</td><td class="r muted">3.30</td></tr><tr><td>Over 3.5</td><td class="r">48.5%</td><td class="r muted">2.06</td></tr><tr><td>Under 3.5</td><td class="r">51.5%</td><td class="r muted">1.94</td></tr><tr><td>Over 4.5</td><td class="r">29.3%</td><td class="r muted">3.41</td></tr><tr><td>Under 4.5</td><td class="r">70.7%</td><td class="r muted">1.42</td></tr><tr><td>Over 5.5</td><td class="r">15.6%</td><td class="r muted">6.42</td></tr><tr><td>Under 5.5</td><td class="r">84.4%</td><td class="r muted">1.18</td></tr>
+  <tr><td>Over 0.5</td><td class="r">96.7%</td><td class="r muted">1.03</td></tr><tr><td>Under 0.5</td><td class="r">3.3%</td><td class="r muted">30.74</td></tr><tr><td>Over 1.5</td><td class="r">87.9%</td><td class="r muted">1.14</td></tr><tr><td>Under 1.5</td><td class="r">12.1%</td><td class="r muted">8.30</td></tr><tr><td>Over 2.5</td><td class="r">69.7%</td><td class="r muted">1.43</td></tr><tr><td>Under 2.5</td><td class="r">30.3%</td><td class="r muted">3.30</td></tr><tr><td>Over 3.5</td><td class="r">48.5%</td><td class="r muted">2.06</td></tr><tr><td>Under 3.5</td><td class="r">51.5%</td><td class="r muted">1.94</td></tr><tr><td>Over 4.5</td><td class="r">29.3%</td><td class="r muted">3.41</td></tr><tr><td>Under 4.5</td><td class="r">70.7%</td><td class="r muted">1.42</td></tr><tr><td>Over 5.5</td><td class="r">15.6%</td><td class="r muted">6.42</td></tr><tr><td>Under 5.5</td><td class="r">84.4%</td><td class="r muted">1.18</td></tr>
   </table></div></details>
   
   <details class="fam"><summary>Goal/No Goal</summary><div class="scroll"><table>
@@ -669,7 +670,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   </table></div></details>
   
   <details class="fam"><summary>Combo</summary><div class="scroll"><table>
-  <tr><td>1 + Over 1.5</td><td class="r">44.5%</td><td class="r muted">2.25</td></tr><tr><td>1 + Over 2.5</td><td class="r">38.6%</td><td class="r muted">2.59</td></tr><tr><td>1 + Under 2.5</td><td class="r">11.0%</td><td class="r muted">9.11</td></tr><tr><td>1 + Under 3.5</td><td class="r">23.9%</td><td class="r muted">4.18</td></tr><tr><td>1 + Under 4.5</td><td class="r">32.2%</td><td class="r muted">3.11</td></tr><tr><td>1 + Goal</td><td class="r">31.2%</td><td class="r muted">3.20</td></tr><tr><td>1 + No Goal</td><td class="r">18.3%</td><td class="r muted">5.45</td></tr><tr><td>1 + Multigol 1-3</td><td class="r">23.9%</td><td class="r muted">4.18</td></tr><tr><td>1 + Multigol 2-4</td><td class="r">27.1%</td><td class="r muted">3.70</td></tr><tr><td>1 + Multigol 1-4</td><td class="r">32.2%</td><td class="r muted">3.11</td></tr><tr><td>X + Over 1.5</td><td class="r">19.0%</td><td class="r muted">5.26</td></tr><tr><td>X + Over 2.5</td><td class="r">9.8%</td><td class="r muted">10.19</td></tr><tr><td>X + Under 2.5</td><td class="r">12.4%</td><td class="r muted">8.04</td></tr><tr><td>X + Under 3.5</td><td class="r">12.4%</td><td class="r muted">8.04</td></tr><tr><td>X + Under 4.5</td><td class="r">19.3%</td><td class="r muted">5.18</td></tr><tr><td>X + Goal</td><td class="r">19.0%</td><td class="r muted">5.26</td></tr><tr><td>X + No Goal</td><td class="r">3.3%</td><td class="r muted">30.73</td></tr><tr><td>X + Multigol 1-3</td><td class="r">9.2%</td><td class="r muted">10.89</td></tr><tr><td>X + Multigol 2-4</td><td class="r">16.0%</td><td class="r muted">6.24</td></tr><tr><td>X + Multigol 1-4</td><td class="r">16.0%</td><td class="r muted">6.24</td></tr><tr><td>2 + Over 1.5</td><td class="r">24.5%</td><td class="r muted">4.08</td></tr><tr><td>2 + Over 2.5</td><td class="r">21.3%</td><td class="r muted">4.70</td></tr><tr><td>2 + Under 2.5</td><td class="r">6.9%</td><td class="r muted">14.53</td></tr><tr><td>2 + Under 3.5</td><td class="r">15.2%</td><td class="r muted">6.60</td></tr><tr><td>2 + Under 4.5</td><td class="r">19.2%</td><td class="r muted">5.21</td></tr><tr><td>2 + Goal</td><td class="r">18.8%</td><td class="r muted">5.33</td></tr><tr><td>2 + No Goal</td><td class="r">9.4%</td><td class="r muted">10.63</td></tr><tr><td>2 + Multigol 1-3</td><td class="r">15.2%</td><td class="r muted">6.60</td></tr><tr><td>2 + Multigol 2-4</td><td class="r">15.5%</td><td class="r muted">6.45</td></tr><tr><td>2 + Multigol 1-4</td><td class="r">19.2%</td><td class="r muted">5.21</td></tr><tr><td>1X + Over 1.5</td><td class="r">63.5%</td><td class="r muted">1.58</td></tr><tr><td>1X + Over 2.5</td><td class="r">48.4%</td><td class="r muted">2.06</td></tr><tr><td>1X + Under 2.5</td><td class="r">23.4%</td><td class="r muted">4.27</td></tr><tr><td>1X + Under 3.5</td><td class="r">36.4%</td><td class="r muted">2.75</td></tr><tr><td>1X + Under 4.5</td><td class="r">51.5%</td><td class="r muted">1.94</td></tr><tr><td>1X + Goal</td><td class="r">50.2%</td><td class="r muted">1.99</td></tr><tr><td>1X + No Goal</td><td class="r">21.6%</td><td class="r muted">4.63</td></tr><tr><td>1X + Multigol 1-3</td><td class="r">33.1%</td><td class="r muted">3.02</td></tr><tr><td>1X + Multigol 2-4</td><td class="r">43.1%</td><td class="r muted">2.32</td></tr><tr><td>1X + Multigol 1-4</td><td class="r">48.2%</td><td class="r muted">2.07</td></tr><tr><td>X2 + Over 1.5</td><td class="r">43.5%</td><td class="r muted">2.30</td></tr><tr><td>X2 + Over 2.5</td><td class="r">31.1%</td><td class="r muted">3.22</td></tr><tr><td>X2 + Under 2.5</td><td class="r">19.3%</td><td class="r muted">5.18</td></tr><tr><td>X2 + Under 3.5</td><td class="r">27.6%</td><td class="r muted">3.62</td></tr><tr><td>X2 + Under 4.5</td><td class="r">38.5%</td><td class="r muted">2.60</td></tr><tr><td>X2 + Goal</td><td class="r">37.8%</td><td class="r muted">2.65</td></tr><tr><td>X2 + No Goal</td><td class="r">12.7%</td><td class="r muted">7.90</td></tr><tr><td>X2 + Multigol 1-3</td><td class="r">24.3%</td><td class="r muted">4.11</td></tr><tr><td>X2 + Multigol 2-4</td><td class="r">31.5%</td><td class="r muted">3.17</td></tr><tr><td>X2 + Multigol 1-4</td><td class="r">35.2%</td><td class="r muted">2.84</td></tr><tr><td>12 + Over 1.5</td><td class="r">68.9%</td><td class="r muted">1.45</td></tr><tr><td>12 + Over 2.5</td><td class="r">59.9%</td><td class="r muted">1.67</td></tr><tr><td>12 + Under 2.5</td><td class="r">17.9%</td><td class="r muted">5.60</td></tr><tr><td>12 + Under 3.5</td><td class="r">39.1%</td><td class="r muted">2.56</td></tr><tr><td>12 + Under 4.5</td><td class="r">51.4%</td><td class="r muted">1.95</td></tr><tr><td>12 + Goal</td><td class="r">50.0%</td><td class="r muted">2.00</td></tr><tr><td>12 + No Goal</td><td class="r">27.8%</td><td class="r muted">3.60</td></tr><tr><td>12 + Multigol 1-3</td><td class="r">39.1%</td><td class="r muted">2.56</td></tr><tr><td>12 + Multigol 2-4</td><td class="r">42.6%</td><td class="r muted">2.35</td></tr><tr><td>12 + Multigol 1-4</td><td class="r">51.4%</td><td class="r muted">1.95</td></tr><tr><td>Goal + Over 2.5</td><td class="r">59.8%</td><td class="r muted">1.67</td></tr><tr><td>Goal + Under 2.5</td><td class="r">9.2%</td><td class="r muted">10.89</td></tr><tr><td>Goal + Under 3.5</td><td class="r">24.8%</td><td class="r muted">4.04</td></tr><tr><td>Goal + Over 1.5</td><td class="r">69.0%</td><td class="r muted">1.45</td></tr><tr><td>No Goal + Over 2.5</td><td class="r">9.9%</td><td class="r muted">10.10</td></tr><tr><td>No Goal + Under 2.5</td><td class="r">21.1%</td><td class="r muted">4.74</td></tr><tr><td>No Goal + Under 3.5</td><td class="r">26.8%</td><td class="r muted">3.74</td></tr><tr><td>No Goal + Over 1.5</td><td class="r">18.9%</td><td class="r muted">5.28</td></tr>
+  <tr><td>1 + Over 1.5</td><td class="r">44.5%</td><td class="r muted">2.25</td></tr><tr><td>1 + Over 2.5</td><td class="r">38.6%</td><td class="r muted">2.59</td></tr><tr><td>1 + Under 2.5</td><td class="r">11.0%</td><td class="r muted">9.12</td></tr><tr><td>1 + Under 3.5</td><td class="r">23.9%</td><td class="r muted">4.18</td></tr><tr><td>1 + Under 4.5</td><td class="r">32.2%</td><td class="r muted">3.11</td></tr><tr><td>1 + Goal</td><td class="r">31.2%</td><td class="r muted">3.20</td></tr><tr><td>1 + No Goal</td><td class="r">18.3%</td><td class="r muted">5.45</td></tr><tr><td>1 + Multigol 1-3</td><td class="r">23.9%</td><td class="r muted">4.18</td></tr><tr><td>1 + Multigol 2-4</td><td class="r">27.1%</td><td class="r muted">3.70</td></tr><tr><td>1 + Multigol 1-4</td><td class="r">32.2%</td><td class="r muted">3.11</td></tr><tr><td>X + Over 1.5</td><td class="r">19.0%</td><td class="r muted">5.26</td></tr><tr><td>X + Over 2.5</td><td class="r">9.8%</td><td class="r muted">10.19</td></tr><tr><td>X + Under 2.5</td><td class="r">12.4%</td><td class="r muted">8.04</td></tr><tr><td>X + Under 3.5</td><td class="r">12.4%</td><td class="r muted">8.04</td></tr><tr><td>X + Under 4.5</td><td class="r">19.3%</td><td class="r muted">5.18</td></tr><tr><td>X + Goal</td><td class="r">19.0%</td><td class="r muted">5.26</td></tr><tr><td>X + No Goal</td><td class="r">3.3%</td><td class="r muted">30.74</td></tr><tr><td>X + Multigol 1-3</td><td class="r">9.2%</td><td class="r muted">10.89</td></tr><tr><td>X + Multigol 2-4</td><td class="r">16.0%</td><td class="r muted">6.24</td></tr><tr><td>X + Multigol 1-4</td><td class="r">16.0%</td><td class="r muted">6.24</td></tr><tr><td>2 + Over 1.5</td><td class="r">24.5%</td><td class="r muted">4.08</td></tr><tr><td>2 + Over 2.5</td><td class="r">21.3%</td><td class="r muted">4.70</td></tr><tr><td>2 + Under 2.5</td><td class="r">6.9%</td><td class="r muted">14.53</td></tr><tr><td>2 + Under 3.5</td><td class="r">15.2%</td><td class="r muted">6.60</td></tr><tr><td>2 + Under 4.5</td><td class="r">19.2%</td><td class="r muted">5.21</td></tr><tr><td>2 + Goal</td><td class="r">18.8%</td><td class="r muted">5.33</td></tr><tr><td>2 + No Goal</td><td class="r">9.4%</td><td class="r muted">10.63</td></tr><tr><td>2 + Multigol 1-3</td><td class="r">15.2%</td><td class="r muted">6.60</td></tr><tr><td>2 + Multigol 2-4</td><td class="r">15.5%</td><td class="r muted">6.45</td></tr><tr><td>2 + Multigol 1-4</td><td class="r">19.2%</td><td class="r muted">5.21</td></tr><tr><td>1X + Over 1.5</td><td class="r">63.5%</td><td class="r muted">1.58</td></tr><tr><td>1X + Over 2.5</td><td class="r">48.4%</td><td class="r muted">2.06</td></tr><tr><td>1X + Under 2.5</td><td class="r">23.4%</td><td class="r muted">4.27</td></tr><tr><td>1X + Under 3.5</td><td class="r">36.4%</td><td class="r muted">2.75</td></tr><tr><td>1X + Under 4.5</td><td class="r">51.5%</td><td class="r muted">1.94</td></tr><tr><td>1X + Goal</td><td class="r">50.2%</td><td class="r muted">1.99</td></tr><tr><td>1X + No Goal</td><td class="r">21.6%</td><td class="r muted">4.63</td></tr><tr><td>1X + Multigol 1-3</td><td class="r">33.1%</td><td class="r muted">3.02</td></tr><tr><td>1X + Multigol 2-4</td><td class="r">43.1%</td><td class="r muted">2.32</td></tr><tr><td>1X + Multigol 1-4</td><td class="r">48.2%</td><td class="r muted">2.07</td></tr><tr><td>X2 + Over 1.5</td><td class="r">43.5%</td><td class="r muted">2.30</td></tr><tr><td>X2 + Over 2.5</td><td class="r">31.1%</td><td class="r muted">3.22</td></tr><tr><td>X2 + Under 2.5</td><td class="r">19.3%</td><td class="r muted">5.18</td></tr><tr><td>X2 + Under 3.5</td><td class="r">27.6%</td><td class="r muted">3.62</td></tr><tr><td>X2 + Under 4.5</td><td class="r">38.5%</td><td class="r muted">2.60</td></tr><tr><td>X2 + Goal</td><td class="r">37.8%</td><td class="r muted">2.65</td></tr><tr><td>X2 + No Goal</td><td class="r">12.7%</td><td class="r muted">7.90</td></tr><tr><td>X2 + Multigol 1-3</td><td class="r">24.3%</td><td class="r muted">4.11</td></tr><tr><td>X2 + Multigol 2-4</td><td class="r">31.5%</td><td class="r muted">3.17</td></tr><tr><td>X2 + Multigol 1-4</td><td class="r">35.2%</td><td class="r muted">2.84</td></tr><tr><td>12 + Over 1.5</td><td class="r">68.9%</td><td class="r muted">1.45</td></tr><tr><td>12 + Over 2.5</td><td class="r">59.9%</td><td class="r muted">1.67</td></tr><tr><td>12 + Under 2.5</td><td class="r">17.9%</td><td class="r muted">5.60</td></tr><tr><td>12 + Under 3.5</td><td class="r">39.1%</td><td class="r muted">2.56</td></tr><tr><td>12 + Under 4.5</td><td class="r">51.4%</td><td class="r muted">1.95</td></tr><tr><td>12 + Goal</td><td class="r">50.0%</td><td class="r muted">2.00</td></tr><tr><td>12 + No Goal</td><td class="r">27.7%</td><td class="r muted">3.60</td></tr><tr><td>12 + Multigol 1-3</td><td class="r">39.1%</td><td class="r muted">2.56</td></tr><tr><td>12 + Multigol 2-4</td><td class="r">42.6%</td><td class="r muted">2.35</td></tr><tr><td>12 + Multigol 1-4</td><td class="r">51.4%</td><td class="r muted">1.95</td></tr><tr><td>Goal + Over 2.5</td><td class="r">59.8%</td><td class="r muted">1.67</td></tr><tr><td>Goal + Under 2.5</td><td class="r">9.2%</td><td class="r muted">10.89</td></tr><tr><td>Goal + Under 3.5</td><td class="r">24.8%</td><td class="r muted">4.04</td></tr><tr><td>Goal + Over 1.5</td><td class="r">69.0%</td><td class="r muted">1.45</td></tr><tr><td>No Goal + Over 2.5</td><td class="r">9.9%</td><td class="r muted">10.10</td></tr><tr><td>No Goal + Under 2.5</td><td class="r">21.1%</td><td class="r muted">4.74</td></tr><tr><td>No Goal + Under 3.5</td><td class="r">26.8%</td><td class="r muted">3.74</td></tr><tr><td>No Goal + Over 1.5</td><td class="r">18.9%</td><td class="r muted">5.28</td></tr>
   </table></div></details>
   
   <details class="fam"><summary>1° tempo</summary><div class="scroll"><table>
@@ -737,7 +738,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · dom 25/10 15:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Genoa – Venezia</div>
-  <div class="bar"><i style="width:47.99144718747293%;background:var(--home)"></i><i style="width:25.71733933104154%;background:var(--draw)"></i><i style="width:26.291213481485542%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:47.991446209306694%;background:var(--home)"></i><i style="width:25.71734119570166%;background:var(--draw)"></i><i style="width:26.291212594991663%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 48%</span><span>X · 26%</span><span>2 · 26%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.65 – 1.17</b></span>
   <span>Top: <span class="pick">12</span> 74%</span></div>
@@ -889,14 +890,14 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League · dom 25/10 15:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Liverpool – Brighton</div>
-  <div class="bar"><i style="width:38.34443254967169%;background:var(--home)"></i><i style="width:25.682699233615082%;background:var(--draw)"></i><i style="width:35.972868216713216%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:38.34443948811461%;background:var(--home)"></i><i style="width:25.682698108210282%;background:var(--draw)"></i><i style="width:35.9728624036751%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 38%</span><span>X · 26%</span><span>2 · 36%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.52 – 1.47</b></span>
   <span>Top: <span class="pick">12</span> 74%</span></div>
 </summary>
 <div class="body">
   <h3>Analisi</h3>
-  <ul class="an"><li>Liverpool in buona forma (3V 1N 1P nelle ultime 5, 5 gol fatti e 4 subiti). In casa crea 1.28 xG e ne concede 1.80 a partita.</li><li>Brighton in ottima forma (4V 1N 0P nelle ultime 5, 16 gol fatti e 1 subiti). In trasferta crea 2.07 xG e ne concede 1.92 a partita.</li><li>Numeri: Liverpool 15.7 tiri a partita (5.0 in porta), possesso medio 53%, pressing PPDA 8.1; Brighton 17.9 tiri a partita (6.0 in porta), possesso medio 57%, pressing PPDA 6.8. (PPDA basso = pressing più aggressivo.)</li><li>Assenze pesanti per Liverpool: Dominik Szoboszlai (11% della produzione offensiva), Bradley Barcola (9% della produzione offensiva). Attacco stimato al 88% del normale.</li><li>Meteo: 11°C, vento 39 km/h, pioggia 0.0 mm/h. Vento sostenuto (39 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</li><li>Sintesi: gol attesi 1.52 – 1.47, partita equilibrata nei gol, nessuna favorita netta. Risultato più probabile 1-1.</li><li>Il modello vede il segno 2 più probabile di quanto dicano le quote (42% contro 30% dei bookmaker): possibile valore.</li></ul>
+  <ul class="an"><li>Liverpool in buona forma (3V 1N 1P nelle ultime 5, 5 gol fatti e 4 subiti). In casa crea 1.28 xG e ne concede 1.80 a partita.</li><li>Brighton in ottima forma (4V 1N 0P nelle ultime 5, 16 gol fatti e 1 subiti). In trasferta crea 2.07 xG e ne concede 1.92 a partita.</li><li>Numeri: Liverpool 15.7 tiri a partita (5.0 in porta), possesso medio 53%, pressing PPDA 8.1; Brighton 17.9 tiri a partita (6.0 in porta), possesso medio 57%, pressing PPDA 6.8. (PPDA basso = pressing più aggressivo.)</li><li>Assenze pesanti per Liverpool: Dominik Szoboszlai (11% della produzione offensiva), Bradley Barcola (9% della produzione offensiva). Attacco stimato al 88% del normale.</li><li>Meteo: 11°C, vento 39 km/h, pioggia 0.1 mm/h. Vento sostenuto (39 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</li><li>Sintesi: gol attesi 1.52 – 1.47, partita equilibrata nei gol, nessuna favorita netta. Risultato più probabile 1-1.</li><li>Il modello vede il segno 2 più probabile di quanto dicano le quote (42% contro 30% dei bookmaker): possibile valore.</li></ul>
 
   <h3>Gol</h3>
   <div class="grid2">
@@ -1025,7 +1026,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   </table></div>
 
   <h3>Meteo · Anfield, Liverpool</h3>
-  <div class="small">11°C, vento 39 km/h, pioggia 0.0 mm/h. Vento sostenuto (39 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</div>
+  <div class="small">11°C, vento 39 km/h, pioggia 0.1 mm/h. Vento sostenuto (39 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</div>
 
   <h3>Modello contro bookmaker</h3>
   <div class="small">Modello puro: 1 32% · X 26% · 2 42%<br>
@@ -1041,14 +1042,14 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League · dom 25/10 15:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Manchester United – Bournemouth</div>
-  <div class="bar"><i style="width:42.657872951632%;background:var(--home)"></i><i style="width:25.14110840068154%;background:var(--draw)"></i><i style="width:32.20101864768648%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:42.6578748076046%;background:var(--home)"></i><i style="width:25.14110882279084%;background:var(--draw)"></i><i style="width:32.20101636960456%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 43%</span><span>X · 25%</span><span>2 · 32%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.65 – 1.41</b></span>
   <span>Top: <span class="pick">12</span> 75%</span></div>
 </summary>
 <div class="body">
   <h3>Analisi</h3>
-  <ul class="an"><li>Manchester United in momento difficile (0V 4N 1P nelle ultime 5, 5 gol fatti e 6 subiti), prestazioni in calo secondo gli expected goals. In casa crea 2.23 xG e ne concede 1.66 a partita.</li><li>Bournemouth in momento difficile (1V 2N 2P nelle ultime 5, 7 gol fatti e 10 subiti), prestazioni in crescita secondo gli expected goals. In trasferta crea 1.34 xG e ne concede 1.54 a partita.</li><li>Numeri: Manchester United 19.7 tiri a partita (5.0 in porta), possesso medio 47%, pressing PPDA 12.9; Bournemouth 15.1 tiri a partita (5.1 in porta), possesso medio 58%, pressing PPDA 10.2. (PPDA basso = pressing più aggressivo.)</li><li>Assenze pesanti per Manchester United: Marcus Rashford (9% della produzione offensiva). Attacco stimato al 91% del normale.</li><li>Meteo: 11°C, vento 34 km/h, pioggia 0.1 mm/h. Vento sostenuto (34 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</li><li>Sintesi: gol attesi 1.65 – 1.41, partita aperta, da molti gol, Manchester United favorita (43%). Risultato più probabile 1-1.</li></ul>
+  <ul class="an"><li>Manchester United in momento difficile (0V 4N 1P nelle ultime 5, 5 gol fatti e 6 subiti), prestazioni in calo secondo gli expected goals. In casa crea 2.23 xG e ne concede 1.66 a partita.</li><li>Bournemouth in momento difficile (1V 2N 2P nelle ultime 5, 7 gol fatti e 10 subiti), prestazioni in crescita secondo gli expected goals. In trasferta crea 1.34 xG e ne concede 1.54 a partita.</li><li>Numeri: Manchester United 19.7 tiri a partita (5.0 in porta), possesso medio 47%, pressing PPDA 12.9; Bournemouth 15.1 tiri a partita (5.1 in porta), possesso medio 58%, pressing PPDA 10.2. (PPDA basso = pressing più aggressivo.)</li><li>Assenze pesanti per Manchester United: Marcus Rashford (9% della produzione offensiva). Attacco stimato al 91% del normale.</li><li>Meteo: 11°C, vento 34 km/h, pioggia 0.0 mm/h. Vento sostenuto (34 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</li><li>Sintesi: gol attesi 1.65 – 1.41, partita aperta, da molti gol, Manchester United favorita (43%). Risultato più probabile 1-1.</li></ul>
 
   <h3>Gol</h3>
   <div class="grid2">
@@ -1177,7 +1178,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   </table></div>
 
   <h3>Meteo · Old Trafford, Manchester</h3>
-  <div class="small">11°C, vento 34 km/h, pioggia 0.1 mm/h. Vento sostenuto (34 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</div>
+  <div class="small">11°C, vento 34 km/h, pioggia 0.0 mm/h. Vento sostenuto (34 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</div>
 
   <h3>Modello contro bookmaker</h3>
   <div class="small">Modello puro: 1 40% · X 25% · 2 35%<br>
@@ -1193,7 +1194,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League · dom 25/10 15:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Crystal Palace – Newcastle United</div>
-  <div class="bar"><i style="width:38.00128614823457%;background:var(--home)"></i><i style="width:24.741897395022974%;background:var(--draw)"></i><i style="width:37.25681645674247%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:38.00128655425159%;background:var(--home)"></i><i style="width:24.741899127755698%;background:var(--draw)"></i><i style="width:37.256814317992706%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 38%</span><span>X · 25%</span><span>2 · 37%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.60 – 1.58</b></span>
   <span>Top: <span class="pick">12</span> 75%</span></div>
@@ -1345,14 +1346,14 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League · dom 25/10 15:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Hull – Brentford</div>
-  <div class="bar"><i style="width:23.82923679661656%;background:var(--home)"></i><i style="width:25.042759743925046%;background:var(--draw)"></i><i style="width:51.128003459458384%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:23.829247339397742%;background:var(--home)"></i><i style="width:25.042761636303883%;background:var(--draw)"></i><i style="width:51.12799102429837%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 24%</span><span>X · 25%</span><span>2 · 51%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.12 – 1.74</b></span>
   <span>Top: <span class="pick">1° tempo Over 0.5</span> 72%</span></div>
 </summary>
 <div class="body">
   <h3>Analisi</h3>
-  <ul class="an"><li>Hull in momento difficile (0V 3N 2P nelle ultime 5, 5 gol fatti e 7 subiti). In casa crea 1.28 xG e ne concede 2.07 a partita.</li><li>Brentford in forma altalenante (1V 3N 1P nelle ultime 5, 9 gol fatti e 7 subiti), prestazioni in calo secondo gli expected goals. In trasferta crea 1.23 xG e ne concede 1.85 a partita.</li><li>Numeri: Hull 10.7 tiri a partita (3.4 in porta), possesso medio 37%, pressing PPDA 17.1; Brentford 15.0 tiri a partita (4.1 in porta), possesso medio 49%, pressing PPDA 9.1. (PPDA basso = pressing più aggressivo.)</li><li>Assenze pesanti per Hull: Nobel Mendy (9% della produzione offensiva), Mohamed Ali-Cho (8% della produzione offensiva). Attacco stimato al 94% del normale.</li><li>Meteo: 11°C, vento 36 km/h, pioggia 0.0 mm/h. Vento sostenuto (36 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</li><li>Sintesi: gol attesi 1.12 – 1.74, partita equilibrata nei gol, Brentford favorita (51%). Risultato più probabile 1-1.</li><li>Il modello vede il segno 1 più probabile di quanto dicano le quote (27% contro 20% dei bookmaker): possibile valore.</li></ul>
+  <ul class="an"><li>Hull in momento difficile (0V 3N 2P nelle ultime 5, 5 gol fatti e 7 subiti). In casa crea 1.28 xG e ne concede 2.07 a partita.</li><li>Brentford in forma altalenante (1V 3N 1P nelle ultime 5, 9 gol fatti e 7 subiti), prestazioni in calo secondo gli expected goals. In trasferta crea 1.23 xG e ne concede 1.85 a partita.</li><li>Numeri: Hull 10.7 tiri a partita (3.4 in porta), possesso medio 37%, pressing PPDA 17.1; Brentford 15.0 tiri a partita (4.1 in porta), possesso medio 49%, pressing PPDA 9.1. (PPDA basso = pressing più aggressivo.)</li><li>Assenze pesanti per Hull: Nobel Mendy (9% della produzione offensiva), Mohamed Ali-Cho (8% della produzione offensiva). Attacco stimato al 94% del normale.</li><li>Meteo: 11°C, vento 36 km/h, pioggia 0.1 mm/h. Vento sostenuto (36 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</li><li>Sintesi: gol attesi 1.12 – 1.74, partita equilibrata nei gol, Brentford favorita (51%). Risultato più probabile 1-1.</li><li>Il modello vede il segno 1 più probabile di quanto dicano le quote (27% contro 20% dei bookmaker): possibile valore.</li></ul>
 
   <h3>Gol</h3>
   <div class="grid2">
@@ -1481,7 +1482,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   </table></div>
 
   <h3>Meteo · The MKM Stadium, Hull</h3>
-  <div class="small">11°C, vento 36 km/h, pioggia 0.0 mm/h. Vento sostenuto (36 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</div>
+  <div class="small">11°C, vento 36 km/h, pioggia 0.1 mm/h. Vento sostenuto (36 km/h): precisione ridotta su lanci e tiri da fuori. Il modello riduce i gol attesi del 3%.</div>
 
   <h3>Modello contro bookmaker</h3>
   <div class="small">Modello puro: 1 27% · X 26% · 2 47%<br>
@@ -1497,7 +1498,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇫🇷 Ligue 1 · dom 25/10 15:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Monaco – Lille</div>
-  <div class="bar"><i style="width:43.19448445828844%;background:var(--home)"></i><i style="width:27.518751505545758%;background:var(--draw)"></i><i style="width:29.286764036165803%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:43.19448971562806%;background:var(--home)"></i><i style="width:27.518747663747885%;background:var(--draw)"></i><i style="width:29.286762620624053%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 43%</span><span>X · 28%</span><span>2 · 29%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.45 – 1.15</b></span>
   <span>Top: <span class="pick">Over 1.5</span> 74%</span></div>
@@ -1649,7 +1650,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇩🇪 Bundesliga · dom 25/10 15:30</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Hoffenheim – Bayer Leverkusen</div>
-  <div class="bar"><i style="width:34.92012817698538%;background:var(--home)"></i><i style="width:22.998347233006125%;background:var(--draw)"></i><i style="width:42.0815245900085%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:34.92013805303519%;background:var(--home)"></i><i style="width:22.998348445380984%;background:var(--draw)"></i><i style="width:42.081513501583814%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 35%</span><span>X · 23%</span><span>2 · 42%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.70 – 1.88</b></span>
   <span>Top: <span class="pick">Under 4.5</span> 71%</span></div>
@@ -1801,7 +1802,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇪🇸 LaLiga · dom 25/10 16:15</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Celta Vigo – Real Betis</div>
-  <div class="bar"><i style="width:34.93287531250813%;background:var(--home)"></i><i style="width:27.538480188901982%;background:var(--draw)"></i><i style="width:37.528644498589905%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:34.93288451729348%;background:var(--home)"></i><i style="width:27.538479473744104%;background:var(--draw)"></i><i style="width:37.528636008962415%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 35%</span><span>X · 28%</span><span>2 · 38%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.30 – 1.36</b></span>
   <span>Top: <span class="pick">Over 1.5</span> 75%</span></div>
@@ -1953,7 +1954,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇫🇷 Ligue 1 · dom 25/10 17:15</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Angers – Lorient</div>
-  <div class="bar"><i style="width:31.94307460477473%;background:var(--home)"></i><i style="width:28.079447193610914%;background:var(--draw)"></i><i style="width:39.977478201614346%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:31.943089251893973%;background:var(--home)"></i><i style="width:28.07944464651832%;background:var(--draw)"></i><i style="width:39.97746610158771%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 32%</span><span>X · 28%</span><span>2 · 40%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.19 – 1.36</b></span>
   <span>Top: <span class="pick">Under 3.5</span> 75%</span></div>
@@ -2037,7 +2038,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   </table></div></details>
   
   <details class="fam"><summary>Combo</summary><div class="scroll"><table>
-  <tr><td>1 + Over 1.5</td><td class="r">23.4%</td><td class="r muted">4.27</td></tr><tr><td>1 + Over 2.5</td><td class="r">17.9%</td><td class="r muted">5.59</td></tr><tr><td>1 + Under 2.5</td><td class="r">14.0%</td><td class="r muted">7.12</td></tr><tr><td>1 + Under 3.5</td><td class="r">23.8%</td><td class="r muted">4.21</td></tr><tr><td>1 + Under 4.5</td><td class="r">27.4%</td><td class="r muted">3.65</td></tr><tr><td>1 + Goal</td><td class="r">14.9%</td><td class="r muted">6.73</td></tr><tr><td>1 + No Goal</td><td class="r">17.1%</td><td class="r muted">5.85</td></tr><tr><td>1 + Multigol 1-3</td><td class="r">23.8%</td><td class="r muted">4.21</td></tr><tr><td>1 + Multigol 2-4</td><td class="r">18.9%</td><td class="r muted">5.30</td></tr><tr><td>1 + Multigol 1-4</td><td class="r">27.4%</td><td class="r muted">3.65</td></tr><tr><td>X + Over 1.5</td><td class="r">19.5%</td><td class="r muted">5.12</td></tr><tr><td>X + Over 2.5</td><td class="r">6.1%</td><td class="r muted">16.29</td></tr><tr><td>X + Under 2.5</td><td class="r">21.9%</td><td class="r muted">4.56</td></tr><tr><td>X + Under 3.5</td><td class="r">21.9%</td><td class="r muted">4.56</td></tr><tr><td>X + Under 4.5</td><td class="r">27.1%</td><td class="r muted">3.70</td></tr><tr><td>X + Goal</td><td class="r">19.5%</td><td class="r muted">5.12</td></tr><tr><td>X + No Goal</td><td class="r">8.6%</td><td class="r muted">11.70</td></tr><tr><td>X + Multigol 1-3</td><td class="r">13.4%</td><td class="r muted">7.47</td></tr><tr><td>X + Multigol 2-4</td><td class="r">18.5%</td><td class="r muted">5.40</td></tr><tr><td>X + Multigol 1-4</td><td class="r">18.5%</td><td class="r muted">5.40</td></tr><tr><td>2 + Over 1.5</td><td class="r">30.1%</td><td class="r muted">3.32</td></tr><tr><td>2 + Over 2.5</td><td class="r">22.9%</td><td class="r muted">4.36</td></tr><tr><td>2 + Under 2.5</td><td class="r">17.1%</td><td class="r muted">5.86</td></tr><tr><td>2 + Under 3.5</td><td class="r">28.9%</td><td class="r muted">3.46</td></tr><tr><td>2 + Under 4.5</td><td class="r">34.0%</td><td class="r muted">2.95</td></tr><tr><td>2 + Goal</td><td class="r">18.1%</td><td class="r muted">5.52</td></tr><tr><td>2 + No Goal</td><td class="r">21.8%</td><td class="r muted">4.58</td></tr><tr><td>2 + Multigol 1-3</td><td class="r">28.9%</td><td class="r muted">3.46</td></tr><tr><td>2 + Multigol 2-4</td><td class="r">24.1%</td><td class="r muted">4.15</td></tr><tr><td>2 + Multigol 1-4</td><td class="r">34.0%</td><td class="r muted">2.95</td></tr><tr><td>1X + Over 1.5</td><td class="r">43.0%</td><td class="r muted">2.33</td></tr><tr><td>1X + Over 2.5</td><td class="r">24.0%</td><td class="r muted">4.16</td></tr><tr><td>1X + Under 2.5</td><td class="r">36.0%</td><td class="r muted">2.78</td></tr><tr><td>1X + Under 3.5</td><td class="r">45.7%</td><td class="r muted">2.19</td></tr><tr><td>1X + Under 4.5</td><td class="r">54.5%</td><td class="r muted">1.84</td></tr><tr><td>1X + Goal</td><td class="r">34.4%</td><td class="r muted">2.91</td></tr><tr><td>1X + No Goal</td><td class="r">25.6%</td><td class="r muted">3.90</td></tr><tr><td>1X + Multigol 1-3</td><td class="r">37.2%</td><td class="r muted">2.69</td></tr><tr><td>1X + Multigol 2-4</td><td class="r">37.4%</td><td class="r muted">2.67</td></tr><tr><td>1X + Multigol 1-4</td><td class="r">45.9%</td><td class="r muted">2.18</td></tr><tr><td>X2 + Over 1.5</td><td class="r">49.7%</td><td class="r muted">2.01</td></tr><tr><td>X2 + Over 2.5</td><td class="r">29.1%</td><td class="r muted">3.44</td></tr><tr><td>X2 + Under 2.5</td><td class="r">39.0%</td><td class="r muted">2.56</td></tr><tr><td>X2 + Under 3.5</td><td class="r">50.9%</td><td class="r muted">1.97</td></tr><tr><td>X2 + Under 4.5</td><td class="r">61.0%</td><td class="r muted">1.64</td></tr><tr><td>X2 + Goal</td><td class="r">37.7%</td><td class="r muted">2.66</td></tr><tr><td>X2 + No Goal</td><td class="r">30.4%</td><td class="r muted">3.29</td></tr><tr><td>X2 + Multigol 1-3</td><td class="r">42.3%</td><td class="r muted">2.36</td></tr><tr><td>X2 + Multigol 2-4</td><td class="r">42.6%</td><td class="r muted">2.35</td></tr><tr><td>X2 + Multigol 1-4</td><td class="r">52.5%</td><td class="r muted">1.91</td></tr><tr><td>12 + Over 1.5</td><td class="r">53.5%</td><td class="r muted">1.87</td></tr><tr><td>12 + Over 2.5</td><td class="r">40.8%</td><td class="r muted">2.45</td></tr><tr><td>12 + Under 2.5</td><td class="r">31.1%</td><td class="r muted">3.21</td></tr><tr><td>12 + Under 3.5</td><td class="r">52.7%</td><td class="r muted">1.90</td></tr><tr><td>12 + Under 4.5</td><td class="r">61.4%</td><td class="r muted">1.63</td></tr><tr><td>12 + Goal</td><td class="r">33.0%</td><td class="r muted">3.03</td></tr><tr><td>12 + No Goal</td><td class="r">38.9%</td><td class="r muted">2.57</td></tr><tr><td>12 + Multigol 1-3</td><td class="r">52.7%</td><td class="r muted">1.90</td></tr><tr><td>12 + Multigol 2-4</td><td class="r">43.0%</td><td class="r muted">2.33</td></tr><tr><td>12 + Multigol 1-4</td><td class="r">61.4%</td><td class="r muted">1.63</td></tr><tr><td>Goal + Over 2.5</td><td class="r">39.1%</td><td class="r muted">2.56</td></tr><tr><td>Goal + Under 2.5</td><td class="r">13.4%</td><td class="r muted">7.47</td></tr><tr><td>Goal + Under 3.5</td><td class="r">29.5%</td><td class="r muted">3.39</td></tr><tr><td>Goal + Over 1.5</td><td class="r">52.5%</td><td class="r muted">1.90</td></tr><tr><td>No Goal + Over 2.5</td><td class="r">7.8%</td><td class="r muted">12.79</td></tr><tr><td>No Goal + Under 2.5</td><td class="r">39.7%</td><td class="r muted">2.52</td></tr><tr><td>No Goal + Under 3.5</td><td class="r">45.1%</td><td class="r muted">2.22</td></tr><tr><td>No Goal + Over 1.5</td><td class="r">20.6%</td><td class="r muted">4.86</td></tr>
+  <tr><td>1 + Over 1.5</td><td class="r">23.4%</td><td class="r muted">4.27</td></tr><tr><td>1 + Over 2.5</td><td class="r">17.9%</td><td class="r muted">5.59</td></tr><tr><td>1 + Under 2.5</td><td class="r">14.0%</td><td class="r muted">7.12</td></tr><tr><td>1 + Under 3.5</td><td class="r">23.8%</td><td class="r muted">4.21</td></tr><tr><td>1 + Under 4.5</td><td class="r">27.4%</td><td class="r muted">3.65</td></tr><tr><td>1 + Goal</td><td class="r">14.9%</td><td class="r muted">6.73</td></tr><tr><td>1 + No Goal</td><td class="r">17.1%</td><td class="r muted">5.85</td></tr><tr><td>1 + Multigol 1-3</td><td class="r">23.8%</td><td class="r muted">4.21</td></tr><tr><td>1 + Multigol 2-4</td><td class="r">18.9%</td><td class="r muted">5.30</td></tr><tr><td>1 + Multigol 1-4</td><td class="r">27.4%</td><td class="r muted">3.65</td></tr><tr><td>X + Over 1.5</td><td class="r">19.5%</td><td class="r muted">5.12</td></tr><tr><td>X + Over 2.5</td><td class="r">6.1%</td><td class="r muted">16.29</td></tr><tr><td>X + Under 2.5</td><td class="r">21.9%</td><td class="r muted">4.56</td></tr><tr><td>X + Under 3.5</td><td class="r">21.9%</td><td class="r muted">4.56</td></tr><tr><td>X + Under 4.5</td><td class="r">27.1%</td><td class="r muted">3.70</td></tr><tr><td>X + Goal</td><td class="r">19.5%</td><td class="r muted">5.12</td></tr><tr><td>X + No Goal</td><td class="r">8.6%</td><td class="r muted">11.70</td></tr><tr><td>X + Multigol 1-3</td><td class="r">13.4%</td><td class="r muted">7.47</td></tr><tr><td>X + Multigol 2-4</td><td class="r">18.5%</td><td class="r muted">5.40</td></tr><tr><td>X + Multigol 1-4</td><td class="r">18.5%</td><td class="r muted">5.40</td></tr><tr><td>2 + Over 1.5</td><td class="r">30.1%</td><td class="r muted">3.32</td></tr><tr><td>2 + Over 2.5</td><td class="r">22.9%</td><td class="r muted">4.36</td></tr><tr><td>2 + Under 2.5</td><td class="r">17.1%</td><td class="r muted">5.86</td></tr><tr><td>2 + Under 3.5</td><td class="r">28.9%</td><td class="r muted">3.46</td></tr><tr><td>2 + Under 4.5</td><td class="r">34.0%</td><td class="r muted">2.95</td></tr><tr><td>2 + Goal</td><td class="r">18.1%</td><td class="r muted">5.52</td></tr><tr><td>2 + No Goal</td><td class="r">21.8%</td><td class="r muted">4.58</td></tr><tr><td>2 + Multigol 1-3</td><td class="r">28.9%</td><td class="r muted">3.46</td></tr><tr><td>2 + Multigol 2-4</td><td class="r">24.1%</td><td class="r muted">4.15</td></tr><tr><td>2 + Multigol 1-4</td><td class="r">34.0%</td><td class="r muted">2.95</td></tr><tr><td>1X + Over 1.5</td><td class="r">43.0%</td><td class="r muted">2.33</td></tr><tr><td>1X + Over 2.5</td><td class="r">24.0%</td><td class="r muted">4.16</td></tr><tr><td>1X + Under 2.5</td><td class="r">36.0%</td><td class="r muted">2.78</td></tr><tr><td>1X + Under 3.5</td><td class="r">45.7%</td><td class="r muted">2.19</td></tr><tr><td>1X + Under 4.5</td><td class="r">54.5%</td><td class="r muted">1.84</td></tr><tr><td>1X + Goal</td><td class="r">34.4%</td><td class="r muted">2.91</td></tr><tr><td>1X + No Goal</td><td class="r">25.6%</td><td class="r muted">3.90</td></tr><tr><td>1X + Multigol 1-3</td><td class="r">37.2%</td><td class="r muted">2.69</td></tr><tr><td>1X + Multigol 2-4</td><td class="r">37.4%</td><td class="r muted">2.67</td></tr><tr><td>1X + Multigol 1-4</td><td class="r">45.9%</td><td class="r muted">2.18</td></tr><tr><td>X2 + Over 1.5</td><td class="r">49.7%</td><td class="r muted">2.01</td></tr><tr><td>X2 + Over 2.5</td><td class="r">29.1%</td><td class="r muted">3.44</td></tr><tr><td>X2 + Under 2.5</td><td class="r">39.0%</td><td class="r muted">2.56</td></tr><tr><td>X2 + Under 3.5</td><td class="r">50.9%</td><td class="r muted">1.97</td></tr><tr><td>X2 + Under 4.5</td><td class="r">61.0%</td><td class="r muted">1.64</td></tr><tr><td>X2 + Goal</td><td class="r">37.7%</td><td class="r muted">2.66</td></tr><tr><td>X2 + No Goal</td><td class="r">30.4%</td><td class="r muted">3.29</td></tr><tr><td>X2 + Multigol 1-3</td><td class="r">42.3%</td><td class="r muted">2.36</td></tr><tr><td>X2 + Multigol 2-4</td><td class="r">42.6%</td><td class="r muted">2.35</td></tr><tr><td>X2 + Multigol 1-4</td><td class="r">52.5%</td><td class="r muted">1.91</td></tr><tr><td>12 + Over 1.5</td><td class="r">53.6%</td><td class="r muted">1.87</td></tr><tr><td>12 + Over 2.5</td><td class="r">40.8%</td><td class="r muted">2.45</td></tr><tr><td>12 + Under 2.5</td><td class="r">31.1%</td><td class="r muted">3.21</td></tr><tr><td>12 + Under 3.5</td><td class="r">52.7%</td><td class="r muted">1.90</td></tr><tr><td>12 + Under 4.5</td><td class="r">61.4%</td><td class="r muted">1.63</td></tr><tr><td>12 + Goal</td><td class="r">33.0%</td><td class="r muted">3.03</td></tr><tr><td>12 + No Goal</td><td class="r">38.9%</td><td class="r muted">2.57</td></tr><tr><td>12 + Multigol 1-3</td><td class="r">52.7%</td><td class="r muted">1.90</td></tr><tr><td>12 + Multigol 2-4</td><td class="r">43.0%</td><td class="r muted">2.33</td></tr><tr><td>12 + Multigol 1-4</td><td class="r">61.4%</td><td class="r muted">1.63</td></tr><tr><td>Goal + Over 2.5</td><td class="r">39.1%</td><td class="r muted">2.56</td></tr><tr><td>Goal + Under 2.5</td><td class="r">13.4%</td><td class="r muted">7.47</td></tr><tr><td>Goal + Under 3.5</td><td class="r">29.5%</td><td class="r muted">3.39</td></tr><tr><td>Goal + Over 1.5</td><td class="r">52.5%</td><td class="r muted">1.90</td></tr><tr><td>No Goal + Over 2.5</td><td class="r">7.8%</td><td class="r muted">12.79</td></tr><tr><td>No Goal + Under 2.5</td><td class="r">39.7%</td><td class="r muted">2.52</td></tr><tr><td>No Goal + Under 3.5</td><td class="r">45.1%</td><td class="r muted">2.22</td></tr><tr><td>No Goal + Over 1.5</td><td class="r">20.6%</td><td class="r muted">4.86</td></tr>
   </table></div></details>
   
   <details class="fam"><summary>1° tempo</summary><div class="scroll"><table>
@@ -2105,7 +2106,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇫🇷 Ligue 1 · dom 25/10 17:15</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Auxerre – Le Mans</div>
-  <div class="bar"><i style="width:48.67053311669708%;background:var(--home)"></i><i style="width:24.392124729035153%;background:var(--draw)"></i><i style="width:26.937342154267764%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:48.670540240947616%;background:var(--home)"></i><i style="width:24.392125498853034%;background:var(--draw)"></i><i style="width:26.937334260199354%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 49%</span><span>X · 24%</span><span>2 · 27%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.79 – 1.29</b></span>
   <span>Top: <span class="pick">12</span> 76%</span></div>
@@ -2257,7 +2258,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇫🇷 Ligue 1 · dom 25/10 17:15</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Marseille – Le Havre</div>
-  <div class="bar"><i style="width:61.124276027446314%;background:var(--home)"></i><i style="width:21.01764554673626%;background:var(--draw)"></i><i style="width:17.858078425817425%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:61.12426206500243%;background:var(--home)"></i><i style="width:21.01765061553313%;background:var(--draw)"></i><i style="width:17.85808731946443%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 61%</span><span>X · 21%</span><span>2 · 18%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>2.18 – 1.11</b></span>
   <span>Top: <span class="pick">Multigol 1-4</span> 72%</span></div>
@@ -2409,7 +2410,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇫🇷 Ligue 1 · dom 25/10 17:15</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Rennes – Strasbourg</div>
-  <div class="bar"><i style="width:51.98632864894353%;background:var(--home)"></i><i style="width:22.109506729786666%;background:var(--draw)"></i><i style="width:25.90416462126983%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:51.98632414830524%;background:var(--home)"></i><i style="width:22.109509559322525%;background:var(--draw)"></i><i style="width:25.90416629237223%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 52%</span><span>X · 22%</span><span>2 · 26%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>2.09 – 1.45</b></span>
   <span>Top: <span class="pick">Under 4.5</span> 72%</span></div>
@@ -2561,7 +2562,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🏴󠁧󠁢󠁥󠁮󠁧󠁿 Premier League · dom 25/10 17:30</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Sunderland – Leeds</div>
-  <div class="bar"><i style="width:30.551575239994488%;background:var(--home)"></i><i style="width:28.386018933248653%;background:var(--draw)"></i><i style="width:41.062405826756866%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:30.551583922658622%;background:var(--home)"></i><i style="width:28.386017226437527%;background:var(--draw)"></i><i style="width:41.06239885090386%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 31%</span><span>X · 28%</span><span>2 · 41%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.14 – 1.36</b></span>
   <span>Top: <span class="pick">Over 1.5</span> 72%</span></div>
@@ -2713,7 +2714,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇩🇪 Bundesliga · dom 25/10 17:30</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Freiburg – Bayern Munich</div>
-  <div class="bar"><i style="width:21.367911568247106%;background:var(--home)"></i><i style="width:19.68067793514982%;background:var(--draw)"></i><i style="width:58.95141049660309%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:21.367923148500378%;background:var(--home)"></i><i style="width:19.680682074152205%;background:var(--draw)"></i><i style="width:58.95139477734741%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 21%</span><span>X · 20%</span><span>2 · 59%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.45 – 2.44</b></span>
   <span>Top: <span class="pick">X2 + Over 1.5</span> 72%</span></div>
@@ -2865,7 +2866,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · dom 25/10 18:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Lecce – Juventus</div>
-  <div class="bar"><i style="width:15.252977523664624%;background:var(--home)"></i><i style="width:23.26027391788985%;background:var(--draw)"></i><i style="width:61.48674855844553%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:15.25299910555825%;background:var(--home)"></i><i style="width:23.260282348206534%;background:var(--draw)"></i><i style="width:61.48671854623523%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 15%</span><span>X · 23%</span><span>2 · 61%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>0.82 – 1.86</b></span>
   <span>Top: <span class="pick">Over 1.5</span> 75%</span></div>
@@ -3017,7 +3018,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇪🇸 LaLiga · dom 25/10 18:30</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Real Sociedad – Levante</div>
-  <div class="bar"><i style="width:55.92224074939598%;background:var(--home)"></i><i style="width:21.841577000236096%;background:var(--draw)"></i><i style="width:22.236182250367904%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:55.92223585894549%;background:var(--home)"></i><i style="width:21.841579947536644%;background:var(--draw)"></i><i style="width:22.236184193517854%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 56%</span><span>X · 22%</span><span>2 · 22%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>2.12 – 1.29</b></span>
   <span>Top: <span class="pick">Under 4.5</span> 74%</span></div>
@@ -3169,7 +3170,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · dom 25/10 20:45</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Udinese – AC Milan</div>
-  <div class="bar"><i style="width:23.836803751466185%;background:var(--home)"></i><i style="width:26.105097300019303%;background:var(--draw)"></i><i style="width:50.05809894851454%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:23.836812014745192%;background:var(--home)"></i><i style="width:26.105101274249442%;background:var(--draw)"></i><i style="width:50.058086711005366%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 24%</span><span>X · 26%</span><span>2 · 50%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.05 – 1.63</b></span>
   <span>Top: <span class="pick">Over 1.5</span> 75%</span></div>
@@ -3321,7 +3322,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇫🇷 Ligue 1 · dom 25/10 20:45</span>
   <span class="rel muted">affidabilità 95/100</span></div>
   <div class="teams">Paris Saint Germain – Lyon</div>
-  <div class="bar"><i style="width:61.630097188221654%;background:var(--home)"></i><i style="width:21.13846779398521%;background:var(--draw)"></i><i style="width:17.231435017793117%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:61.63007631759015%;background:var(--home)"></i><i style="width:21.138472029761367%;background:var(--draw)"></i><i style="width:17.23145165264848%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 62%</span><span>X · 21%</span><span>2 · 17%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>2.15 – 1.06</b></span>
   <span>Top: <span class="pick">Multigol ospite 0-1</span> 71%</span></div>
@@ -3473,7 +3474,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇪🇸 LaLiga · dom 25/10 21:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Barcelona – Real Madrid</div>
-  <div class="bar"><i style="width:60.93555965498953%;background:var(--home)"></i><i style="width:18.493498738784016%;background:var(--draw)"></i><i style="width:20.570941606226455%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:60.93555822684523%;background:var(--home)"></i><i style="width:18.493499407395902%;background:var(--draw)"></i><i style="width:20.570942365758878%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 61%</span><span>X · 18%</span><span>2 · 21%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>2.64 – 1.54</b></span>
   <span>Top: <span class="pick">Goal</span> 73%</span></div>
@@ -3625,7 +3626,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇪🇸 LaLiga · lun 26/10 21:00</span>
   <span class="rel muted">affidabilità 100/100</span></div>
   <div class="teams">Sevilla – Osasuna</div>
-  <div class="bar"><i style="width:46.19707214585116%;background:var(--home)"></i><i style="width:27.672227009176094%;background:var(--draw)"></i><i style="width:26.130700844972733%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:46.19707408904221%;background:var(--home)"></i><i style="width:27.672225796111842%;background:var(--draw)"></i><i style="width:26.130700114845933%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 46%</span><span>X · 28%</span><span>2 · 26%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.47 – 1.04</b></span>
   <span>Top: <span class="pick">Under 3.5</span> 75%</span></div>
@@ -3777,7 +3778,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · mar 27/10 18:30</span>
   <span class="rel muted">affidabilità 90/100</span></div>
   <div class="teams">Sassuolo – Lazio</div>
-  <div class="bar"><i style="width:33.08768312898279%;background:var(--home)"></i><i style="width:27.1451215348155%;background:var(--draw)"></i><i style="width:39.7671953362017%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:33.08768803298303%;background:var(--home)"></i><i style="width:27.145120641993888%;background:var(--draw)"></i><i style="width:39.767191325023084%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 33%</span><span>X · 27%</span><span>2 · 40%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.28 – 1.43</b></span>
   <span>Top: <span class="pick">12</span> 73%</span></div>
@@ -3926,7 +3927,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · mar 27/10 20:45</span>
   <span class="rel muted">affidabilità 90/100</span></div>
   <div class="teams">Roma – Cagliari</div>
-  <div class="bar"><i style="width:62.76651281124484%;background:var(--home)"></i><i style="width:21.608849392024602%;background:var(--draw)"></i><i style="width:15.624637796730557%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:62.766492321768894%;background:var(--home)"></i><i style="width:21.608856176699984%;background:var(--draw)"></i><i style="width:15.624651501531098%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 63%</span><span>X · 22%</span><span>2 · 16%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>2.05 – 0.93</b></span>
   <span>Top: <span class="pick">1° tempo Over 0.5</span> 74%</span></div>
@@ -4075,7 +4076,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · mar 27/10 20:45</span>
   <span class="rel muted">affidabilità 90/100</span></div>
   <div class="teams">Torino – Como</div>
-  <div class="bar"><i style="width:26.90756014881326%;background:var(--home)"></i><i style="width:25.756031698720317%;background:var(--draw)"></i><i style="width:47.33640815246643%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:26.90757361333368%;background:var(--home)"></i><i style="width:25.756034043679787%;background:var(--draw)"></i><i style="width:47.33639234298654%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 27%</span><span>X · 26%</span><span>2 · 47%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.19 – 1.65</b></span>
   <span>Top: <span class="pick">12</span> 74%</span></div>
@@ -4224,7 +4225,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · mer 28/10 18:30</span>
   <span class="rel muted">affidabilità 90/100</span></div>
   <div class="teams">AC Milan – Bologna</div>
-  <div class="bar"><i style="width:38.04886770044179%;background:var(--home)"></i><i style="width:29.11720815732435%;background:var(--draw)"></i><i style="width:32.83392414223388%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:38.04886368728126%;background:var(--home)"></i><i style="width:29.117207370232762%;background:var(--draw)"></i><i style="width:32.833928942485976%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 38%</span><span>X · 29%</span><span>2 · 33%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.26 – 1.15</b></span>
   <span>Top: <span class="pick">Casa Over 0.5</span> 72%</span></div>
@@ -4373,7 +4374,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · mer 28/10 18:30</span>
   <span class="rel muted">affidabilità 90/100</span></div>
   <div class="teams">Parma Calcio 1913 – Udinese</div>
-  <div class="bar"><i style="width:35.55214134327833%;background:var(--home)"></i><i style="width:29.984629581677346%;background:var(--draw)"></i><i style="width:34.463229075044325%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:35.552150741285196%;background:var(--home)"></i><i style="width:29.984625695984114%;background:var(--draw)"></i><i style="width:34.46322356273067%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 36%</span><span>X · 30%</span><span>2 · 34%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.16 – 1.14</b></span>
   <span>Top: <span class="pick">1° tempo Under 1.5</span> 72%</span></div>
@@ -4522,7 +4523,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · mer 28/10 18:30</span>
   <span class="rel muted">affidabilità 90/100</span></div>
   <div class="teams">Venezia – Inter</div>
-  <div class="bar"><i style="width:10.533031076564924%;background:var(--home)"></i><i style="width:13.822507015852187%;background:var(--draw)"></i><i style="width:75.64446190758287%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:10.533043897840235%;background:var(--home)"></i><i style="width:13.822520132965826%;background:var(--draw)"></i><i style="width:75.64443596919392%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 11%</span><span>X · 14%</span><span>2 · 76%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.18 – 3.14</b></span>
   <span>Top: <span class="pick">2</span> 76%</span></div>
@@ -4671,7 +4672,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · mer 28/10 20:45</span>
   <span class="rel muted">affidabilità 90/100</span></div>
   <div class="teams">Genoa – Juventus</div>
-  <div class="bar"><i style="width:21.380932417645486%;background:var(--home)"></i><i style="width:29.469043514987845%;background:var(--draw)"></i><i style="width:49.15002406736666%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:21.380948930411773%;background:var(--home)"></i><i style="width:29.46904405281623%;background:var(--draw)"></i><i style="width:49.150007016772%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 21%</span><span>X · 29%</span><span>2 · 49%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>0.80 – 1.36</b></span>
   <span>Top: <span class="pick">12</span> 71%</span></div>
@@ -4820,7 +4821,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="mrow"><span class="small muted">🇮🇹 Serie A · mer 28/10 20:45</span>
   <span class="rel muted">affidabilità 90/100</span></div>
   <div class="teams">Monza – Napoli</div>
-  <div class="bar"><i style="width:27.300763082882856%;background:var(--home)"></i><i style="width:23.726843800410165%;background:var(--draw)"></i><i style="width:48.97239311670699%;background:var(--away)"></i></div>
+  <div class="bar"><i style="width:27.300769846164318%;background:var(--home)"></i><i style="width:23.72684835666135%;background:var(--draw)"></i><i style="width:48.972381797174314%;background:var(--away)"></i></div>
   <div class="legend"><span>1 · 27%</span><span>X · 24%</span><span>2 · 49%</span></div>
   <div class="mrow small" style="margin-top:6px"><span>Gol attesi <b>1.36 – 1.87</b></span>
   <span>Top: <span class="pick">12</span> 76%</span></div>
