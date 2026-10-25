@@ -1,0 +1,113 @@
+
+===== rw_epl.html | 200 | 491899 chars | https://www.rotowire.com/soccer/lineups.php?league=EPL
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	        <script src="https://bet.rotowire.com/js/app.js"></script>
+        
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({"sport_name":"soccer","sport_content":"fantasy","event":"content_grouping"});
+    </script>
+    <script async src="https://js.verisoul.ai/prod/bundle.js" verisoul-project-id="9c5ac82a-bf8
+
+===== rw_liga.html | 200 | 449918 chars | https://www.rotowire.com/soccer/lineups.php?league=LIGA
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	        <script src="https://bet.rotowire.com/js/app.js"></script>
+        
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({"sport_name":"soccer","sport_content":"fantasy","event":"content_grouping"});
+    </script>
+    <script async src="https://js.verisoul.ai/prod/bundle.js" verisoul-project-id="9c5ac82a-bf8
+
+===== rw_inj_epl.html | 200 | 338205 chars | https://www.rotowire.com/soccer/injury-report.php?league=EPL
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+            <script src="https://bet.rotowire.com/js/app.js"></script>
+        
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({"sport_name":"soccer","sport_content":"fantasy","event":"content_grouping"});
+    </script>
+    <script async src="https://js.verisoul.ai/prod/bundle.js" verisoul-project-id="9c5ac82a-
+
+===== sg_inj_epl.html | 200 | 311379 chars | https://www.sportsgambler.com/injuries/football/england-premier-league/
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNod
+
+===== sg_lu_epl.html | 200 | 223915 chars | https://www.sportsgambler.com/lineups/football/england-premier-league/
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNod
+
+===== espn_roster.json | 200 | 206414 chars | https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/teams/359/roster
+{"timestamp":"2026-10-25T10:10:28Z","status":"success","season":{"year":2026,"displayName":"2026-27 English Premier League","type":14308,"name":"2026-27 English Premier League"},"athletes":[{"id":"169
+
+===== espn_core_inj.json | 200 | 64 chars | https://sports.core.api.espn.com/v2/sports/soccer/leagues/eng.1/teams/359/injuries
+{"count":0,"pageIndex":0,"pageSize":25,"pageCount":0,"items":[]}
+
+===== fc_premier.html | 200 | 45771 chars | https://www.fantacalcio.it/probabili-formazioni-premier-league
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<script>
+    (function () {
+        // La property e' l'
+
+===== espn_eng_day.json | 200 | 2503 chars | https://site.api.espn.com/apis/site/v2/sports/soccer/eng.1/scoreboard?dates=20261026
+{"leagues":[{"id":"700","uid":"s:600~l:700","name":"English Premier League","abbreviation":"Premier League","midsizeName":"ENG.1","slug":"eng.1","season":{"year":2026,"startDate":"2026-06-01T04:00Z","
+
+===== espn_esp.1.json | 200 | 53182 chars | https://site.api.espn.com/apis/site/v2/sports/soccer/esp.1/scoreboard
+{"leagues":[{"id":"740","uid":"s:600~l:740","name":"Spanish LALIGA","abbreviation":"LALIGA","midsizeName":"ESP.1","slug":"esp.1","season":{"year":2026
+
+===== espn_ger.1.json | 200 | 26621 chars | https://site.api.espn.com/apis/site/v2/sports/soccer/ger.1/scoreboard
+{"leagues":[{"id":"720","uid":"s:600~l:720","name":"German Bundesliga","abbreviation":"Bundesliga","midsizeName":"GER.1","slug":"ger.1","season":{"yea
+
+===== espn_fra.1.json | 200 | 74176 chars | https://site.api.espn.com/apis/site/v2/sports/soccer/fra.1/scoreboard
+{"leagues":[{"id":"710","uid":"s:600~l:710","name":"French Ligue 1","abbreviation":"Ligue 1","midsizeName":"FRA.1","slug":"fra.1","season":{"year":202
+
+===== us_EPL.json | 200 | 291934 chars | https://understat.com/getLeagueData/EPL/2026
+{"teams":{"71":{"id":"71","title":"Aston Villa","history":[{"h_a":"a","xG":0.275249,"xGA":4.00327,"n
+
+===== us_La_liga.json | 200 | 317113 chars | https://understat.com/getLeagueData/La_liga/2026
+{"teams":{"137":{"id":"137","title":"Malaga","history":[{"h_a":"a","xG":0.229576,"xGA":1.34391,"npxG
+
+===== us_Bundesliga.json | 200 | 253541 chars | https://understat.com/getLeagueData/Bundesliga/2026
+{"teams":{"117":{"id":"117","title":"Bayern Munich","history":[{"h_a":"h","xG":4.07897,"xGA":1.24951
+
+===== us_Ligue_1.json | 200 | 256633 chars | https://understat.com/getLeagueData/Ligue_1/2026
+{"teams":{"160":{"id":"160","title":"Lille","history":[{"h_a":"a","xG":1.21456,"xGA":1.85763,"npxG":
+
+===== us_EPL_2025.json | 200 | 529950 chars | https://understat.com/getLeagueData/EPL/2025
+{"teams":{"71":{"id":"71","title":"Aston Villa","history":[{"h_a":"h","xG":0.318601,"xGA":1.40098,"n
+
+===== us_Serie_A_2025.json | 200 | 543256 chars | https://understat.com/getLeagueData/Serie_A/2025
+{"teams":{"94":{"id":"94","title":"Verona","history":[{"h_a":"a","xG":0.799203,"xGA":1.05058,"npxG":
