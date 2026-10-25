@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>Storico pronostici</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f5f1;--card:#fff;--ink:#14181f;--muted:#5d6672;--line:#e2e5df;--accent:#0b7a4b;--accent-soft:#e3f3ea;
+--home:#0b7a4b;--draw:#9aa3ad;--away:#c2410c;--warn:#b45309;--warn-soft:#fdf3e1;--bad:#b91c1c;--good:#15803d;--chip:#eef0ea}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1116;--card:#171b22;--ink:#e8ebef;--muted:#98a2ae;
+--line:#262c35;--accent:#34d399;--accent-soft:#11291f;--home:#34d399;--draw:#6b7480;--away:#fb923c;--warn:#fbbf24;
+--warn-soft:#2a2010;--bad:#f87171;--good:#4ade80;--chip:#1f242c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px 48px}
+header.top{padding:20px 0 8px;display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+h1,h2,h3{font-family:"Barlow Condensed",Inter,sans-serif;letter-spacing:.3px;margin:0}
+h1{font-size:30px;line-height:1}
+h2{font-size:22px;margin:28px 0 10px}
+h3{font-size:17px;margin:14px 0 6px}
+.muted{color:var(--muted)}.small{font-size:13px}
+.nav{margin-left:auto;display:flex;gap:14px;font-weight:600}
+.note{background:var(--warn-soft);border-left:3px solid var(--warn);padding:10px 12px;border-radius:8px;font-size:13px;margin:10px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.slip{border:2px solid var(--accent)}
+.slip-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.big{font-family:"Barlow Condensed";font-size:30px;font-weight:700;line-height:1}
+.leg{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:9px 0;border-top:1px dashed var(--line)}
+.leg:first-of-type{border-top:0}
+.pick{font-weight:600;color:var(--accent)}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:var(--chip);color:var(--muted);white-space:nowrap}
+.tag.real{background:var(--accent-soft);color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600}
+td.r,th.r{text-align:right;white-space:nowrap}
+.scroll{overflow-x:auto}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chips button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+.chips button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+details.match{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;overflow:hidden}
+details.match>summary{list-style:none;cursor:pointer;padding:12px 14px}
+details.match>summary::-webkit-details-marker{display:none}
+.mrow{display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+.teams{font-weight:600;font-size:16px}
+.bar{display:flex;height:8px;border-radius:99px;overflow:hidden;margin:8px 0 4px;background:var(--line)}
+.bar i{display:block}
+.legend{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.body{padding:0 14px 14px;border-top:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.dist{display:flex;gap:3px;align-items:flex-end;height:46px;margin-top:4px}
+.dist div{flex:1;background:var(--accent);opacity:.85;border-radius:3px 3px 0 0;position:relative;min-height:2px}
+.dist-l{display:flex;gap:3px;font-size:11px;color:var(--muted)}.dist-l span{flex:1;text-align:center}
+ul.an{padding-left:18px;margin:8px 0}ul.an li{margin:4px 0}
+details.fam{border-top:1px solid var(--line)}details.fam summary{cursor:pointer;padding:7px 0;font-weight:600;font-size:14px}
+.ok{color:var(--good);font-weight:600}.ko{color:var(--bad);font-weight:600}
+.rel{font-size:12px}
+footer{margin-top:30px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div><h1>Storico</h1><div class="muted small">Aggiornato il 25/10/2026 alle 11:22</div></div>
+  <nav class="nav"><a href="index.html">Pronostici</a><a href="storico.html">Storico</a></nav>
+</header>
+
+<div class="note">Qui il sistema si mette alla prova da solo: ogni pronostico viene salvato prima della partita e controllato
+dopo il risultato. Servono almeno 50-100 schedine prima di giudicare: su pochi casi conta soprattutto la fortuna.</div>
+
+<h2>Schedine ufficiali</h2>
+<div class="card">
+<div class="muted">Ancora nessuna schedina conclusa. La prima schedina ufficiale è quella generata alla prima esecuzione di ogni giorno.</div>
+</div>
+
+<h2>Precisione delle probabilità</h2>
+<div class="card scroll">
+<div class="muted">Dati insufficienti: tornerà utile dopo le prime giornate.</div>
+</div>
+
+<h2>Ultime schedine</h2>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-25 · del giorno</b>
+<span>quota 2.00 · <span class="tag">in corso</span></span></div>
+<div class="small">Atalanta – Frosinone: <b>Over 2.5</b>
+<span class="muted">(da giocare)</span></div><div class="small">Liverpool – Brighton: <b>Under 3.5</b>
+<span class="muted">(da giocare)</span></div>
+</div>
+
+
+<h2>Ultimi pronostici verificati</h2>
+<div class="card scroll"><table>
+<tr><th>Data</th><th>Partita</th><th>Pronostico</th><th class="r">Prob.</th><th class="r">Esito</th></tr>
+<tr><td colspan="5" class="muted">Ancora nessun pronostico verificato.</td></tr>
+</table></div>
+</div>
+</body>
+</html>
