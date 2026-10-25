@@ -41,6 +41,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
 {% else %}<div class="card muted">Oggi non ci sono partite adatte nei 5 campionati (o sono già iniziate).</div>{% endif %}
 
 <h2>Schedine dei prossimi giorni</h2>
+{% if slips_day %}<div class="muted small">Alternative con partite diverse da quelle della schedina del giorno.</div>{% endif %}
 {% for s in slips_window %}{{ slipcard(s, ["La più probabile", "Alternativa", "Seconda alternativa"][loop.index0]) }}
 {% else %}<div class="card muted">Nessuna combinazione con quota tra 2 e 3 rispetta i criteri di affidabilità.</div>{% endfor %}
 

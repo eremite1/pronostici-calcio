@@ -115,7 +115,8 @@ def run():
     all_matches.sort(key=lambda m: m["kickoff_utc"])
     today_matches = [m for m in all_matches if m["date_local"] == today_local.isoformat()]
     slips_day = picks.build_slips(today_matches) if today_matches else []
-    slips_window = picks.build_slips(all_matches)
+    day_ids = [l["match_id"] for l in slips_day[0]["legs"]] if slips_day else []
+    slips_window = picks.build_slips(all_matches, exclude_ids=day_ids)
     best = picks.global_best(all_matches)
 
     history.save_predictions(all_matches, now)

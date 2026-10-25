@@ -56,8 +56,9 @@ def slip_candidates(match, k=8):
     return out[:k]
 
 
-def build_slips(matches, n_best=3):
-    pool = [m for m in matches if m["reliability"] >= config.MIN_RELIABILITY and not m.get("started")]
+def build_slips(matches, n_best=3, exclude_ids=()):
+    pool = [m for m in matches if m["reliability"] >= config.MIN_RELIABILITY and not m.get("started")
+            and m["id"] not in set(exclude_ids)]
     cands = {m["id"]: slip_candidates(m) for m in pool}
     pool = [m for m in pool if cands[m["id"]]]
     found = []
