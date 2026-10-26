@@ -1,0 +1,37 @@
+{
+ "generated": "2026-10-26T13:28:55.825354+00:00",
+ "giorno": [],
+ "prossimi": [
+  {
+   "prob": 0.4504649012586607,
+   "odds": 2.01,
+   "fair": 2.22,
+   "legs": [
+    {
+     "match_id": "31646",
+     "league": "Serie A",
+     "flag": "🇮🇹",
+     "home": "Parma Calcio 1913",
+     "away": "Udinese",
+     "kickoff": "mer 28/10 18:30",
+     "pick": "12",
+     "p": 0.7051982595761019,
+     "odds": 1.35,
+     "is_real": false
+    },
+    {
+     "match_id": "31642",
+     "league": "Serie A",
+     "flag": "🇮🇹",
+     "home": "Fiorentina",
+     "away": "Atalanta",
+     "kickoff": "gio 29/10 20:45",
+     "pick": "X2",
+     "p": 0.6387776701681557,
+     "odds": 1.49,
+     "is_real": false
+    }
+   ]
+  }
+ ]
+}
