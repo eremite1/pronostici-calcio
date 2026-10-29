@@ -1,7 +1,7 @@
 name: Calcola pronostici
 
 # Ogni esecuzione resta attiva fino a ~5 ore e mezza e ricalcola tutto ogni 30 minuti;
-# alla fine avvia da sola l'esecuzione successiva. Di notte (2:00-8:00 ora italiana) si ferma.
+# alla fine avvia da sola l'esecuzione successiva. Di notte (2:00-7:00 ora italiana) un giro all'ora.
 # Gli orari qui sotto servono solo da riserva, per farla ripartire se la catena si interrompe
 # (GitHub spesso li ritarda o li salta, per questo ce ne sono diversi).
 on:
@@ -56,13 +56,12 @@ jobs:
               done
             fi
             ora=$(TZ=Europe/Rome date +%-H)
-            if [ "$ora" -ge 2 ] && [ "$ora" -lt 8 ]; then
-              echo "Notte: la catena si ferma, riparte al mattino"; break
-            fi
-            if [ $(( $(date +%s) + 30*60 )) -gt "$fine" ]; then
+            attesa=1800
+            if [ "$ora" -ge 2 ] && [ "$ora" -lt 7 ]; then attesa=3600; fi   # di notte un giro all'ora
+            if [ $(( $(date +%s) + attesa )) -gt "$fine" ]; then
               echo "Avvio l'esecuzione successiva"
               gh workflow run pronostici.yml --ref main || true
               break
             fi
-            sleep 1800
+            sleep $attesa
           done
