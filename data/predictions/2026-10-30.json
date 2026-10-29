@@ -1,6 +1,6 @@
 {
  "32012": {
-  "generated": "2026-10-29T09:21:08.120993+00:00",
+  "generated": "2026-10-29T09:51:38.515451+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Le Havre",
@@ -48,7 +48,7 @@
    },
    {
     "name": "Casa Over 0.5",
-    "p": 0.6426,
+    "p": 0.6427,
     "odds": 1.43
    }
   ],
@@ -96,8 +96,8 @@
    "Multigol casa 2-3": 0.2541,
    "Multigol casa 2-4": 0.2708,
    "Multigol casa 3-4": 0.0816,
-   "Casa Over 0.5": 0.6426,
-   "Casa Under 0.5": 0.3574,
+   "Casa Over 0.5": 0.6427,
+   "Casa Under 0.5": 0.3573,
    "Casa Over 1.5": 0.2749,
    "Casa Under 1.5": 0.7251,
    "Casa Over 2.5": 0.0857,
@@ -147,7 +147,7 @@
    "2 + Multigol 1-4": 0.4396,
    "1X + Over 1.5": 0.3253,
    "1X + Over 2.5": 0.1818,
-   "1X + Under 2.5": 0.2523,
+   "1X + Under 2.5": 0.2524,
    "1X + Under 3.5": 0.3159,
    "1X + Under 4.5": 0.388,
    "1X + Goal": 0.284,
@@ -161,7 +161,7 @@
    "X2 + Under 3.5": 0.5272,
    "X2 + Under 4.5": 0.6699,
    "X2 + Goal": 0.4514,
-   "X2 + No Goal": 0.3574,
+   "X2 + No Goal": 0.3573,
    "X2 + Multigol 1-3": 0.4631,
    "X2 + Multigol 2-4": 0.5146,
    "X2 + Multigol 1-4": 0.6058,
@@ -194,7 +194,7 @@
   }
  },
  "32765": {
-  "generated": "2026-10-29T09:21:08.120993+00:00",
+  "generated": "2026-10-29T09:51:38.515451+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Elversberg",
@@ -267,7 +267,7 @@
    "Under 5.5": 0.7851,
    "Goal": 0.7538,
    "No Goal": 0.2462,
-   "Multigol 1-2": 0.2124,
+   "Multigol 1-2": 0.2125,
    "Multigol 1-3": 0.4078,
    "Multigol 1-4": 0.6032,
    "Multigol 1-5": 0.7595,
@@ -388,7 +388,7 @@
   }
  },
  "30879": {
-  "generated": "2026-10-29T09:21:08.120993+00:00",
+  "generated": "2026-10-29T09:51:38.515451+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Villarreal",
@@ -567,7 +567,7 @@
    "Goal + Under 2.5": 0.0999,
    "Goal + Under 3.5": 0.2437,
    "Goal + Over 1.5": 0.5668,
-   "No Goal + Over 2.5": 0.1467,
+   "No Goal + Over 2.5": 0.1466,
    "No Goal + Under 2.5": 0.2865,
    "No Goal + Under 3.5": 0.3657,
    "No Goal + Over 1.5": 0.267,
@@ -582,7 +582,7 @@
   }
  },
  "32013": {
-  "generated": "2026-10-29T09:21:08.120993+00:00",
+  "generated": "2026-10-29T09:51:38.515451+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Lille",
