@@ -135,6 +135,13 @@ def fd_fixture_odds(div):
 
 # ---------------------------------------------------------------- ESPN (stadio, città, possesso palla)
 
+def _int(x):
+    try:
+        return int(x)
+    except (TypeError, ValueError):
+        return None
+
+
 def espn_events(espn_code, day):
     url = f"https://site.api.espn.com/apis/site/v2/sports/soccer/{espn_code}/scoreboard?dates={day:%Y%m%d}"
     d = get_json(url, tries=2)
@@ -145,7 +152,13 @@ def espn_events(espn_code, day):
             teams = {c["homeAway"]: c["team"] for c in comp["competitors"]}
             venue = comp.get("venue") or {}
             addr = venue.get("address") or {}
+            sc = {c["homeAway"]: c.get("score") for c in comp["competitors"]}
+            stype = ((e.get("status") or {}).get("type") or {})
             out.append(dict(id=e["id"], when=e.get("date"), home=teams["home"]["displayName"],
+                            finished=bool(stype.get("completed")) and stype.get("name") in
+                            ("STATUS_FULL_TIME", "STATUS_FINAL", "STATUS_FINAL_AET", "STATUS_FINAL_PEN",
+                             "STATUS_END_OF_EXTRATIME"),
+                            state=stype.get("state"), hg=_int(sc.get("home")), ag=_int(sc.get("away")),
                             away=teams["away"]["displayName"], home_id=teams["home"].get("id"),
                             away_id=teams["away"].get("id"), venue=venue.get("fullName"),
                             city=addr.get("city"), country=addr.get("country")))

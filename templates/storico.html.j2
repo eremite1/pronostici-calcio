@@ -39,9 +39,10 @@ dopo il risultato. Servono almeno 50-100 schedine prima di giudicare: su pochi c
 {% for sl in s.recent_slips %}
 <div class="card">
 <div class="slip-head"><b>{{ sl.day }} · {{ "del giorno" if sl.kind == "giorno" else "prossimi giorni" }}</b>
-<span>quota {{ sl.odds|num }} · {% if not sl.done %}<span class="tag">in corso</span>{% elif sl.won %}<span class="ok">VINTA</span>{% else %}<span class="ko">PERSA</span>{% endif %}</span></div>
+<span>quota {{ sl.odds|num }} · {% if not sl.done %}<span class="tag">{{ "in corso" if sl.legs|selectattr("state","equalto","in corso")|list else ("in attesa" if sl.legs|selectattr("ok","none")|rejectattr("state","equalto","da giocare")|list else "da giocare") }}</span>{% elif sl.won %}<span class="ok">VINTA</span>{% else %}<span class="ko">PERSA</span>{% endif %}</span></div>
 {% for l in sl.legs %}<div class="small">{{ l.home }} – {{ l.away }}: <b>{{ l.pick }}</b>
-{% if l.ok is none %}<span class="muted">(da giocare)</span>{% elif l.ok %}<span class="ok">✓ {{ l.score }}</span>{% else %}<span class="ko">✗ {{ l.score }}</span>{% endif %}</div>{% endfor %}
+<span class="small muted">· {{ l.kickoff }}</span>
+{% if l.ok is none %}<span class="muted">({{ l.state or "da giocare" }})</span>{% elif l.ok %}<span class="ok">✓ {{ l.score }}</span>{% else %}<span class="ko">✗ {{ l.score }}</span>{% endif %}</div>{% endfor %}
 </div>
 {% else %}<div class="card muted">Nessuna schedina registrata.</div>{% endfor %}
 

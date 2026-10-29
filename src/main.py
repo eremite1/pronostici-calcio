@@ -35,6 +35,7 @@ def run():
     horizon = now + dt.timedelta(days=config.DAYS_AHEAD)
     all_matches, results_by_id, fd_index, league_status = [], {}, {}, []
     possession_budget = [300]
+    live_ids = set()
 
     for L in config.LEAGUES:
         print(f"\n=== {L['name']}")
@@ -55,6 +56,21 @@ def run():
             for m in cur_m:
                 if m["played"]:
                     results_by_id[m["id"]] = (m["hg"], m["ag"])
+            # risultati appena finiti: ESPN li ha subito, Understat a volte dopo ore
+            pending = [m for m in cur_m if not m["played"] and now - dt.timedelta(days=5) < m["when"] <= now]
+            if pending:
+                got = 0
+                for d in sorted({m["when"].date() for m in pending}):
+                    for e in sources.espn_events(L["espn"], d):
+                        h, a = names.match_team(e["home"], teams), names.match_team(e["away"], teams)
+                        for m in pending:
+                            if m["home"] == h and m["away"] == a:
+                                if e.get("finished") and e.get("hg") is not None:
+                                    results_by_id[m["id"]] = (e["hg"], e["ag"])
+                                    got += 1
+                                elif e.get("state") == "in":
+                                    live_ids.add(m["id"])
+                print(f"  risultati da ESPN: {got} (in attesa su Understat: {len(pending)})")
             rt = model.fit_ratings(played, teams, now, prev_teams)
             print(f"  forza squadre calcolata su {rt['n']} partite (vantaggio casa {np.exp(rt['home']):.2f}x)")
             hist = sources.understat_team_history(cur)
@@ -129,7 +145,7 @@ def run():
                 return (r["hthg"], r["htag"])
         return None
 
-    picks_rows, slip_rows = history.evaluate(results_by_id, ht_lookup)
+    picks_rows, slip_rows = history.evaluate(results_by_id, ht_lookup, now, live_ids)
     summary = history.summarize(picks_rows, slip_rows)
 
     ctx = dict(generated=now.astimezone(ROME).strftime("%d/%m/%Y alle %H:%M"), today=local_label(now)[:9],

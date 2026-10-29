@@ -53,12 +53,14 @@ def save_official_slips(slips_day, slips_window, today_local, now):
     _save(p, dict(generated=now.isoformat(), giorno=slips_day[:1], prossimi=slips_window[:1]))
 
 
-def evaluate(results_by_id, ht_lookup):
+def evaluate(results_by_id, ht_lookup, now=None, live_ids=()):
     """Confronta i pronostici con i risultati veri. results_by_id: id -> (gol casa, gol ospite)."""
     picks_rows, slips_rows = [], []
+    kick = {}
     for p in sorted(glob.glob(os.path.join(PRED_DIR, "*.json")))[-120:]:
         d = _load(p, {})
         for mid, pr in d.items():
+            kick[mid] = pr.get("kickoff")
             if mid not in results_by_id:
                 continue
             hg, ag = results_by_id[mid]
@@ -80,13 +82,27 @@ def evaluate(results_by_id, ht_lookup):
                     r = results_by_id.get(leg["match_id"])
                     if not r:
                         done = False
-                        legs.append(dict(leg, ok=None, score=None))
+                        ko = kick.get(leg["match_id"])
+                        started = False
+                        if ko and now is not None:
+                            try:
+                                started = dt.datetime.fromisoformat(ko) <= now
+                            except ValueError:
+                                pass
+                        if leg["match_id"] in live_ids:
+                            state = "in corso"
+                        elif started:
+                            state = "in attesa del risultato"
+                        else:
+                            state = "da giocare"
+                        legs.append(dict(leg, ok=None, score=None, state=state))
                         continue
                     ok = market_outcome(leg["pick"], r[0], r[1])
                     won = won and bool(ok)
-                    legs.append(dict(leg, ok=ok, score=f"{r[0]}-{r[1]}"))
+                    legs.append(dict(leg, ok=ok, score=f"{r[0]}-{r[1]}", state="finita"))
+                lost = any(l["ok"] is False for l in legs)
                 slips_rows.append(dict(day=day, kind=kind, odds=s["odds"], prob=s["prob"], legs=legs,
-                                       done=done, won=(won if done else None)))
+                                       done=done or lost, won=(False if lost else (won if done else None))))
     # schedine identiche (giorno = prossimi) contate una volta sola
     seen, uniq = set(), []
     for s in slips_rows:

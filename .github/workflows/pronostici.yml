@@ -1,13 +1,25 @@
 name: Calcola pronostici
 
+# Ogni esecuzione resta attiva fino a ~5 ore e mezza e ricalcola tutto ogni 30 minuti;
+# alla fine avvia da sola l'esecuzione successiva. Di notte (2:00-8:00 ora italiana) si ferma.
+# Gli orari qui sotto servono solo da riserva, per farla ripartire se la catena si interrompe
+# (GitHub spesso li ritarda o li salta, per questo ce ne sono diversi).
 on:
   schedule:
-    - cron: "33 6 * * *"     # ogni mattina (07:33 ora italiana d'inverno, 08:33 d'estate)
-    - cron: "7 9-20 * * *"   # ogni ora dalle 10 alle 21 circa: aggiorna formazioni e assenze prima delle partite
-  workflow_dispatch:          # pulsante "Run workflow" per lanciarlo a mano
+    - cron: "11 5 * * *"
+    - cron: "41 5 * * *"
+    - cron: "17 6 * * *"
+    - cron: "53 6 * * *"
+    - cron: "29 8 * * *"
+    - cron: "47 11 * * *"
+    - cron: "23 15 * * *"
+    - cron: "59 18 * * *"
+    - cron: "37 21 * * *"
+  workflow_dispatch:
 
 permissions:
   contents: write
+  actions: write
 
 concurrency:
   group: pronostici
@@ -16,7 +28,9 @@ concurrency:
 jobs:
   run:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 350
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
@@ -24,16 +38,31 @@ jobs:
           python-version: "3.12"
           cache: pip
       - run: pip install -r requirements.txt
-      - name: Calcola
-        run: python -m src.main
-      - name: Salva i risultati
+      - name: Calcola ogni 30 minuti
         run: |
           git config user.name "pronostici-bot"
           git config user.email "actions@github.com"
-          git add docs data
-          if git diff --cached --quiet; then echo "Niente di nuovo"; exit 0; fi
-          git commit -m "Pronostici aggiornati $(date -u +'%Y-%m-%d %H:%M') UTC"
-          for i in 1 2 3; do
-            git pull --rebase -X theirs origin main && git push origin main && break
-            sleep 5
+          fine=$(( $(date +%s) + 330*60 ))
+          while true; do
+            git pull -q --rebase -X theirs origin main || true
+            pip install -q -r requirements.txt
+            python -m src.main || echo "Esecuzione con errori"
+            git add docs data
+            if ! git diff --cached --quiet; then
+              git commit -qm "Pronostici aggiornati $(date -u +'%Y-%m-%d %H:%M') UTC"
+              for i in 1 2 3; do
+                git pull -q --rebase -X theirs origin main && git push -q origin main && break
+                sleep 5
+              done
+            fi
+            ora=$(TZ=Europe/Rome date +%-H)
+            if [ "$ora" -ge 2 ] && [ "$ora" -lt 8 ]; then
+              echo "Notte: la catena si ferma, riparte al mattino"; break
+            fi
+            if [ $(( $(date +%s) + 30*60 )) -gt "$fine" ]; then
+              echo "Avvio l'esecuzione successiva"
+              gh workflow run pronostici.yml --ref main || true
+              break
+            fi
+            sleep 1800
           done
