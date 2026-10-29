@@ -1,6 +1,6 @@
 {
  "31643": {
-  "generated": "2026-10-29T12:55:17.243137+00:00",
+  "generated": "2026-10-29T13:25:38.274555+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Frosinone",
@@ -33,7 +33,7 @@
    },
    {
     "name": "Multigol ospite 1-4",
-    "p": 0.7045,
+    "p": 0.7044,
     "odds": 1.28
    },
    {
@@ -105,7 +105,7 @@
    "Multigol ospite 0-1": 0.6445,
    "Multigol ospite 1-2": 0.582,
    "Multigol ospite 1-3": 0.6753,
-   "Multigol ospite 1-4": 0.7045,
+   "Multigol ospite 1-4": 0.7044,
    "Multigol ospite 2-3": 0.3172,
    "Multigol ospite 2-4": 0.3463,
    "Multigol ospite 3-4": 0.1225,
@@ -194,7 +194,7 @@
   }
  },
  "31642": {
-  "generated": "2026-10-29T12:55:17.243137+00:00",
+  "generated": "2026-10-29T13:25:38.274555+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Fiorentina",
