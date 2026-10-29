@@ -14,6 +14,21 @@
 <div class="note">Qui il sistema si mette alla prova da solo: ogni pronostico viene salvato prima della partita e controllato
 dopo il risultato. Servono almeno 50-100 schedine prima di giudicare: su pochi casi conta soprattutto la fortuna.</div>
 
+<h2>Verifica sul passato</h2>
+<div class="card small">
+<p style="margin-top:0">Il modello ha rigiocato <b>5.127 partite</b> delle stagioni 2023-24, 2024-25 e 2025-26 dei cinque campionati,
+usando ogni volta solo i dati disponibili prima della partita, e il risultato è stato confrontato con le quote reali.</p>
+<table>
+<tr><th>Strategia (quote medie dei bookmaker)</th><th class="r">Giocate</th><th class="r">Resa</th></tr>
+<tr><td>Schedina giornaliera di 2 partite a quota 2-3, la più probabile</td><td class="r">435</td><td class="r ko">−10,6%</td></tr>
+<tr><td>Singole sul pronostico più probabile (quote 1,20-1,60)</td><td class="r">2.074</td><td class="r ko">−2,6%</td></tr>
+<tr><td>Le stesse, giocate sempre al bookmaker con la quota più alta</td><td class="r">2.074</td><td class="r">−0,2%</td></tr>
+<tr><td>"Valore": quando il modello vede più probabilità delle quote</td><td class="r">1.151</td><td class="r ko">−11,8%</td></tr>
+</table>
+<p>Le percentuali sono ben tarate (pronostici al 70-80% riusciti il 76% delle volte), ma <b>le quote dei bookmaker sono risultate
+più precise del modello</b> e nessuna strategia ha guadagnato. Per questo le percentuali mostrate danno più peso alle quote reali.</p>
+</div>
+
 <h2>Schedine ufficiali</h2>
 <div class="card">
 {% if s.n_slips %}

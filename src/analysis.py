@@ -128,15 +128,25 @@ def write_analysis(m):
         fav = f"{H} favorita ({p1 * 100:.0f}%)"
     else:
         fav = f"{A} favorita ({p2 * 100:.0f}%)"
-    out.append(f"Sintesi: gol attesi {lh:.2f} – {la:.2f}, partita {tipo}, {fav}. "
-               f"Risultato più probabile {m['exact'][0]['score']}.")
+    ex = m["exact"][0]
+    ptot = m["goals_tot"]["dist"]
+    over = 1 - sum(ptot[:3])
+    band = (f"il {over * 100:.0f}% delle volte ci saranno 3 o più gol" if over >= 0.5
+            else f"il {(1 - over) * 100:.0f}% delle volte ci saranno al massimo 2 gol")
+    out.append(f"Sintesi: gol attesi {lh:.2f} – {la:.2f} (in media, non un risultato), partita {tipo}, {fav}. "
+               f"Il risultato esatto più frequente è {ex['score']}, ma solo nel {ex['p'] * 100:.0f}% dei casi: "
+               f"conta di più che {band}.")
     mk = m.get("market")
     if mk:
         mod = m["p1x2_model"]
-        for lab, i, k in (("1", 0, "H"), ("X", 1, "D"), ("2", 2, "A")):
-            if mod[i] - mk[k] >= 0.06:
-                out.append(f"Il modello vede il segno {lab} più probabile di quanto dicano le quote "
-                           f"({mod[i] * 100:.0f}% contro {mk[k] * 100:.0f}% dei bookmaker): possibile valore.")
+        diffs = []
+        for i, k, team in ((0, "H", H), (1, "D", None), (2, "A", A)):
+            if abs(mod[i] - mk[k]) >= 0.07:
+                who = f"la vittoria di {team}" if team else "il pareggio"
+                diffs.append(f"{who} al {mod[i] * 100:.0f}% (quote: {mk[k] * 100:.0f}%)")
+        if diffs:
+            out.append("Le sole statistiche danno " + " e ".join(diffs) + ". Le percentuali mostrate pesano di più "
+                       "le quote, che sul passato si sono rivelate più precise.")
     return out
 
 

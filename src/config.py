@@ -27,11 +27,11 @@ DAYS_AHEAD = 4
 
 # Modello
 XG_WEIGHT = 0.70          # peso degli expected goals rispetto ai gol reali nella forza delle squadre
-HALF_LIFE_DAYS = 150      # le partite vecchie di 150 giorni contano la metà
+HALF_LIFE_DAYS = 250      # le partite vecchie di 250 giorni contano la metà (tarato sul passato)
 RIDGE = 4.0               # prudenza: evita valori estremi quando ci sono poche partite
 PROMOTED_PRIOR = (-0.15, -0.12)  # neopromosse: attacco e difesa partono leggermente sotto la media
-DC_RHO = -0.06            # correzione Dixon-Coles per i risultati con pochi gol
-MARKET_WEIGHT = 0.5       # quanto conta l'opinione dei bookmaker quando le quote reali ci sono
+DC_RHO = -0.10            # correzione Dixon-Coles per i risultati con pochi gol (tarato sul passato)
+MARKET_WEIGHT = 0.85      # peso delle quote reali: sul passato le quote si sono rivelate più precise del modello
 HT_SHARE = 0.45           # quota dei gol segnati nel primo tempo
 
 # Schedina

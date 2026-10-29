@@ -12,7 +12,9 @@
   <nav class="nav"><a href="index.html">Pronostici</a><a href="storico.html">Storico</a></nav>
 </header>
 
-<div class="note">Le percentuali sono stime statistiche, non certezze. Una schedina a quota 2-3 vince, in media,
+<div class="note"><b>Verifica sul passato (5.127 partite, 2023-2026):</b> le percentuali sono affidabili, ma nessuna strategia
+ha battuto i bookmaker: una schedina come questa ogni giorno avrebbe perso circa il 10% di quanto giocato. Dettagli nello <a href="storico.html">Storico</a>.<br>
+Le percentuali sono stime statistiche, non certezze. Una schedina a quota 2-3 vince, in media,
 tra 1 volta su 3 e 1 volta su 2. Le quote con l'etichetta <span class="tag real">reale</span> sono la media dei bookmaker;
 le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle della tua agenzia.</div>
 
@@ -30,7 +32,8 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
     <div class="pick">{{ l.pick }}</div></div>
     <div style="text-align:right"><div class="big" style="font-size:22px">{{ l.odds|num }}</div>
     <div class="small muted">{{ l.p|pct }}</div>
-    {% if l.is_real %}<span class="tag real">reale</span>{% else %}<span class="tag">stimata</span>{% endif %}</div>
+    {% if l.is_real %}<span class="tag real">reale</span>{% else %}<span class="tag">stimata</span>{% endif %}
+    {% if l.best and l.best > l.odds + 0.01 %}<div class="small muted">fino a {{ l.best|num }} sul bookmaker migliore</div>{% endif %}</div>
   </div>
   {% endfor %}
 </div>

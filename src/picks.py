@@ -20,7 +20,12 @@ def price(market, odds):
             a, b = {"1X": ("H", "D"), "X2": ("D", "A"), "12": ("H", "A")}[market["name"]]
             real = round(1 / (1 / odds[a] + 1 / odds[b]), 2)
     est = round(max(1.01, fair * (1 - MARGIN.get(market["fam"], 0.08))), 2)
-    return dict(fair=round(fair, 2), real=real, est=est, used=real or est, is_real=real is not None)
+    best = None
+    if odds:
+        mk = {"1": "maxH", "X": "maxD", "2": "maxA", "Over 2.5": "maxO25", "Under 2.5": "maxU25"}.get(market["name"])
+        if mk and odds.get(mk):
+            best = odds[mk]
+    return dict(fair=round(fair, 2), real=real, est=est, used=real or est, is_real=real is not None, best=best)
 
 
 def top_picks(markets, odds, n=8):
@@ -87,7 +92,8 @@ def build_slips(matches, n_best=3, exclude_ids=()):
         used_sets.append(ids)
         slips.append(dict(prob=prob, odds=round(q, 2), fair=round(1 / prob, 2), legs=[
             dict(match_id=m["id"], league=m["league"], flag=m["flag"], home=m["home"], away=m["away"],
-                 kickoff=m["kickoff_local"], pick=p["name"], p=p["p"], odds=p["used"], is_real=p["is_real"])
+                 kickoff=m["kickoff_local"], pick=p["name"], p=p["p"], odds=p["used"], is_real=p["is_real"],
+                 best=p.get("best"))
             for m, p in zip(combo, picks)]))
         if len(slips) >= n_best:
             break
