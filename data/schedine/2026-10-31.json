@@ -1,0 +1,86 @@
+{
+ "generated": "2026-10-30T23:28:06.759042+00:00",
+ "giorno": [
+  {
+   "prob": 0.4229199417608866,
+   "odds": 2.01,
+   "fair": 2.36,
+   "legs": [
+    {
+     "match_id": "32310",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Bayer Leverkusen",
+     "away": "VfB Stuttgart",
+     "kickoff": "sab 31/10 15:30",
+     "pick": "1X",
+     "p": 0.7516307542044138,
+     "odds": 1.26,
+     "is_real": true,
+     "best": null
+    },
+    {
+     "match_id": "31264",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Bournemouth",
+     "away": "Leeds",
+     "kickoff": "sab 31/10 16:00",
+     "pick": "Over 1.5",
+     "p": 0.7715060446796652,
+     "odds": 1.22,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "31265",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Brentford",
+     "away": "Nottingham Forest",
+     "kickoff": "sab 31/10 16:00",
+     "pick": "1X",
+     "p": 0.729313561002055,
+     "odds": 1.31,
+     "is_real": true,
+     "best": null
+    }
+   ]
+  }
+ ],
+ "prossimi": [
+  {
+   "prob": 0.44723461081867333,
+   "odds": 2.03,
+   "fair": 2.24,
+   "legs": [
+    {
+     "match_id": "30878",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Rayo Vallecano",
+     "away": "Celta Vigo",
+     "kickoff": "sab 31/10 16:15",
+     "pick": "1X",
+     "p": 0.6974916119693133,
+     "odds": 1.37,
+     "is_real": true,
+     "best": null
+    },
+    {
+     "match_id": "32305",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Union Berlin",
+     "away": "FC Cologne",
+     "kickoff": "dom 01/11 15:30",
+     "pick": "1X",
+     "p": 0.6412042856772732,
+     "odds": 1.48,
+     "is_real": true,
+     "best": null
+    }
+   ]
+  }
+ ]
+}
