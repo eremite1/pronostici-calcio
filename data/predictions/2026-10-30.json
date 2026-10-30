@@ -1,6 +1,6 @@
 {
  "32012": {
-  "generated": "2026-10-30T17:22:31.774285+00:00",
+  "generated": "2026-10-30T17:53:01.728647+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Le Havre",
@@ -76,7 +76,7 @@
    "Multigol 1-2": 0.2904,
    "Multigol 1-3": 0.5076,
    "Multigol 1-4": 0.6951,
-   "Multigol 1-5": 0.8245,
+   "Multigol 1-5": 0.8246,
    "Multigol 1-6": 0.8991,
    "Multigol 2-3": 0.4135,
    "Multigol 2-4": 0.601,
@@ -90,14 +90,14 @@
    "Multigol 5-6": 0.204,
    "Multigol 7+": 0.0617,
    "Multigol casa 0-1": 0.7488,
-   "Multigol casa 1-2": 0.545,
+   "Multigol casa 1-2": 0.5449,
    "Multigol casa 1-3": 0.602,
    "Multigol casa 1-4": 0.6157,
    "Multigol casa 2-3": 0.2343,
    "Multigol casa 2-4": 0.2481,
    "Multigol casa 3-4": 0.0708,
-   "Casa Over 0.5": 0.6189,
-   "Casa Under 0.5": 0.3811,
+   "Casa Over 0.5": 0.6188,
+   "Casa Under 0.5": 0.3812,
    "Casa Over 1.5": 0.2512,
    "Casa Under 1.5": 0.7488,
    "Casa Over 2.5": 0.0739,
@@ -161,7 +161,7 @@
    "X2 + Under 3.5": 0.4678,
    "X2 + Under 4.5": 0.6424,
    "X2 + Goal": 0.5001,
-   "X2 + No Goal": 0.3811,
+   "X2 + No Goal": 0.3812,
    "X2 + Multigol 1-3": 0.4285,
    "X2 + Multigol 2-4": 0.532,
    "X2 + Multigol 1-4": 0.6031,
@@ -194,7 +194,7 @@
   }
  },
  "32765": {
-  "generated": "2026-10-30T17:22:31.774285+00:00",
+  "generated": "2026-10-30T17:53:01.728647+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Elversberg",
@@ -388,7 +388,7 @@
   }
  },
  "30879": {
-  "generated": "2026-10-30T17:22:31.774285+00:00",
+  "generated": "2026-10-30T17:53:01.728647+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Villarreal",
@@ -542,7 +542,7 @@
    "1X + No Goal": 0.3762,
    "1X + Multigol 1-3": 0.4434,
    "1X + Multigol 2-4": 0.5334,
-   "1X + Multigol 1-4": 0.6108,
+   "1X + Multigol 1-4": 0.6107,
    "X2 + Over 1.5": 0.2614,
    "X2 + Over 2.5": 0.1515,
    "X2 + Under 2.5": 0.183,
@@ -582,7 +582,7 @@
   }
  },
  "32013": {
-  "generated": "2026-10-30T17:22:31.774285+00:00",
+  "generated": "2026-10-30T17:53:01.728647+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Lille",
