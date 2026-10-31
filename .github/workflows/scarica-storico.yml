@@ -1,19 +1,25 @@
 name: Scarica archivio storico
 on:
   workflow_dispatch:
+    inputs:
+      dal:
+        description: "Data di inizio (AAAA-MM-GG)"
+        default: "2023-07-01"
 permissions:
   contents: write
 jobs:
   get:
     runs-on: ubuntu-latest
+    timeout-minutes: 300
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
       - run: pip install requests
-      - run: python tools/probe_pengwin.py
+      - run: python tools/pengwin_archive.py "${{ github.event.inputs.dal }}"
       - name: Salva nel ramo archivio-storico
+        if: always()
         run: |
           mkdir /tmp/a && mv storico_out /tmp/a/ && cd /tmp/a
           git init -q -b archivio-storico && git config user.name bot && git config user.email actions@github.com
