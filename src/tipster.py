@@ -2,6 +2,7 @@
 import datetime as dt
 import html
 import re
+import time
 
 from . import names
 from .fetch import get_text, load_cache, save_cache
@@ -192,7 +193,7 @@ def extract(h):
 
 
 def recent_articles(days=6):
-    sm = get_text(BASE + "/sitemap.xml", tries=2, timeout=60)
+    sm = get_text(BASE + "/sitemap.xml", tries=4, timeout=90)
     if not sm:
         return None
     since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
@@ -216,7 +217,8 @@ def tips_for(league_key, fixtures, teams, articles):
             continue
         c = cache.get(a["url"])
         if not c or c.get("lastmod") != a["lastmod"]:
-            h = get_text(a["url"], tries=2)
+            h = get_text(a["url"], tries=3)
+            time.sleep(0.5)
             if not h:
                 continue
             c = extract(h)
