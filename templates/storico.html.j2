@@ -50,6 +50,29 @@ più precise del modello</b> e nessuna strategia ha guadagnato. Per questo le pe
 {% else %}<div class="muted">Dati insufficienti: tornerà utile dopo le prime giornate.</div>{% endif %}
 </div>
 
+<h2>Pengwin e schedina incrociata (dal vivo)</h2>
+<div class="card small">
+{% set pw = s.pengwin %}
+{% if pw.n %}
+<table>
+<tr><th></th><th class="r">Pronostici</th><th class="r">Riusciti</th><th class="r">Resa</th></tr>
+<tr><td>Tutti i pronostici di Pengwin</td><td class="r">{{ pw.n }}</td><td class="r">{{ pw.rate|num(0) }}%</td><td class="r {{ 'ok' if pw.roi >= 0 else 'ko' }}">{{ "%+.1f"|format(pw.roi) }}%</td></tr>
+{% set a = s.pengwin_agree %}{% if a.n %}<tr><td>…quando il modello è d'accordo (≥60%)</td><td class="r">{{ a.n }}</td><td class="r">{{ a.rate|num(0) }}%</td><td class="r {{ 'ok' if a.roi >= 0 else 'ko' }}">{{ "%+.1f"|format(a.roi) }}%</td></tr>{% endif %}
+{% set d = s.pengwin_disagree %}{% if d.n %}<tr><td>…quando il modello è contrario (&lt;50%)</td><td class="r">{{ d.n }}</td><td class="r">{{ d.rate|num(0) }}%</td><td class="r {{ 'ok' if d.roi >= 0 else 'ko' }}">{{ "%+.1f"|format(d.roi) }}%</td></tr>{% endif %}
+{% set c = s.cross %}{% if c.n %}<tr><td>Schedine incrociate</td><td class="r">{{ c.n }}</td><td class="r">{{ c.rate|num(0) }}%</td><td class="r {{ 'ok' if c.roi >= 0 else 'ko' }}">{{ "%+.1f"|format(c.roi) }}%</td></tr>{% endif %}
+</table>
+<div class="muted">Resa = guadagno teorico puntando 1 € a pronostico alla quota indicata da Pengwin.</div>
+{% else %}<div class="muted">Ancora nessun pronostico di Pengwin verificato: i primi arriveranno dopo le partite di questo fine settimana.</div>{% endif %}
+</div>
+{% for sl in s.recent_cross %}
+<div class="card">
+<div class="slip-head"><b>{{ sl.day }} · incrociata</b>
+<span>quota {{ sl.odds|num }} · {% if not sl.done %}<span class="tag">in attesa</span>{% elif sl.won %}<span class="ok">VINTA</span>{% else %}<span class="ko">PERSA</span>{% endif %}</span></div>
+{% for l in sl.legs %}<div class="small">{{ l.home }} – {{ l.away }}: <b>{{ l.pick }}</b> <span class="small muted">· {{ l.kickoff }}</span>
+{% if l.ok is none %}<span class="muted">({{ l.state or "da giocare" }})</span>{% elif l.ok %}<span class="ok">✓ {{ l.score }}</span>{% else %}<span class="ko">✗ {{ l.score }}</span>{% endif %}</div>{% endfor %}
+</div>
+{% endfor %}
+
 <h2>Ultime schedine</h2>
 {% for sl in s.recent_slips %}
 <div class="card">

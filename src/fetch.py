@@ -31,6 +31,9 @@ def get(url, headers=None, tries=3, timeout=30, allow_fail=True):
             last = f"HTTP {r.status_code}"
             if r.status_code in (403, 404):
                 break
+            if r.status_code in (202, 429, 503):  # il sito chiede di riprovare più tardi
+                time.sleep(15 * (i + 1))
+                continue
         except Exception as e:  # rete instabile
             last = str(e)
         time.sleep(2 * (i + 1))

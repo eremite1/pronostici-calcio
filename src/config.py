@@ -40,6 +40,7 @@ SLIP_MAX_ODDS = 3.0
 PICK_MIN_PROB = 0.55
 PICK_MIN_ODDS = 1.20
 MIN_RELIABILITY = 60
+CROSS_MIN_PROB = 0.60     # schedina incrociata: probabilità minima che il NOSTRO modello dà al pronostico di Pengwin
 
 
 def season_start_year(today=None):
