@@ -12,7 +12,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
-      - run: python -m src.main > log.txt 2>&1 || echo "ERRORE $?" >> log.txt
+      - run: python tools/probe2.py > log.txt 2>&1 || true
       - if: always()
         run: |
           mkdir /tmp/o && cp -r log.txt docs data /tmp/o/ && cd /tmp/o
