@@ -12,7 +12,7 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install requests
-      - run: python tools/scarica_storico.py
+      - run: python tools/probe_pengwin.py
       - name: Salva nel ramo archivio-storico
         run: |
           mkdir /tmp/a && mv storico_out /tmp/a/ && cd /tmp/a
