@@ -330,6 +330,11 @@ def outcome_fn(name):
     for n, _, fn in MARKETS:
         if n == name:
             return fn
+    if " o " in name:
+        fs = [outcome_fn(x) for x in name.split(" o ")]
+        if all(fs):
+            return lambda h, a, fs=fs: any(f(h, a) for f in fs)
+        return None
     if " + " in name:
         fs = [outcome_fn(x) for x in name.split(" + ")]
         if all(fs):
@@ -353,6 +358,8 @@ def outcome_fn(name):
 
 def prob_of(name, M, Mht=None):
     if name.startswith("1° tempo"):
+        if name in ("1° tempo Under 0.5",):
+            return float(Mht[0, 0]) if Mht is not None else None
         for n, _, fn in HT_MARKETS:
             if n == name and Mht is not None:
                 return float((Mht * _mask(fn, Mht.shape[0])).sum())

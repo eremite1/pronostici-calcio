@@ -62,41 +62,92 @@ def _num(s):
     return s.replace(",", ".")
 
 
+UNSUPPORTED = re.compile(r"corner|cartellin|ammonizion|tir[oi] in porta|\btiri\b|falli|marcatore|segna(?:tore)?\b.*\b[12]t\b|"
+                         r"almeno un tempo|vince a zero|2° tempo|secondo tempo|\b2t\b|handicap|asian|rigor|sostitut|"
+                         r"risultato esatto|parziale|draw no bet")
+ODDS = re.compile(r"(?:quota(?:to|ta)?|moltiplicatore|valore di|sviluppa|ottimo|\ba|\bad|\bdi)\s*:?\s*(?:a\s+|ad\s+|di\s+|un ottimo\s+)?"
+                  r"\(?(\d{1,2}[.,]\d{1,2})\b")
+
+
 def parse_tip(sentence, bold=(), home="", away=""):
-    """Restituisce (nome mercato del nostro sistema, quota) oppure (None, quota) se non riconosciuto."""
-    s = html.unescape(sentence or "")
-    odds = None
-    m = re.search(r"quota\s*(?:di\s*|pari a\s*|a\s*)?(\d{1,2}[.,]\d{1,2})", s, re.I)
-    if m:
-        odds = float(_num(m.group(1)))
-    # porzione con il pronostico: il grassetto o il testo dopo "esito/segno/opzione/sul/sulla"
-    cand = [b for b in bold if b.strip()] + [s]
-    for c in cand:
-        mk = to_market(c, home, away)
-        if mk:
-            return mk, odds
-    return None, odds
+    """Restituisce (nome mercato del nostro sistema, quota). Mercato None se non riconosciuto o non calcolabile."""
+    s = html.unescape(sentence or "").replace("’", "'")
+    bold = [html.unescape(b) for b in bold if b and b.strip() and "telegram" not in b.lower()]
+    texts = [s] if s else []
+    if not s and bold:
+        texts = [" ".join(bold)]
+    for txt in texts:
+        low = txt.lower()
+        hits = list(ODDS.finditer(low))
+        pairs = []
+        start = 0
+        for h in hits:
+            pairs.append((txt[start:h.start()], float(h.group(1).replace(",", "."))))
+            start = h.end()
+        if not pairs:
+            nums = [float(x.replace(",", ".")) for x in re.findall(r"(?<![\d.])(\d[.,]\d{2})(?![\d])", low)]
+            pairs = [(txt, nums[-1] if nums else None)]
+        for seg, odds in pairs:
+            if odds is not None and not (1.05 <= odds <= 15):
+                continue
+            if UNSUPPORTED.search(seg.lower()):
+                continue
+            mk = to_market(seg, home, away)
+            if mk:
+                return mk, odds
+        # nessun mercato calcolabile: restituisce comunque la quota del primo pronostico
+        return None, pairs[0][1] if pairs else None
+    return None, None
 
 
 TOKEN = re.compile(
-    r"(?P<mg>multi\s?go(?:a)?l\s*(?P<mgs1>casa|ospite|trasferta)?\s*(?P<lo>\d)\s*-\s*(?P<hi>\d)\s*(?P<mgs2>casa|ospite|trasferta)?)"
-    r"|(?P<pt>(?:primo tempo|1° tempo|1t)\s*(?P<ptou>over|under)\s*(?P<ptl>\d\.5))"
-    r"|(?P<ou>(?P<ous1>casa|ospite|trasferta)?\s*(?P<ouw>over|under)\s*(?P<oul>\d\.5)\s*(?P<ous2>casa|ospite|trasferta)?)"
+    r"(?P<mg>(?:multi\s?go(?:a)?l|\bmg\b)\s*(?P<mgs1>casa|ospite|trasferta|[a-z][a-z' ]{2,20}?)?\s*(?P<lo>\d)\s*-\s*(?P<hi>\d)\b"
+    r"\s*(?P<mgs2>casa|ospite|trasferta)?)"
+    r"|(?P<mgr>(?P<rlo>\d)\s*-\s*(?P<rhi>\d)\s*(?:multi\s?go(?:a)?l|mg)\s*(?P<rside>casa|ospite|trasferta)?)"
+    r"|(?P<pt>(?:primo tempo|1° tempo|1t|pt)\s*(?P<ptou>over|under)\s*(?P<ptl>\d\.5))"
+    r"|(?P<pts>(?<![\d.\-])\b(?P<ptsv>1|x|2)\s+(?:primo tempo|1° tempo|pt)\b)"
+    r"|(?P<ou>(?P<ous1>casa|ospite|trasferta)?\s*(?P<ouw>over|under)\s*(?P<oul>\d\.5)\s*(?:goal\s*)?(?P<ous2>casa|ospite|trasferta)?)"
     r"|(?P<ng>no\s?goal)"
     r"|(?P<gg>\bgoal\b)"
     r"|(?P<dc>doppia chance\s*(?P<dcv>1x|x2|12))"
     r"|(?P<win>(?:vittoria|successo|affermazione|colpo)\s+(?:esterno\s+|interno\s+)?(?:della|del|dello|dell'|di|degli|dei)\s*(?P<who>[a-z' ]{3,25}))"
     r"|(?P<draw>\bpareggio\b)"
+    r"|(?P<orr>\s+o\s+)"
     r"|(?P<seg>(?<![\d.\-])\b(?P<segv>1x|x2|12|1|x|2)\b(?![\-.]?\d))")
+
+
+def _side(word, home, away):
+    if not word:
+        return None
+    w = names.norm(word)
+    if w in ("casa",):
+        return "casa"
+    if w in ("ospite", "trasferta"):
+        return "ospite"
+    if home and away:
+        hn, an = names.norm(home), names.norm(away)
+        if w and (w in hn or hn.startswith(w) or _IT_REV(w) == home or any(t in w for t in hn.split() if len(t) > 3)):
+            return "casa"
+        if w and (w in an or an.startswith(w) or _IT_REV(w) == away or any(t in w for t in an.split() if len(t) > 3)):
+            return "ospite"
+    return "?"
 
 
 def to_market(text, home="", away=""):
     t = html.unescape(text or "").lower().replace("’", "'")
     t = re.sub(r"(\d),(\d)", r"\1.\2", t)
-    t = re.sub(r"\b(?:a |alla |con )?quota\b.*$", "", t)
-    kws = list(re.finditer(r"esito|segno|opzione|sull'|sullo |sulla |sul |gioco |punto |scelgo |consiglio |"
-                           r"pronostico è|pronostico: |per l'|per il |giocata", t))
-    core = t[kws[-1].end():] if kws else t
+    t = re.sub(r"\b(?:a |alla |con |dal )?(?:quota|quotat[oa]|moltiplicatore|valore di)\s*:?\s*(?:a |ad |di |pari a )?\(?\d.*$", "", t)
+    kws = list(re.finditer(r"\b(?:esito|segno|opzione|sull'|sullo|sulla|sul|gioco|punto|scelgo|consiglio|consigliato|"
+                           r"pronostico è|pronostico:|per l'|per il|giocata|mi prendo|prendiamo|all'|alla|al|combo)\b", t))
+    starts = [k.end() for k in reversed(kws)] + [0]
+    for st in starts:
+        res = _parse_core(t[st:], home, away)
+        if res:
+            return res
+    return None
+
+
+def _parse_core(core, home, away):
     core = core.replace("gol/no gol", " ")
     core = re.sub(r"\bgg\b", "goal", core)
     core = re.sub(r"\bng\b", "no goal", core)
@@ -106,10 +157,17 @@ def to_market(text, home="", away=""):
     for m in TOKEN.finditer(core):
         g = m.groupdict()
         x = None
-        if g["mg"]:
-            side = g["mgs1"] or g["mgs2"]
-            x = (f"Multigol {'casa' if side == 'casa' else 'ospite'} {g['lo']}-{g['hi']}" if side
-                 else f"Multigol {g['lo']}-{g['hi']}")
+        if g["mg"] or g["mgr"]:
+            lo, hi = (g["lo"], g["hi"]) if g["mg"] else (g["rlo"], g["rhi"])
+            side = _side((g["mgs1"] or g["mgs2"]) if g["mg"] else g["rside"], home, away)
+            if side == "?":
+                return None
+            x = f"Multigol {side} {lo}-{hi}" if side else f"Multigol {lo}-{hi}"
+        elif g["pts"]:
+            x = f"1° tempo {g['ptsv'].upper()}"
+        elif g["orr"]:
+            found.append("|o|")
+            continue
         elif g["pt"]:
             x = f"1° tempo {g['ptou'].capitalize()} {g['ptl']}"
         elif g["ou"]:
@@ -136,6 +194,11 @@ def to_market(text, home="", away=""):
             x = g["segv"].upper()
         if x:
             found.append(x)
+    if "|o|" in found:
+        i = found.index("|o|")
+        if 0 < i < len(found) - 1:
+            return f"{found[i - 1]} o {found[i + 1]}"
+        found = [f for f in found if f != "|o|"]
     found = list(dict.fromkeys(found))
     if not found:
         return None
@@ -176,19 +239,31 @@ def extract(h):
     i = h.find("Analisi e pronostico")
     if i < 0:
         i = h.find("pronostico di Kristian")
-    seg = h[i:i + 8000] if i >= 0 else ""
+    if i < 0:
+        m = re.search(r"Consigliato:|Esito:|[Qq]uota finale", h)
+        i = max(0, m.start() - 3000) if m else -1
+    seg = h[i:i + 9000] if i >= 0 else ""
     end = seg.find("Per non perderti")
     if end > 0:
         seg = seg[:end]
     body = _text(seg)
-    sents = re.split(r"(?<=[.!?])\s+(?=[A-ZÈÀ])", body)
+    sents = [x.strip() for x in re.split(r"(?<=[.!?])\s+(?=[A-ZÈÀ])", body) if x.strip()]
     tip = ""
-    for s in reversed(sents):
-        if re.search(r"quota|esito|segno|punto|gioco|puntiamo|consiglio|opzione|scelta", s, re.I):
-            tip = s
+    odd_re = re.compile(r"\d[.,]\d{2}\b|quot|moltiplicatore")
+    kw_re = re.compile(r"esito|segno|punto|gioco|mi affido|mi prendo|consiglio|consigliato|combo|opzione|pronostico|quota finale",
+                       re.I)
+    for x in reversed(sents):
+        if odd_re.search(x) and kw_re.search(x) and not re.search(r"telegram|youtube", x, re.I):
+            tip = x
             break
-    r["tip"] = tip[-300:]
+    if not tip:
+        for x in reversed(sents):
+            if kw_re.search(x):
+                tip = x
+                break
+    r["tip"] = tip[-350:]
     r["bold"] = [_text(b)[:80] for b in re.findall(r"<strong>(.*?)</strong>", seg, re.S)][-3:]
+    r["v"] = 2
     return r
 
 
@@ -216,7 +291,7 @@ def tips_for(league_key, fixtures, teams, articles):
         if a["league_path"] != path:
             continue
         c = cache.get(a["url"])
-        if not c or c.get("lastmod") != a["lastmod"]:
+        if not c or c.get("lastmod") != a["lastmod"] or c.get("v") != 2:
             h = get_text(a["url"], tries=3)
             time.sleep(0.5)
             if not h:
