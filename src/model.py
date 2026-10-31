@@ -1,5 +1,6 @@
 """Il motore matematico: forza delle squadre, gol attesi, probabilità di ogni mercato."""
 import math
+import re
 
 import numpy as np
 from scipy.optimize import minimize
@@ -297,9 +298,9 @@ def all_markets(M, Mht):
 
 
 def market_outcome(name, hg, ag, hthg=None, htag=None):
-    for n, _, fn in MARKETS:
-        if n == name:
-            return bool(fn(hg, ag))
+    if not name.startswith("1° tempo"):
+        fn = outcome_fn(name)
+        return bool(fn(hg, ag)) if fn else None
     for n, _, fn in HT_MARKETS:
         if n == name:
             if hthg is None or htag is None:
@@ -320,3 +321,43 @@ def goal_range(lmbda_row):
                     best = (lo, hi, s)
                 break
     return best
+
+
+# ------------------------------------------------------------------ mercati generici (per i pronostici dei tipster)
+
+def outcome_fn(name):
+    """Funzione (gol casa, gol ospite) -> vero/falso per qualunque nome di mercato del sistema, anche combinato."""
+    for n, _, fn in MARKETS:
+        if n == name:
+            return fn
+    if " + " in name:
+        fs = [outcome_fn(x) for x in name.split(" + ")]
+        if all(fs):
+            return lambda h, a, fs=fs: all(f(h, a) for f in fs)
+        return None
+    m = re.match(r"^Multigol (casa |ospite )?(\d)-(\d)$", name)
+    if m:
+        lo, hi, side = int(m.group(2)), int(m.group(3)), (m.group(1) or "").strip()
+        if side == "casa":
+            return lambda h, a: lo <= h <= hi
+        if side == "ospite":
+            return lambda h, a: lo <= a <= hi
+        return lambda h, a: lo <= h + a <= hi
+    m = re.match(r"^(Casa |Ospite )?(Over|Under) (\d\.5)$", name)
+    if m:
+        ln, ou, side = float(m.group(3)), m.group(2), (m.group(1) or "").strip()
+        val = (lambda h, a: h) if side == "Casa" else ((lambda h, a: a) if side == "Ospite" else (lambda h, a: h + a))
+        return (lambda h, a: val(h, a) > ln) if ou == "Over" else (lambda h, a: val(h, a) < ln)
+    return None
+
+
+def prob_of(name, M, Mht=None):
+    if name.startswith("1° tempo"):
+        for n, _, fn in HT_MARKETS:
+            if n == name and Mht is not None:
+                return float((Mht * _mask(fn, Mht.shape[0])).sum())
+        return None
+    fn = outcome_fn(name)
+    if not fn:
+        return None
+    return float((M * _mask(fn, M.shape[0])).sum())

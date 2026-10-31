@@ -29,7 +29,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div class="leg">
     <div><div class="small muted">{{ l.flag }} {{ l.league }} · {{ l.kickoff }}</div>
     <div><b>{{ l.home }} – {{ l.away }}</b></div>
-    <div class="pick">{{ l.pick }}</div></div>
+    <div class="pick">{{ l.pick }}{% if l.url %} <a class="small" href="{{ l.url }}" target="_blank" rel="noopener">articolo</a>{% endif %}</div></div>
     <div style="text-align:right"><div class="big" style="font-size:22px">{{ l.odds|num }}</div>
     <div class="small muted">{{ l.p|pct }}</div>
     {% if l.is_real %}<span class="tag real">reale</span>{% else %}<span class="tag">stimata</span>{% endif %}
@@ -42,6 +42,25 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
 <h2>Schedina del giorno</h2>
 {% if slips_day %}{{ slipcard(slips_day[0], "La più probabile di oggi") }}
 {% else %}<div class="card muted">Oggi non ci sono partite adatte nei 5 campionati (o sono già iniziate).</div>{% endif %}
+
+<h2>Schedina incrociata · noi + Pengwin</h2>
+<div class="muted small">Solo pronostici di <a href="https://www.mondopengwin.it" target="_blank" rel="noopener">Kristian Pengwin</a> a cui anche il nostro modello dà almeno il 60% di probabilità. Quote indicate da Pengwin nei suoi articoli.</div>
+{% for s in slips_cross %}{{ slipcard(s, ["La più probabile", "Alternativa"][loop.index0]) }}
+{% else %}<div class="card muted">Nessuna combinazione di pronostici Pengwin approvati dal modello con quota tra 2 e 3, per ora.
+{% if not pengwin_list %}I pronostici di Pengwin di solito escono 1-2 giorni prima delle partite.{% endif %}</div>{% endfor %}
+
+{% if pengwin_list %}
+<h2>Pengwin contro il nostro modello</h2>
+<div class="card scroll"><table>
+<tr><th>Partita</th><th>Pengwin</th><th class="r">Quota</th><th class="r">Nostra prob.</th><th class="r">Giudizio</th></tr>
+{% for m in pengwin_list %}{% set pw = m.pengwin %}
+<tr><td><div class="small muted">{{ m.flag }} {{ m.kickoff_local }}</div>{{ m.home }} – {{ m.away }}</td>
+<td><a class="pick" href="{{ pw.url }}" target="_blank" rel="noopener">{{ pw.market or "non letto" }}</a></td>
+<td class="r">{{ pw.odds|num }}</td><td class="r">{{ pw.p|pct }}</td>
+<td class="r">{% if pw.p is none %}<span class="muted">–</span>{% elif pw.p >= 0.60 %}<span class="ok">d'accordo</span>{% elif pw.p >= 0.50 %}<span class="muted">tiepido</span>{% else %}<span class="ko">contrario</span>{% endif %}</td></tr>
+{% endfor %}</table>
+<div class="small muted" style="margin-top:6px">Valore? Se la nostra probabilità × la quota supera 1, la giocata conviene secondo il modello. Ricorda però che sul passato il modello non ha battuto le quote.</div></div>
+{% endif %}
 
 <h2>Schedine dei prossimi giorni</h2>
 {% if slips_day %}<div class="muted small">Alternative con partite diverse da quelle della schedina del giorno.</div>{% endif %}
@@ -90,6 +109,10 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
   <div><div class="small"><b>Risultati esatti più probabili</b></div>
   <table>{% for e in m.exact %}<tr><td>{{ e.score }}</td><td class="r">{{ e.p|pct(1) }}</td><td class="r muted">quota giusta {{ e.fair }}</td></tr>{% endfor %}</table></div>
   </div>
+
+  {% if m.pengwin %}<h3>Pronostico di Pengwin</h3>
+  <div class="small"><a class="pick" href="{{ m.pengwin.url }}" target="_blank" rel="noopener">{{ m.pengwin.market or "non riconosciuto" }}</a>
+  a quota {{ m.pengwin.odds|num }} · il nostro modello gli dà <b>{{ m.pengwin.p|pct }}</b>{% if m.pengwin.fair %} (quota giusta {{ m.pengwin.fair|num }}){% endif %}</div>{% endif %}
 
   <h3>Pronostici più probabili</h3>
   <div class="scroll"><table>
@@ -157,7 +180,7 @@ le altre sono <b>stimate</b> dalla probabilità e possono differire da quelle de
 dando più peso alle partite recenti. Da qui il modello di Poisson (con correzione Dixon-Coles) calcola la probabilità di ogni risultato
 e quindi di ogni mercato. I gol attesi vengono corretti per assenze, meteo e vantaggio del campo, e poi avvicinati alle quote
 reali dei bookmaker quando sono disponibili.</p>
-<p>Fonti: Understat, football-data.co.uk, ESPN, RotoWire, Fantacalcio.it, Open-Meteo.</p>
+<p>Fonti: Understat, football-data.co.uk, ESPN, RotoWire, Fantacalcio.it, Open-Meteo. Pronostici tipster: Mondo Pengwin (link agli articoli originali).</p>
 {% for l in leagues %}{% if not l.ok or l.notes %}<p>{{ l.flag }} {{ l.name }}: {% if not l.ok %}dati non disponibili{% endif %} {{ l.notes|join(", ") }}</p>{% endif %}{% endfor %}
 {% for w in warnings %}<p>⚠ {{ w }}</p>{% endfor %}
 </footer>

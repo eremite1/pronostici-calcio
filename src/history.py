@@ -39,23 +39,29 @@ def save_predictions(matches, now):
                               away=m["away"], kickoff=m["kickoff_utc"], lh=round(m["lh"], 3), la=round(m["la"], 3),
                               fd_home=m.get("fd_home"), fd_away=m.get("fd_away"),
                               top=[dict(name=t["name"], p=round(t["p"], 4), odds=t["used"]) for t in m["top"]],
-                              markets={x["name"]: round(x["p"], 4) for x in m["markets"]})
+                              markets={x["name"]: round(x["p"], 4) for x in m["markets"]},
+                              pengwin=({k: m["pengwin"].get(k) for k in ("market", "odds", "p", "url")}
+                                       if m.get("pengwin") else None))
         _save(p, d)
 
 
-def save_official_slips(slips_day, slips_window, today_local, now):
-    """La schedina ufficiale del giorno è quella della prima esecuzione della giornata (non si cambia dopo)."""
+def save_official_slips(slips_day, slips_window, today_local, now, slips_cross=None):
+    """La schedina ufficiale di ogni tipo è la prima generata nella giornata (non si cambia dopo)."""
     p = os.path.join(SLIP_DIR, f"{today_local}.json")
-    if os.path.exists(p):
-        return
-    if not slips_day and not slips_window:
-        return
-    _save(p, dict(generated=now.isoformat(), giorno=slips_day[:1], prossimi=slips_window[:1]))
+    d = _load(p, None)
+    if d is None:
+        if not slips_day and not slips_window and not slips_cross:
+            return
+        d = dict(generated=now.isoformat(), giorno=slips_day[:1], prossimi=slips_window[:1])
+    if slips_cross and not d.get("incrociata"):
+        d["incrociata"] = slips_cross[:1]
+        d["generated_incrociata"] = now.isoformat()
+    _save(p, d)
 
 
 def evaluate(results_by_id, ht_lookup, now=None, live_ids=()):
     """Confronta i pronostici con i risultati veri. results_by_id: id -> (gol casa, gol ospite)."""
-    picks_rows, slips_rows = [], []
+    picks_rows, slips_rows, pengwin_rows = [], [], []
     kick = {}
     for p in sorted(glob.glob(os.path.join(PRED_DIR, "*.json")))[-120:]:
         d = _load(p, {})
@@ -65,6 +71,13 @@ def evaluate(results_by_id, ht_lookup, now=None, live_ids=()):
                 continue
             hg, ag = results_by_id[mid]
             ht = ht_lookup(pr)
+            pw = pr.get("pengwin")
+            if pw and pw.get("market"):
+                ok = market_outcome(pw["market"], hg, ag, *(ht or (None, None)))
+                if ok is not None:
+                    pengwin_rows.append(dict(day=os.path.basename(p)[:10], match=f"{pr['home']} - {pr['away']}",
+                                             pick=pw["market"], odds=pw.get("odds"), p=pw.get("p"), ok=ok,
+                                             score=f"{hg}-{ag}", url=pw.get("url")))
             for i, t in enumerate(pr.get("top", [])):
                 ok = market_outcome(t["name"], hg, ag, *(ht or (None, None)))
                 if ok is None:
@@ -75,7 +88,7 @@ def evaluate(results_by_id, ht_lookup, now=None, live_ids=()):
     for p in sorted(glob.glob(os.path.join(SLIP_DIR, "*.json")))[-120:]:
         d = _load(p, {})
         day = os.path.basename(p)[:10]
-        for kind in ("giorno", "prossimi"):
+        for kind in ("giorno", "prossimi", "incrociata"):
             for s in d.get(kind, [])[:1]:
                 legs, done, won = [], True, True
                 for leg in s["legs"]:
@@ -111,10 +124,28 @@ def evaluate(results_by_id, ht_lookup, now=None, live_ids=()):
             continue
         seen.add(key)
         uniq.append(s)
-    return picks_rows, uniq
+    return picks_rows, uniq, pengwin_rows
 
 
-def summarize(picks_rows, slips_rows):
+def _slip_stats(rows):
+    done = [s for s in rows if s["done"]]
+    won = [s for s in done if s["won"]]
+    profit = sum((s["odds"] - 1) if s["won"] else -1 for s in done)
+    return dict(n=len(done), won=len(won), rate=(len(won) / len(done) * 100) if done else None,
+                exp=(sum(s["prob"] for s in done) / len(done) * 100) if done else None,
+                profit=profit, roi=(profit / len(done) * 100) if done else None)
+
+
+def _tip_stats(rows):
+    rows = [r for r in rows if r.get("odds")]
+    if not rows:
+        return dict(n=0, rate=None, roi=None, profit=0)
+    profit = sum((r["odds"] - 1) if r["ok"] else -1 for r in rows)
+    return dict(n=len(rows), rate=sum(r["ok"] for r in rows) / len(rows) * 100, profit=profit,
+                roi=profit / len(rows) * 100, avg_odds=sum(r["odds"] for r in rows) / len(rows))
+
+
+def summarize(picks_rows, slips_rows, pengwin_rows=()):
     buckets = [(0.5, 0.6), (0.6, 0.7), (0.7, 0.8), (0.8, 0.9), (0.9, 1.01)]
     cal = []
     for lo, hi in buckets:
@@ -123,6 +154,8 @@ def summarize(picks_rows, slips_rows):
             cal.append(dict(label=f"{int(lo * 100)}-{min(100, int(hi * 100))}%", n=len(rows),
                             expected=sum(r["p"] for r in rows) / len(rows) * 100,
                             actual=sum(r["ok"] for r in rows) / len(rows) * 100))
+    cross = [s for s in slips_rows if s["kind"] == "incrociata"]
+    slips_rows = [s for s in slips_rows if s["kind"] != "incrociata"]
     done = [s for s in slips_rows if s["done"]]
     won = [s for s in done if s["won"]]
     profit = sum((s["odds"] - 1) if s["won"] else -1 for s in done)
@@ -133,4 +166,9 @@ def summarize(picks_rows, slips_rows):
                 profit=profit, roi=(profit / len(done) * 100) if done else None,
                 first_rate=(sum(r["ok"] for r in firsts) / len(firsts) * 100) if firsts else None,
                 n_first=len(firsts),
-                recent_slips=list(reversed(slips_rows))[:30], recent_picks=list(reversed(picks_rows))[:60])
+                recent_slips=list(reversed(slips_rows))[:30], recent_picks=list(reversed(picks_rows))[:60],
+                cross=_slip_stats(cross), recent_cross=list(reversed(cross))[:20],
+                pengwin=_tip_stats(pengwin_rows),
+                pengwin_agree=_tip_stats([r for r in pengwin_rows if (r.get("p") or 0) >= 0.60]),
+                pengwin_disagree=_tip_stats([r for r in pengwin_rows if r.get("p") is not None and r["p"] < 0.50]),
+                recent_pengwin=list(reversed(list(pengwin_rows)))[:40])

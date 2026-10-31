@@ -8,7 +8,7 @@ from zoneinfo import ZoneInfo
 
 import numpy as np
 
-from . import analysis, config, history, model, names, picks, report, sources
+from . import analysis, config, history, model, names, picks, report, sources, tipster
 from .fetch import WARNINGS, warn
 
 ROME = ZoneInfo(config.TZ)
@@ -36,6 +36,7 @@ def run():
     all_matches, results_by_id, fd_index, league_status = [], {}, {}, []
     possession_budget = [300]
     live_ids = set()
+    pengwin_articles = ["da leggere"]
 
     for L in config.LEAGUES:
         print(f"\n=== {L['name']}")
@@ -116,10 +117,22 @@ def run():
             if L["key"] == "serie_a" and fc is None:
                 st["notes"].append("Fantacalcio.it non disponibile")
 
+            pw_tips = {}
+            try:
+                if pengwin_articles[0] == "da leggere":
+                    pengwin_articles[0] = tipster.recent_articles()
+                    if pengwin_articles[0] is None:
+                        warn("Mondo Pengwin non raggiungibile: schedina incrociata non disponibile")
+                pw_tips = tipster.tips_for(L["key"], fixtures, teams, pengwin_articles[0])
+                print(f"  pronostici Pengwin trovati: {len(pw_tips)}")
+            except Exception:
+                traceback.print_exc()
+                warn(f"{L['name']}: errore nella lettura dei pronostici Pengwin")
+
             for fx in fixtures:
                 try:
                     all_matches.append(build_match(L, fx, rt, hist, pl, fd_rows, us2fd, odds_rows, espn_ev,
-                                                   rw, fc, teams, now, possession_budget))
+                                                   rw, fc, teams, now, possession_budget, pw_tips.get(fx["id"])))
                 except Exception:
                     traceback.print_exc()
                     warn(f"Errore nell'analisi di {fx['home']} - {fx['away']}")
@@ -134,9 +147,11 @@ def run():
     day_ids = [l["match_id"] for l in slips_day[0]["legs"]] if slips_day else []
     slips_window = picks.build_slips(all_matches, exclude_ids=day_ids)
     best = picks.global_best(all_matches)
+    slips_cross = picks.build_cross_slips(all_matches)
+    pengwin_list = [m for m in all_matches if m.get("pengwin") and not m.get("started")]
 
     history.save_predictions(all_matches, now)
-    history.save_official_slips(slips_day, slips_window, today_local.isoformat(), now)
+    history.save_official_slips(slips_day, slips_window, today_local.isoformat(), now, slips_cross)
 
     def ht_lookup(pr):
         rows = fd_index.get((pr.get("fd_home"), pr.get("fd_away"))) or []
@@ -145,18 +160,20 @@ def run():
                 return (r["hthg"], r["htag"])
         return None
 
-    picks_rows, slip_rows = history.evaluate(results_by_id, ht_lookup, now, live_ids)
-    summary = history.summarize(picks_rows, slip_rows)
+    picks_rows, slip_rows, pengwin_rows = history.evaluate(results_by_id, ht_lookup, now, live_ids)
+    summary = history.summarize(picks_rows, slip_rows, pengwin_rows)
 
     ctx = dict(generated=now.astimezone(ROME).strftime("%d/%m/%Y alle %H:%M"), today=local_label(now)[:9],
                matches=all_matches, slips_day=slips_day, slips_window=slips_window, best=best,
+               slips_cross=slips_cross, pengwin_list=pengwin_list,
                leagues=league_status, warnings=WARNINGS, summary=summary,
                days_ahead=config.DAYS_AHEAD)
     report.render(ctx)
     print(f"\nFatto: {len(all_matches)} partite, {len(slips_window)} schedine, avvisi: {len(WARNINGS)}")
 
 
-def build_match(L, fx, rt, hist, pl, fd_rows, us2fd, odds_rows, espn_ev, rw, fc, teams, now, budget):
+def build_match(L, fx, rt, hist, pl, fd_rows, us2fd, odds_rows, espn_ev, rw, fc, teams, now, budget,
+                pw_tip=None):
     H, A = fx["home"], fx["away"]
     m = dict(id=fx["id"], league=L["name"], league_key=L["key"], flag=L["flag"], home=H, away=A,
              kickoff_utc=fx["when"].isoformat(), kickoff_local=local_label(fx["when"]),
@@ -239,6 +256,10 @@ def build_match(L, fx, rt, hist, pl, fd_rows, us2fd, odds_rows, espn_ev, rw, fc,
     m["goals_away"] = dict(dist=[float(x) for x in pa[:6]], rng=model.goal_range(pa), mode=int(pa.argmax()))
     m["goals_tot"] = dict(dist=[float(x) for x in ptot[:8]], rng=model.goal_range(ptot), mode=int(ptot.argmax()))
     m["top"] = picks.top_picks(m["markets"], od)
+    m["pengwin"] = None
+    if pw_tip:
+        p = model.prob_of(pw_tip["market"], M, Mht) if pw_tip.get("market") else None
+        m["pengwin"] = dict(pw_tip, p=p, fair=(round(1 / p, 2) if p else None))
 
     rel, why = 100, []
     if min(m["stats_home"]["played"], m["stats_away"]["played"]) < 4:

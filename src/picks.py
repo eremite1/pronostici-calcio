@@ -119,3 +119,38 @@ def global_best(matches, n=15):
         if len(out) >= n:
             break
     return out
+
+
+def build_cross_slips(matches, n_best=2):
+    """Schedina incrociata: solo pronostici di Pengwin a cui anche il nostro modello dà una probabilità alta."""
+    pool = []
+    for m in matches:
+        pw = m.get("pengwin")
+        if (m.get("started") or not pw or not pw.get("market") or not pw.get("p") or not pw.get("odds")
+                or m["reliability"] < config.MIN_RELIABILITY):
+            continue
+        if pw["p"] >= config.CROSS_MIN_PROB and pw["odds"] >= 1.15:
+            pool.append((m, pw))
+    found = []
+    for size in (2, 3):
+        for combo in itertools.combinations(pool, size):
+            q, prob = 1.0, 1.0
+            for _, pw in combo:
+                q *= pw["odds"]
+                prob *= pw["p"]
+            if config.SLIP_MIN_ODDS <= q <= config.SLIP_MAX_ODDS:
+                found.append((prob, q, combo))
+    found.sort(key=lambda x: (-x[0], -x[1]))
+    slips, used = [], set()
+    for prob, q, combo in found:
+        ids = {m["id"] for m, _ in combo}
+        if ids & used:
+            continue
+        used |= ids
+        slips.append(dict(prob=prob, odds=round(q, 2), fair=round(1 / prob, 2), legs=[
+            dict(match_id=m["id"], league=m["league"], flag=m["flag"], home=m["home"], away=m["away"],
+                 kickoff=m["kickoff_local"], pick=pw["market"], p=pw["p"], odds=pw["odds"], is_real=True,
+                 url=pw.get("url")) for m, pw in combo]))
+        if len(slips) >= n_best:
+            break
+    return slips

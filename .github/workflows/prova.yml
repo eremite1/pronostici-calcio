@@ -1,0 +1,21 @@
+name: Prova (senza pubblicare)
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt
+      - run: python -m src.main > log.txt 2>&1 || echo "ERRORE $?" >> log.txt
+      - if: always()
+        run: |
+          mkdir /tmp/o && cp -r log.txt docs data /tmp/o/ && cd /tmp/o
+          git init -q -b prova-output && git config user.name bot && git config user.email actions@github.com
+          git add -A && git commit -qm prova
+          git push -f "https://x-access-token:${{ github.token }}@github.com/${{ github.repository }}" prova-output
