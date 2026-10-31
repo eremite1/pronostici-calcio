@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="it">
+<head>
+<title>Storico pronostici</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f4f5f1;--card:#fff;--ink:#14181f;--muted:#5d6672;--line:#e2e5df;--accent:#0b7a4b;--accent-soft:#e3f3ea;
+--home:#0b7a4b;--draw:#9aa3ad;--away:#c2410c;--warn:#b45309;--warn-soft:#fdf3e1;--bad:#b91c1c;--good:#15803d;--chip:#eef0ea}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e1116;--card:#171b22;--ink:#e8ebef;--muted:#98a2ae;
+--line:#262c35;--accent:#34d399;--accent-soft:#11291f;--home:#34d399;--draw:#6b7480;--away:#fb923c;--warn:#fbbf24;
+--warn-soft:#2a2010;--bad:#f87171;--good:#4ade80;--chip:#1f242c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 Inter,system-ui,sans-serif}
+a{color:var(--accent)}
+.wrap{max-width:960px;margin:0 auto;padding:0 16px 48px}
+header.top{padding:20px 0 8px;display:flex;align-items:flex-end;gap:12px;flex-wrap:wrap}
+h1,h2,h3{font-family:"Barlow Condensed",Inter,sans-serif;letter-spacing:.3px;margin:0}
+h1{font-size:30px;line-height:1}
+h2{font-size:22px;margin:28px 0 10px}
+h3{font-size:17px;margin:14px 0 6px}
+.muted{color:var(--muted)}.small{font-size:13px}
+.nav{margin-left:auto;display:flex;gap:14px;font-weight:600}
+.note{background:var(--warn-soft);border-left:3px solid var(--warn);padding:10px 12px;border-radius:8px;font-size:13px;margin:10px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px;margin:10px 0}
+.slip{border:2px solid var(--accent)}
+.slip-head{display:flex;justify-content:space-between;align-items:baseline;gap:8px;flex-wrap:wrap}
+.big{font-family:"Barlow Condensed",Inter,system-ui,sans-serif;font-size:30px;font-weight:700;line-height:1}
+.leg{display:grid;grid-template-columns:1fr auto;gap:2px 10px;padding:9px 0;border-top:1px dashed var(--line)}
+.leg:first-of-type{border-top:0}
+.pick{font-weight:600;color:var(--accent)}td.pick{white-space:nowrap}
+.tag{display:inline-block;font-size:11px;padding:1px 7px;border-radius:99px;background:var(--chip);color:var(--muted);white-space:nowrap}
+.tag.real{background:var(--accent-soft);color:var(--accent)}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:6px 6px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600}
+td.r,th.r{text-align:right;white-space:nowrap}
+.scroll{overflow-x:auto}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:8px 0}
+.chips button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:5px 12px;font:inherit;font-size:13px;cursor:pointer}
+.chips button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+details.match{background:var(--card);border:1px solid var(--line);border-radius:14px;margin:10px 0;overflow:hidden}
+details.match>summary{list-style:none;cursor:pointer;padding:12px 14px}
+details.match>summary::-webkit-details-marker{display:none}
+.mrow{display:flex;justify-content:space-between;gap:8px;align-items:baseline;flex-wrap:wrap}
+.teams{font-weight:600;font-size:16px}
+.bar{display:flex;height:8px;border-radius:99px;overflow:hidden;margin:8px 0 4px;background:var(--line)}
+.bar i{display:block}
+.legend{display:flex;justify-content:space-between;font-size:12px;color:var(--muted)}
+.body{padding:0 14px 14px;border-top:1px solid var(--line)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media (max-width:620px){.grid2{grid-template-columns:1fr}}
+.dist{display:flex;gap:3px;align-items:flex-end;height:46px;margin-top:4px}
+.dist div{flex:1;background:var(--accent);opacity:.85;border-radius:3px 3px 0 0;position:relative;min-height:2px}
+.dist-l{display:flex;gap:3px;font-size:11px;color:var(--muted)}.dist-l span{flex:1;text-align:center}
+ul.an{padding-left:18px;margin:8px 0}ul.an li{margin:4px 0}
+details.fam{border-top:1px solid var(--line)}details.fam summary{cursor:pointer;padding:7px 0;font-weight:600;font-size:14px}
+.ok{color:var(--good);font-weight:600}.ko{color:var(--bad);font-weight:600}
+.rel{font-size:12px}
+footer{margin-top:30px;font-size:12px;color:var(--muted)}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <div><h1>Storico</h1><div class="muted small">Aggiornato il 31/10/2026 alle 10:42</div></div>
+  <nav class="nav"><a href="index.html">Pronostici</a><a href="storico.html">Storico</a></nav>
+</header>
+
+<div class="note">Qui il sistema si mette alla prova da solo: ogni pronostico viene salvato prima della partita e controllato
+dopo il risultato. Servono almeno 50-100 schedine prima di giudicare: su pochi casi conta soprattutto la fortuna.</div>
+
+<h2>Verifica sul passato</h2>
+<div class="card small">
+<p style="margin-top:0">Il modello ha rigiocato <b>5.127 partite</b> delle stagioni 2023-24, 2024-25 e 2025-26 dei cinque campionati,
+usando ogni volta solo i dati disponibili prima della partita, e il risultato è stato confrontato con le quote reali.</p>
+<table>
+<tr><th>Strategia (quote medie dei bookmaker)</th><th class="r">Giocate</th><th class="r">Resa</th></tr>
+<tr><td>Schedina giornaliera di 2 partite a quota 2-3, la più probabile</td><td class="r">435</td><td class="r ko">−10,6%</td></tr>
+<tr><td>Singole sul pronostico più probabile (quote 1,20-1,60)</td><td class="r">2.074</td><td class="r ko">−2,6%</td></tr>
+<tr><td>Le stesse, giocate sempre al bookmaker con la quota più alta</td><td class="r">2.074</td><td class="r">−0,2%</td></tr>
+<tr><td>"Valore": quando il modello vede più probabilità delle quote</td><td class="r">1.151</td><td class="r ko">−11,8%</td></tr>
+</table>
+<p>Le percentuali sono ben tarate (pronostici al 70-80% riusciti il 76% delle volte), ma <b>le quote dei bookmaker sono risultate
+più precise del modello</b> e nessuna strategia ha guadagnato. Per questo le percentuali mostrate danno più peso alle quote reali.</p>
+</div>
+
+<h2>Schedine ufficiali</h2>
+<div class="card">
+
+<div class="grid2">
+<div><div class="big">3 / 6</div><div class="muted small">schedine vinte (50%, il modello si aspettava 43%)</div></div>
+<div><div class="big ok">+0.02</div><div class="muted small">guadagno teorico puntando 1 € a schedina (ROI 0%)</div></div>
+</div>
+
+</div>
+
+<h2>Precisione delle probabilità</h2>
+<div class="card scroll">
+
+<div class="small muted">Se il modello è ben tarato, i pronostici dati al 70% devono riuscire circa 7 volte su 10.</div>
+<table><tr><th>Fascia</th><th class="r">Pronostici</th><th class="r">Atteso</th><th class="r">Riusciti</th></tr>
+<tr><td>60-70%</td><td class="r">163</td><td class="r">67%</td><td class="r"><b>61%</b></td></tr><tr><td>70-80%</td><td class="r">140</td><td class="r">72%</td><td class="r"><b>69%</b></td></tr>
+</table>
+<div class="small" style="margin-top:8px">Pronostico n.1 di ogni partita: riuscito nel 71% di 38 partite.</div>
+
+</div>
+
+<h2>Pengwin e schedina incrociata (dal vivo)</h2>
+<div class="card small">
+
+<div class="muted">Ancora nessun pronostico di Pengwin verificato: i primi arriveranno dopo le partite di questo fine settimana.</div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-31 · incrociata</b>
+<span>quota 2.00 · <span class="tag">in attesa</span></span></div>
+<div class="small">Elche – Valencia: <b>Multigol casa 1-3</b> <span class="small muted">· dom 01/11 18:30</span>
+<span class="muted">(da giocare)</span></div><div class="small">Lorient – Brest: <b>Multigol casa 1-3</b> <span class="small muted">· lun 02/11 20:45</span>
+<span class="muted">(da giocare)</span></div>
+</div>
+
+
+<h2>Ultime schedine</h2>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-31 · prossimi giorni</b>
+<span>quota 2.03 · <span class="tag">da giocare</span></span></div>
+<div class="small">Rayo Vallecano – Celta Vigo: <b>1X</b>
+<span class="small muted">· sab 31/10 16:15</span>
+<span class="muted">(da giocare)</span></div><div class="small">Union Berlin – FC Cologne: <b>1X</b>
+<span class="small muted">· dom 01/11 15:30</span>
+<span class="muted">(da giocare)</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-31 · del giorno</b>
+<span>quota 2.01 · <span class="tag">da giocare</span></span></div>
+<div class="small">Bayer Leverkusen – VfB Stuttgart: <b>1X</b>
+<span class="small muted">· sab 31/10 15:30</span>
+<span class="muted">(da giocare)</span></div><div class="small">Bournemouth – Leeds: <b>Over 1.5</b>
+<span class="small muted">· sab 31/10 16:00</span>
+<span class="muted">(da giocare)</span></div><div class="small">Brentford – Nottingham Forest: <b>1X</b>
+<span class="small muted">· sab 31/10 16:00</span>
+<span class="muted">(da giocare)</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-30 · prossimi giorni</b>
+<span>quota 2.01 · <span class="tag">da giocare</span></span></div>
+<div class="small">Werder Bremen – Hoffenheim: <b>X2</b>
+<span class="small muted">· sab 31/10 15:30</span>
+<span class="muted">(da giocare)</span></div><div class="small">Deportivo La Coruna – Osasuna: <b>12</b>
+<span class="small muted">· dom 01/11 17:00</span>
+<span class="muted">(da giocare)</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-30 · del giorno</b>
+<span>quota 2.02 · <span class="ok">VINTA</span></span></div>
+<div class="small">Le Havre – Paris Saint Germain: <b>12</b>
+<span class="small muted">· ven 30/10 19:00</span>
+<span class="ok">✓ 1-5</span></div><div class="small">Elversberg – Mainz 05: <b>Goal</b>
+<span class="small muted">· ven 30/10 20:30</span>
+<span class="ok">✓ 4-1</span></div><div class="small">Lille – Lens: <b>Under 3.5</b>
+<span class="small muted">· ven 30/10 21:05</span>
+<span class="ok">✓ 1-0</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-29 · prossimi giorni</b>
+<span>quota 2.01 · <span class="tag">da giocare</span></span></div>
+<div class="small">Lecce – Genoa: <b>X2</b>
+<span class="small muted">· dom 01/11 15:00</span>
+<span class="muted">(da giocare)</span></div><div class="small">Sassuolo – Fiorentina: <b>1X</b>
+<span class="small muted">· dom 01/11 15:00</span>
+<span class="muted">(da giocare)</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-28 · prossimi giorni</b>
+<span>quota 2.01 · <span class="tag">da giocare</span></span></div>
+<div class="small">Marseille – Toulouse: <b>1X</b>
+<span class="small muted">· sab 31/10 15:00</span>
+<span class="muted">(da giocare)</span></div><div class="small">Troyes – Le Mans: <b>1X</b>
+<span class="small muted">· sab 31/10 20:45</span>
+<span class="muted">(da giocare)</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-28 · del giorno</b>
+<span>quota 2.04 · <span class="ko">PERSA</span></span></div>
+<div class="small">AC Milan – Bologna: <b>Under 3.5</b>
+<span class="small muted">· mer 28/10 18:30</span>
+<span class="ko">✗ 2-4</span></div><div class="small">Parma Calcio 1913 – Udinese: <b>Under 3.5</b>
+<span class="small muted">· mer 28/10 18:30</span>
+<span class="ok">✓ 0-0</span></div><div class="small">Venezia – Inter: <b>Over 2.5</b>
+<span class="small muted">· mer 28/10 18:30</span>
+<span class="ko">✗ 0-2</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-27 · prossimi giorni</b>
+<span>quota 2.02 · <span class="ko">PERSA</span></span></div>
+<div class="small">Venezia – Inter: <b>Over 2.5</b>
+<span class="small muted">· mer 28/10 18:30</span>
+<span class="ko">✗ 0-2</span></div><div class="small">Fiorentina – Atalanta: <b>Goal</b>
+<span class="small muted">· gio 29/10 20:45</span>
+<span class="ok">✓ 2-2</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-27 · del giorno</b>
+<span>quota 2.00 · <span class="ok">VINTA</span></span></div>
+<div class="small">Sassuolo – Lazio: <b>12</b>
+<span class="small muted">· mar 27/10 18:30</span>
+<span class="ok">✓ 2-6</span></div><div class="small">Roma – Cagliari: <b>1X + Over 1.5</b>
+<span class="small muted">· mar 27/10 20:45</span>
+<span class="ok">✓ 4-2</span></div><div class="small">Torino – Como: <b>12</b>
+<span class="small muted">· mar 27/10 20:45</span>
+<span class="ok">✓ 1-3</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-26 · prossimi giorni</b>
+<span>quota 2.01 · <span class="ko">PERSA</span></span></div>
+<div class="small">Parma Calcio 1913 – Udinese: <b>12</b>
+<span class="small muted">· mer 28/10 18:30</span>
+<span class="ko">✗ 0-0</span></div><div class="small">Fiorentina – Atalanta: <b>X2</b>
+<span class="small muted">· gio 29/10 20:45</span>
+<span class="ok">✓ 2-2</span></div>
+</div>
+
+<div class="card">
+<div class="slip-head"><b>2026-10-25 · del giorno</b>
+<span>quota 2.00 · <span class="ok">VINTA</span></span></div>
+<div class="small">Atalanta – Frosinone: <b>Over 2.5</b>
+<span class="small muted">· dom 25/10 15:00</span>
+<span class="ok">✓ 4-4</span></div><div class="small">Liverpool – Brighton: <b>Under 3.5</b>
+<span class="small muted">· dom 25/10 15:00</span>
+<span class="ok">✓ 2-0</span></div>
+</div>
+
+
+<h2>Ultimi pronostici verificati</h2>
+<div class="card scroll"><table>
+<tr><th>Data</th><th>Partita</th><th>Pronostico</th><th class="r">Prob.</th><th class="r">Esito</th></tr>
+<tr><td class="small">10-31</td><td class="small">Nice - Rennes</td><td>Multigol 2-4</td><td class="r">62%</td>
+<td class="r"><span class="ko">✗</span> 5-2</td></tr>
+<tr><td class="small">10-31</td><td class="small">Nice - Rennes</td><td>Under 3.5</td><td class="r">63%</td>
+<td class="r"><span class="ko">✗</span> 5-2</td></tr>
+<tr><td class="small">10-31</td><td class="small">Nice - Rennes</td><td>Goal + Over 1.5</td><td class="r">63%</td>
+<td class="r"><span class="ok">✓</span> 5-2</td></tr>
+<tr><td class="small">10-31</td><td class="small">Nice - Rennes</td><td>Goal</td><td class="r">63%</td>
+<td class="r"><span class="ok">✓</span> 5-2</td></tr>
+<tr><td class="small">10-31</td><td class="small">Nice - Rennes</td><td>X2</td><td class="r">64%</td>
+<td class="r"><span class="ko">✗</span> 5-2</td></tr>
+<tr><td class="small">10-31</td><td class="small">Nice - Rennes</td><td>Multigol casa 1-3</td><td class="r">71%</td>
+<td class="r"><span class="ko">✗</span> 5-2</td></tr>
+<tr><td class="small">10-31</td><td class="small">Nice - Rennes</td><td>Multigol ospite 1-3</td><td class="r">72%</td>
+<td class="r"><span class="ok">✓</span> 5-2</td></tr>
+<tr><td class="small">10-31</td><td class="small">Nice - Rennes</td><td>12</td><td class="r">74%</td>
+<td class="r"><span class="ok">✓</span> 5-2</td></tr>
+<tr><td class="small">10-30</td><td class="small">Lille - Lens</td><td>Multigol casa 1-3</td><td class="r">69%</td>
+<td class="r"><span class="ok">✓</span> 1-0</td></tr>
+<tr><td class="small">10-30</td><td class="small">Lille - Lens</td><td>Multigol ospite 1-3</td><td class="r">69%</td>
+<td class="r"><span class="ko">✗</span> 1-0</td></tr>
+<tr><td class="small">10-30</td><td class="small">Lille - Lens</td><td>Multigol 2-5</td><td class="r">71%</td>
+<td class="r"><span class="ko">✗</span> 1-0</td></tr>
+<tr><td class="small">10-30</td><td class="small">Lille - Lens</td><td>12</td><td class="r">72%</td>
+<td class="r"><span class="ok">✓</span> 1-0</td></tr>
+<tr><td class="small">10-30</td><td class="small">Lille - Lens</td><td>Under 3.5</td><td class="r">72%</td>
+<td class="r"><span class="ok">✓</span> 1-0</td></tr>
+<tr><td class="small">10-30</td><td class="small">Lille - Lens</td><td>Multigol casa 1-4</td><td class="r">72%</td>
+<td class="r"><span class="ok">✓</span> 1-0</td></tr>
+<tr><td class="small">10-30</td><td class="small">Lille - Lens</td><td>Casa Over 0.5</td><td class="r">73%</td>
+<td class="r"><span class="ok">✓</span> 1-0</td></tr>
+<tr><td class="small">10-30</td><td class="small">Villarreal - Espanyol</td><td>Ospite Over 0.5</td><td class="r">62%</td>
+<td class="r"><span class="ok">✓</span> 0-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Villarreal - Espanyol</td><td>Over 2.5</td><td class="r">64%</td>
+<td class="r"><span class="ko">✗</span> 0-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Villarreal - Espanyol</td><td>1X + Under 4.5</td><td class="r">66%</td>
+<td class="r"><span class="ko">✗</span> 0-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Villarreal - Espanyol</td><td>1</td><td class="r">67%</td>
+<td class="r"><span class="ko">✗</span> 0-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Villarreal - Espanyol</td><td>Casa Over 1.5</td><td class="r">67%</td>
+<td class="r"><span class="ko">✗</span> 0-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Villarreal - Espanyol</td><td>12 + Over 1.5</td><td class="r">70%</td>
+<td class="r"><span class="ko">✗</span> 0-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Villarreal - Espanyol</td><td>Multigol casa 1-3</td><td class="r">70%</td>
+<td class="r"><span class="ko">✗</span> 0-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Villarreal - Espanyol</td><td>Multigol 1-4</td><td class="r">72%</td>
+<td class="r"><span class="ok">✓</span> 0-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Elversberg - Mainz 05</td><td>Goal + Over 1.5</td><td class="r">68%</td>
+<td class="r"><span class="ok">✓</span> 4-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Elversberg - Mainz 05</td><td>Goal</td><td class="r">68%</td>
+<td class="r"><span class="ok">✓</span> 4-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Elversberg - Mainz 05</td><td>X2</td><td class="r">69%</td>
+<td class="r"><span class="ko">✗</span> 4-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Elversberg - Mainz 05</td><td>Multigol 1-4</td><td class="r">70%</td>
+<td class="r"><span class="ko">✗</span> 4-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Elversberg - Mainz 05</td><td>Ospite Under 2.5</td><td class="r">71%</td>
+<td class="r"><span class="ok">✓</span> 4-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Elversberg - Mainz 05</td><td>Multigol casa 1-3</td><td class="r">72%</td>
+<td class="r"><span class="ko">✗</span> 4-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Elversberg - Mainz 05</td><td>Under 4.5</td><td class="r">74%</td>
+<td class="r"><span class="ko">✗</span> 4-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Elversberg - Mainz 05</td><td>12</td><td class="r">76%</td>
+<td class="r"><span class="ok">✓</span> 4-1</td></tr>
+<tr><td class="small">10-30</td><td class="small">Le Havre - Paris Saint Germain</td><td>2 + Over 1.5</td><td class="r">63%</td>
+<td class="r"><span class="ok">✓</span> 1-5</td></tr>
+<tr><td class="small">10-30</td><td class="small">Le Havre - Paris Saint Germain</td><td>X2 + Under 4.5</td><td class="r">64%</td>
+<td class="r"><span class="ko">✗</span> 1-5</td></tr>
+<tr><td class="small">10-30</td><td class="small">Le Havre - Paris Saint Germain</td><td>Over 2.5</td><td class="r">67%</td>
+<td class="r"><span class="ok">✓</span> 1-5</td></tr>
+<tr><td class="small">10-30</td><td class="small">Le Havre - Paris Saint Germain</td><td>Multigol ospite 1-3</td><td class="r">68%</td>
+<td class="r"><span class="ko">✗</span> 1-5</td></tr>
+<tr><td class="small">10-30</td><td class="small">Le Havre - Paris Saint Germain</td><td>Multigol 1-4</td><td class="r">70%</td>
+<td class="r"><span class="ko">✗</span> 1-5</td></tr>
+<tr><td class="small">10-30</td><td class="small">Le Havre - Paris Saint Germain</td><td>2</td><td class="r">70%</td>
+<td class="r"><span class="ok">✓</span> 1-5</td></tr>
+<tr><td class="small">10-30</td><td class="small">Le Havre - Paris Saint Germain</td><td>Ospite Over 1.5</td><td class="r">71%</td>
+<td class="r"><span class="ok">✓</span> 1-5</td></tr>
+<tr><td class="small">10-30</td><td class="small">Le Havre - Paris Saint Germain</td><td>Under 4.5</td><td class="r">73%</td>
+<td class="r"><span class="ko">✗</span> 1-5</td></tr>
+<tr><td class="small">10-29</td><td class="small">Fiorentina - Atalanta</td><td>Goal + Over 1.5</td><td class="r">62%</td>
+<td class="r"><span class="ok">✓</span> 2-2</td></tr>
+<tr><td class="small">10-29</td><td class="small">Fiorentina - Atalanta</td><td>Goal</td><td class="r">62%</td>
+<td class="r"><span class="ok">✓</span> 2-2</td></tr>
+<tr><td class="small">10-29</td><td class="small">Fiorentina - Atalanta</td><td>Multigol 2-4</td><td class="r">63%</td>
+<td class="r"><span class="ok">✓</span> 2-2</td></tr>
+<tr><td class="small">10-29</td><td class="small">Fiorentina - Atalanta</td><td>Under 3.5</td><td class="r">64%</td>
+<td class="r"><span class="ko">✗</span> 2-2</td></tr>
+<tr><td class="small">10-29</td><td class="small">Fiorentina - Atalanta</td><td>1X</td><td class="r">68%</td>
+<td class="r"><span class="ok">✓</span> 2-2</td></tr>
+<tr><td class="small">10-29</td><td class="small">Fiorentina - Atalanta</td><td>Multigol ospite 1-3</td><td class="r">70%</td>
+<td class="r"><span class="ok">✓</span> 2-2</td></tr>
+<tr><td class="small">10-29</td><td class="small">Fiorentina - Atalanta</td><td>Multigol casa 1-3</td><td class="r">72%</td>
+<td class="r"><span class="ok">✓</span> 2-2</td></tr>
+<tr><td class="small">10-29</td><td class="small">Fiorentina - Atalanta</td><td>12</td><td class="r">74%</td>
+<td class="r"><span class="ko">✗</span> 2-2</td></tr>
+<tr><td class="small">10-29</td><td class="small">Frosinone - Lecce</td><td>Multigol ospite 1-3</td><td class="r">68%</td>
+<td class="r"><span class="ok">✓</span> 5-1</td></tr>
+<tr><td class="small">10-29</td><td class="small">Frosinone - Lecce</td><td>12 + Over 1.5</td><td class="r">68%</td>
+<td class="r"><span class="ok">✓</span> 5-1</td></tr>
+<tr><td class="small">10-29</td><td class="small">Frosinone - Lecce</td><td>1X + Over 1.5</td><td class="r">68%</td>
+<td class="r"><span class="ok">✓</span> 5-1</td></tr>
+<tr><td class="small">10-29</td><td class="small">Frosinone - Lecce</td><td>Multigol 1-4</td><td class="r">70%</td>
+<td class="r"><span class="ko">✗</span> 5-1</td></tr>
+<tr><td class="small">10-29</td><td class="small">Frosinone - Lecce</td><td>Multigol ospite 1-4</td><td class="r">71%</td>
+<td class="r"><span class="ok">✓</span> 5-1</td></tr>
+<tr><td class="small">10-29</td><td class="small">Frosinone - Lecce</td><td>Multigol casa 1-3</td><td class="r">71%</td>
+<td class="r"><span class="ko">✗</span> 5-1</td></tr>
+<tr><td class="small">10-29</td><td class="small">Frosinone - Lecce</td><td>Ospite Over 0.5</td><td class="r">72%</td>
+<td class="r"><span class="ok">✓</span> 5-1</td></tr>
+<tr><td class="small">10-29</td><td class="small">Frosinone - Lecce</td><td>Under 4.5</td><td class="r">75%</td>
+<td class="r"><span class="ko">✗</span> 5-1</td></tr>
+<tr><td class="small">10-28</td><td class="small">Monza - Napoli</td><td>X2 + Over 1.5</td><td class="r">62%</td>
+<td class="r"><span class="ok">✓</span> 1-4</td></tr>
+<tr><td class="small">10-28</td><td class="small">Monza - Napoli</td><td>12 + Over 1.5</td><td class="r">63%</td>
+<td class="r"><span class="ok">✓</span> 1-4</td></tr>
+<tr><td class="small">10-28</td><td class="small">Monza - Napoli</td><td>Under 3.5</td><td class="r">64%</td>
+<td class="r"><span class="ko">✗</span> 1-4</td></tr>
+<tr><td class="small">10-28</td><td class="small">Monza - Napoli</td><td>Casa Under 1.5</td><td class="r">66%</td>
+<td class="r"><span class="ok">✓</span> 1-4</td></tr>
+<tr><td class="small">10-28</td><td class="small">Monza - Napoli</td><td>Multigol casa 1-3</td><td class="r">66%</td>
+<td class="r"><span class="ok">✓</span> 1-4</td></tr>
+
+</table></div>
+</div>
+</body>
+</html>

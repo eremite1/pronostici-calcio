@@ -1,0 +1,27 @@
+
+=== Serie A
+  forza squadre calcolata su 470 partite (vantaggio casa 1.14x)
+  partite nella finestra: 10
+  pronostici Pengwin trovati: 10
+
+=== Premier League
+  forza squadre calcolata su 460 partite (vantaggio casa 1.20x)
+  partite nella finestra: 10
+  pronostici Pengwin trovati: 10
+
+=== LaLiga
+  forza squadre calcolata su 480 partite (vantaggio casa 1.34x)
+  partite nella finestra: 9
+  pronostici Pengwin trovati: 9
+
+=== Bundesliga
+  forza squadre calcolata su 370 partite (vantaggio casa 1.32x)
+  partite nella finestra: 8
+  pronostici Pengwin trovati: 8
+
+=== Ligue 1
+  forza squadre calcolata su 381 partite (vantaggio casa 1.25x)
+  partite nella finestra: 6
+  pronostici Pengwin trovati: 6
+
+Fatto: 43 partite, 3 schedine, avvisi: 0

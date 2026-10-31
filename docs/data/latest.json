@@ -1,0 +1,2926 @@
+{
+ "generated": "31/10/2026 alle 10:42",
+ "slips_day": [
+  {
+   "prob": 0.4229123291291441,
+   "odds": 2.01,
+   "fair": 2.36,
+   "legs": [
+    {
+     "match_id": "32310",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Bayer Leverkusen",
+     "away": "VfB Stuttgart",
+     "kickoff": "sab 31/10 15:30",
+     "pick": "1X",
+     "p": 0.751618419578011,
+     "odds": 1.26,
+     "is_real": true,
+     "best": null
+    },
+    {
+     "match_id": "31264",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Bournemouth",
+     "away": "Leeds",
+     "kickoff": "sab 31/10 16:00",
+     "pick": "Over 1.5",
+     "p": 0.7715077241670181,
+     "odds": 1.22,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "31265",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Brentford",
+     "away": "Nottingham Forest",
+     "kickoff": "sab 31/10 16:00",
+     "pick": "1X",
+     "p": 0.7293108139710259,
+     "odds": 1.31,
+     "is_real": true,
+     "best": null
+    }
+   ]
+  },
+  {
+   "prob": 0.4216114907963216,
+   "odds": 2.0,
+   "fair": 2.37,
+   "legs": [
+    {
+     "match_id": "32303",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Augsburg",
+     "away": "Freiburg",
+     "kickoff": "sab 31/10 15:30",
+     "pick": "Under 4.5",
+     "p": 0.754474034648355,
+     "odds": 1.25,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "32304",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Schalke 04",
+     "away": "RasenBallsport Leipzig",
+     "kickoff": "sab 31/10 15:30",
+     "pick": "X2",
+     "p": 0.7581770058935448,
+     "odds": 1.25,
+     "is_real": true,
+     "best": null
+    },
+    {
+     "match_id": "31263",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Manchester City",
+     "away": "Brighton",
+     "kickoff": "sab 31/10 16:00",
+     "pick": "Under 4.5",
+     "p": 0.7370509865523773,
+     "odds": 1.28,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  },
+  {
+   "prob": 0.41817973277195614,
+   "odds": 2.01,
+   "fair": 2.39,
+   "legs": [
+    {
+     "match_id": "31652",
+     "league": "Serie A",
+     "flag": "🇮🇹",
+     "home": "Bologna",
+     "away": "Monza",
+     "kickoff": "sab 31/10 15:00",
+     "pick": "Over 1.5",
+     "p": 0.7856764725418527,
+     "odds": 1.2,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "30878",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Rayo Vallecano",
+     "away": "Celta Vigo",
+     "kickoff": "sab 31/10 16:15",
+     "pick": "Over 1.5",
+     "p": 0.7255895037500579,
+     "odds": 1.3,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "31650",
+     "league": "Serie A",
+     "flag": "🇮🇹",
+     "home": "AC Milan",
+     "away": "Inter",
+     "kickoff": "sab 31/10 20:45",
+     "pick": "X2",
+     "p": 0.7335474993046419,
+     "odds": 1.29,
+     "is_real": true,
+     "best": null
+    }
+   ]
+  }
+ ],
+ "slips_window": [
+  {
+   "prob": 0.44778105262769596,
+   "odds": 2.03,
+   "fair": 2.23,
+   "legs": [
+    {
+     "match_id": "30878",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Rayo Vallecano",
+     "away": "Celta Vigo",
+     "kickoff": "sab 31/10 16:15",
+     "pick": "1X",
+     "p": 0.6974920986310982,
+     "odds": 1.37,
+     "is_real": true,
+     "best": null
+    },
+    {
+     "match_id": "32305",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Union Berlin",
+     "away": "FC Cologne",
+     "kickoff": "dom 01/11 15:30",
+     "pick": "1X",
+     "p": 0.641987276280998,
+     "odds": 1.48,
+     "is_real": true,
+     "best": null
+    }
+   ]
+  },
+  {
+   "prob": 0.44458516976678414,
+   "odds": 2.0,
+   "fair": 2.25,
+   "legs": [
+    {
+     "match_id": "31651",
+     "league": "Serie A",
+     "flag": "🇮🇹",
+     "home": "Atalanta",
+     "away": "Parma Calcio 1913",
+     "kickoff": "lun 02/11 20:45",
+     "pick": "Under 3.5",
+     "p": 0.6546045456472197,
+     "odds": 1.44,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "31269",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Newcastle United",
+     "away": "Everton",
+     "kickoff": "lun 02/11 21:00",
+     "pick": "1X",
+     "p": 0.6791660288995007,
+     "odds": 1.39,
+     "is_real": true,
+     "best": null
+    }
+   ]
+  },
+  {
+   "prob": 0.4386733429386177,
+   "odds": 2.03,
+   "fair": 2.28,
+   "legs": [
+    {
+     "match_id": "31656",
+     "league": "Serie A",
+     "flag": "🇮🇹",
+     "home": "Lazio",
+     "away": "Cagliari",
+     "kickoff": "dom 01/11 15:00",
+     "pick": "Under 3.5",
+     "p": 0.6981898166932935,
+     "odds": 1.35,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "31658",
+     "league": "Serie A",
+     "flag": "🇮🇹",
+     "home": "Sassuolo",
+     "away": "Fiorentina",
+     "kickoff": "lun 02/11 18:30",
+     "pick": "Under 3.5",
+     "p": 0.6283009755373182,
+     "odds": 1.5,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  }
+ ],
+ "best": [
+  {
+   "name": "1X",
+   "fam": "Doppia chance",
+   "p": 0.7293108139710259,
+   "fair": 1.37,
+   "real": 1.31,
+   "est": 1.3,
+   "used": 1.31,
+   "is_real": true,
+   "best": null,
+   "match_id": "31265",
+   "home": "Brentford",
+   "away": "Nottingham Forest",
+   "league": "Premier League",
+   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+   "kickoff": "sab 31/10 16:00",
+   "reliability": 100
+  },
+  {
+   "name": "12",
+   "fam": "Doppia chance",
+   "p": 0.7262865346013171,
+   "fair": 1.38,
+   "real": 1.3,
+   "est": 1.31,
+   "used": 1.3,
+   "is_real": true,
+   "best": null,
+   "match_id": "31264",
+   "home": "Bournemouth",
+   "away": "Leeds",
+   "league": "Premier League",
+   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+   "kickoff": "sab 31/10 16:00",
+   "reliability": 100
+  },
+  {
+   "name": "Over 2.5",
+   "fam": "Under/Over",
+   "p": 0.7256908835927972,
+   "fair": 1.38,
+   "real": 1.3,
+   "est": 1.3,
+   "used": 1.3,
+   "is_real": true,
+   "best": 1.33,
+   "match_id": "32310",
+   "home": "Bayer Leverkusen",
+   "away": "VfB Stuttgart",
+   "league": "Bundesliga",
+   "flag": "🇩🇪",
+   "kickoff": "sab 31/10 15:30",
+   "reliability": 100
+  },
+  {
+   "name": "Over 1.5",
+   "fam": "Under/Over",
+   "p": 0.7255895037500579,
+   "fair": 1.38,
+   "real": null,
+   "est": 1.3,
+   "used": 1.3,
+   "is_real": false,
+   "best": null,
+   "match_id": "30878",
+   "home": "Rayo Vallecano",
+   "away": "Celta Vigo",
+   "league": "LaLiga",
+   "flag": "🇪🇸",
+   "kickoff": "sab 31/10 16:15",
+   "reliability": 100
+  },
+  {
+   "name": "Under 4.5",
+   "fam": "Under/Over",
+   "p": 0.7239712771572807,
+   "fair": 1.38,
+   "real": null,
+   "est": 1.3,
+   "used": 1.3,
+   "is_real": false,
+   "best": null,
+   "match_id": "31653",
+   "home": "Como",
+   "away": "Venezia",
+   "league": "Serie A",
+   "flag": "🇮🇹",
+   "kickoff": "dom 01/11 12:30",
+   "reliability": 100
+  },
+  {
+   "name": "12",
+   "fam": "Doppia chance",
+   "p": 0.723356514632624,
+   "fair": 1.38,
+   "real": 1.3,
+   "est": 1.31,
+   "used": 1.3,
+   "is_real": true,
+   "best": null,
+   "match_id": "31262",
+   "home": "Hull",
+   "away": "Ipswich",
+   "league": "Premier League",
+   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+   "kickoff": "sab 31/10 16:00",
+   "reliability": 100
+  },
+  {
+   "name": "Under 4.5",
+   "fam": "Under/Over",
+   "p": 0.7204571018755679,
+   "fair": 1.39,
+   "real": null,
+   "est": 1.3,
+   "used": 1.3,
+   "is_real": false,
+   "best": null,
+   "match_id": "31654",
+   "home": "Frosinone",
+   "away": "Torino",
+   "league": "Serie A",
+   "flag": "🇮🇹",
+   "kickoff": "dom 01/11 15:00",
+   "reliability": 100
+  },
+  {
+   "name": "1X",
+   "fam": "Doppia chance",
+   "p": 0.7187187454836552,
+   "fair": 1.39,
+   "real": 1.3,
+   "est": 1.32,
+   "used": 1.3,
+   "is_real": true,
+   "best": null,
+   "match_id": "32307",
+   "home": "Borussia M.Gladbach",
+   "away": "Paderborn",
+   "league": "Bundesliga",
+   "flag": "🇩🇪",
+   "kickoff": "sab 31/10 15:30",
+   "reliability": 100
+  },
+  {
+   "name": "Under 3.5",
+   "fam": "Under/Over",
+   "p": 0.7171446311449723,
+   "fair": 1.39,
+   "real": null,
+   "est": 1.31,
+   "used": 1.31,
+   "is_real": false,
+   "best": null,
+   "match_id": "31268",
+   "home": "Liverpool",
+   "away": "Arsenal",
+   "league": "Premier League",
+   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+   "kickoff": "dom 01/11 17:30",
+   "reliability": 100
+  },
+  {
+   "name": "12",
+   "fam": "Doppia chance",
+   "p": 0.715822188779949,
+   "fair": 1.4,
+   "real": 1.3,
+   "est": 1.33,
+   "used": 1.3,
+   "is_real": true,
+   "best": null,
+   "match_id": "30873",
+   "home": "Elche",
+   "away": "Valencia",
+   "league": "LaLiga",
+   "flag": "🇪🇸",
+   "kickoff": "dom 01/11 18:30",
+   "reliability": 100
+  },
+  {
+   "name": "12",
+   "fam": "Doppia chance",
+   "p": 0.7122960462405116,
+   "fair": 1.4,
+   "real": 1.3,
+   "est": 1.33,
+   "used": 1.3,
+   "is_real": true,
+   "best": null,
+   "match_id": "31261",
+   "home": "Coventry",
+   "away": "Sunderland",
+   "league": "Premier League",
+   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+   "kickoff": "sab 31/10 16:00",
+   "reliability": 100
+  },
+  {
+   "name": "12",
+   "fam": "Doppia chance",
+   "p": 0.7107963988903385,
+   "fair": 1.41,
+   "real": 1.31,
+   "est": 1.34,
+   "used": 1.31,
+   "is_real": true,
+   "best": null,
+   "match_id": "32014",
+   "home": "Lorient",
+   "away": "Brest",
+   "league": "Ligue 1",
+   "flag": "🇫🇷",
+   "kickoff": "lun 02/11 20:45",
+   "reliability": 100
+  },
+  {
+   "name": "12",
+   "fam": "Doppia chance",
+   "p": 0.7105334529498929,
+   "fair": 1.41,
+   "real": 1.32,
+   "est": 1.34,
+   "used": 1.32,
+   "is_real": true,
+   "best": null,
+   "match_id": "31655",
+   "home": "Juventus",
+   "away": "Napoli",
+   "league": "Serie A",
+   "flag": "🇮🇹",
+   "kickoff": "dom 01/11 20:45",
+   "reliability": 100
+  },
+  {
+   "name": "X2",
+   "fam": "Doppia chance",
+   "p": 0.7098611404109791,
+   "fair": 1.41,
+   "real": 1.33,
+   "est": 1.34,
+   "used": 1.33,
+   "is_real": true,
+   "best": null,
+   "match_id": "31657",
+   "home": "Lecce",
+   "away": "Genoa",
+   "league": "Serie A",
+   "flag": "🇮🇹",
+   "kickoff": "dom 01/11 18:00",
+   "reliability": 100
+  },
+  {
+   "name": "Casa Under 2.5",
+   "fam": "Gol casa",
+   "p": 0.7091353661432573,
+   "fair": 1.41,
+   "real": null,
+   "est": 1.3,
+   "used": 1.3,
+   "is_real": false,
+   "best": null,
+   "match_id": "32016",
+   "home": "Marseille",
+   "away": "Toulouse",
+   "league": "Ligue 1",
+   "flag": "🇫🇷",
+   "kickoff": "dom 01/11 20:45",
+   "reliability": 100
+  }
+ ],
+ "matches": [
+  {
+   "id": "31260",
+   "league": "Premier League",
+   "home": "Chelsea",
+   "away": "Manchester United",
+   "kickoff": "2026-10-31T12:30:00+00:00",
+   "lh": 1.8529813172612426,
+   "la": 1.309356586526878,
+   "p1x2": [
+    0.49173573130560744,
+    0.24745181697859275,
+    0.2608124517157997
+   ],
+   "top": [
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7300062421851005,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.7190369400167004,
+     "odds": 1.25
+    },
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.7163986744205291,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.685971505771614,
+     "odds": 1.31
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6392351760761685,
+     "odds": 1.41
+    },
+    {
+     "name": "Goal",
+     "p": 0.6258327550740513,
+     "odds": 1.5
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.6258327550740513,
+     "odds": 1.44
+    },
+    {
+     "name": "Ospite Under 1.5",
+     "p": 0.6235118629309806,
+     "odds": 1.48
+    }
+   ]
+  },
+  {
+   "id": "30876",
+   "league": "LaLiga",
+   "home": "Levante",
+   "away": "Atletico Madrid",
+   "kickoff": "2026-10-31T13:00:00+00:00",
+   "lh": 1.129218858347909,
+   "la": 2.086376132988253,
+   "p1x2": [
+    0.18967649419301563,
+    0.22622191283049145,
+    0.5841015929764929
+   ],
+   "top": [
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.7170829583948988,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 0-1",
+     "p": 0.6883460106240566,
+     "odds": 1.31
+    },
+    {
+     "name": "Casa Under 1.5",
+     "p": 0.6883460106240566,
+     "odds": 1.34
+    },
+    {
+     "name": "X2 + Over 1.5",
+     "p": 0.6864612401532892,
+     "odds": 1.31
+    },
+    {
+     "name": "Casa Over 0.5",
+     "p": 0.676714299272103,
+     "odds": 1.36
+    },
+    {
+     "name": "Multigol casa 1-4",
+     "p": 0.6706625469503423,
+     "odds": 1.34
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6636399901495917,
+     "odds": 1.36
+    },
+    {
+     "name": "Ospite Under 2.5",
+     "p": 0.6533191551517754,
+     "odds": 1.41
+    }
+   ]
+  },
+  {
+   "id": "31652",
+   "league": "Serie A",
+   "home": "Bologna",
+   "away": "Monza",
+   "kickoff": "2026-10-31T14:00:00+00:00",
+   "lh": 1.810670506446088,
+   "la": 1.0241614511082824,
+   "p1x2": [
+    0.5472162507967684,
+    0.2516107323839373,
+    0.20117301681929461
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.7483892676160628,
+     "odds": 1.25
+    },
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.7277644346948986,
+     "odds": 1.26
+    },
+    {
+     "name": "Ospite Under 1.5",
+     "p": 0.7268712449444461,
+     "odds": 1.27
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.720757410809441,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7174898723318395,
+     "odds": 1.25
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6841811044316446,
+     "odds": 1.37
+    },
+    {
+     "name": "1X + Under 4.5",
+     "p": 0.6741413915190901,
+     "odds": 1.34
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.6409025354442629,
+     "odds": 1.44
+    }
+   ]
+  },
+  {
+   "id": "32303",
+   "league": "Bundesliga",
+   "home": "Augsburg",
+   "away": "Freiburg",
+   "kickoff": "2026-10-31T14:30:00+00:00",
+   "lh": 1.56653057350181,
+   "la": 1.7778141007433543,
+   "p1x2": [
+    0.3323714891926361,
+    0.24691780310528322,
+    0.4207107077020808
+   ],
+   "top": [
+    {
+     "name": "Under 4.5",
+     "p": 0.754474034648355,
+     "odds": 1.25
+    },
+    {
+     "name": "Ospite Under 2.5",
+     "p": 0.7365565487003266,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7169640136036641,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol 1-4",
+     "p": 0.7093641339639649,
+     "odds": 1.27
+    },
+    {
+     "name": "X2",
+     "p": 0.667628510807364,
+     "odds": 1.37
+    },
+    {
+     "name": "Goal",
+     "p": 0.6673338460636925,
+     "odds": 1.41
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.6673338460636925,
+     "odds": 1.35
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6547350410595157,
+     "odds": 1.37
+    }
+   ]
+  },
+  {
+   "id": "32304",
+   "league": "Bundesliga",
+   "home": "Schalke 04",
+   "away": "RasenBallsport Leipzig",
+   "kickoff": "2026-10-31T14:30:00+00:00",
+   "lh": 1.311772251891332,
+   "la": 1.9866429765427642,
+   "p1x2": [
+    0.2418229941064552,
+    0.23664090121579642,
+    0.5215361046777482
+   ],
+   "top": [
+    {
+     "name": "X2",
+     "p": 0.7581770058935448,
+     "odds": 1.25
+    },
+    {
+     "name": "Casa Over 0.5",
+     "p": 0.7306576688995816,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.7223761683005141,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol casa 1-4",
+     "p": 0.7196082959627308,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol 1-4",
+     "p": 0.7163161094433587,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.6863785414665122,
+     "odds": 1.31
+    },
+    {
+     "name": "Ospite Under 2.5",
+     "p": 0.6802970295291374,
+     "odds": 1.35
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6607634979082988,
+     "odds": 1.36
+    }
+   ]
+  },
+  {
+   "id": "32306",
+   "league": "Bundesliga",
+   "home": "Werder Bremen",
+   "away": "Hoffenheim",
+   "kickoff": "2026-10-31T14:30:00+00:00",
+   "lh": 1.633961233701251,
+   "la": 1.7907235328873004,
+   "p1x2": [
+    0.3456079146317489,
+    0.24389690815539825,
+    0.4104951772128529
+   ],
+   "top": [
+    {
+     "name": "Under 4.5",
+     "p": 0.7395878936259405,
+     "odds": 1.27
+    },
+    {
+     "name": "Ospite Under 2.5",
+     "p": 0.7331060573617895,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7212824447467415,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol 1-4",
+     "p": 0.6975013385460674,
+     "odds": 1.29
+    },
+    {
+     "name": "Goal",
+     "p": 0.6800914155051354,
+     "odds": 1.38
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.6800914155051354,
+     "odds": 1.32
+    },
+    {
+     "name": "Over 2.5",
+     "p": 0.6649961247484618,
+     "odds": 1.38
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6636501970069854,
+     "odds": 1.36
+    }
+   ]
+  },
+  {
+   "id": "32307",
+   "league": "Bundesliga",
+   "home": "Borussia M.Gladbach",
+   "away": "Paderborn",
+   "kickoff": "2026-10-31T14:30:00+00:00",
+   "lh": 1.8073316720056167,
+   "la": 1.3673297891016516,
+   "p1x2": [
+    0.4685786051416734,
+    0.2501401403419819,
+    0.28128125451634484
+   ],
+   "top": [
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.7286593556234424,
+     "odds": 1.26
+    },
+    {
+     "name": "1X",
+     "p": 0.7187187454836552,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6951040466487219,
+     "odds": 1.29
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6377958798894316,
+     "odds": 1.41
+    },
+    {
+     "name": "Goal",
+     "p": 0.6332617914405533,
+     "odds": 1.48
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.6332617914405533,
+     "odds": 1.42
+    },
+    {
+     "name": "Multigol 2-4",
+     "p": 0.6209092459023691,
+     "odds": 1.45
+    },
+    {
+     "name": "Over 2.5",
+     "p": 0.6147816140234281,
+     "odds": 1.47
+    }
+   ]
+  },
+  {
+   "id": "32310",
+   "league": "Bundesliga",
+   "home": "Bayer Leverkusen",
+   "away": "VfB Stuttgart",
+   "kickoff": "2026-10-31T14:30:00+00:00",
+   "lh": 2.2509400636257753,
+   "la": 1.5158539012309007,
+   "p1x2": [
+    0.534706605787886,
+    0.21691181379012522,
+    0.248381580421989
+   ],
+   "top": [
+    {
+     "name": "1X",
+     "p": 0.751618419578011,
+     "odds": 1.26
+    },
+    {
+     "name": "Over 2.5",
+     "p": 0.7256908835927972,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7181067158661392,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.712731830691596,
+     "odds": 1.26
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.71175688864062,
+     "odds": 1.26
+    },
+    {
+     "name": "Goal",
+     "p": 0.7060942505026558,
+     "odds": 1.33
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.7060942505026558,
+     "odds": 1.27
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7039619031001296,
+     "odds": 1.28
+    }
+   ]
+  },
+  {
+   "id": "31261",
+   "league": "Premier League",
+   "home": "Coventry",
+   "away": "Sunderland",
+   "kickoff": "2026-10-31T15:00:00+00:00",
+   "lh": 1.2151656726560287,
+   "la": 1.3858009559176132,
+   "p1x2": [
+    0.31622711329727726,
+    0.28770395375948843,
+    0.3960689329432343
+   ],
+   "top": [
+    {
+     "name": "Over 1.5",
+     "p": 0.745297067680239,
+     "odds": 1.26
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.7357915576954113,
+     "odds": 1.28
+    },
+    {
+     "name": "12",
+     "p": 0.7122960462405116,
+     "odds": 1.3
+    },
+    {
+     "name": "Casa Over 0.5",
+     "p": 0.7033391174623425,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6977398678440276,
+     "odds": 1.29
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.6961891092977206,
+     "odds": 1.29
+    },
+    {
+     "name": "Multigol casa 1-4",
+     "p": 0.6951917170266462,
+     "odds": 1.29
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.6897680336451494,
+     "odds": 1.33
+    }
+   ]
+  },
+  {
+   "id": "31262",
+   "league": "Premier League",
+   "home": "Hull",
+   "away": "Ipswich",
+   "kickoff": "2026-10-31T15:00:00+00:00",
+   "lh": 1.43764434645094,
+   "la": 1.358177420275664,
+   "p1x2": [
+    0.37970629617991497,
+    0.27664348536737593,
+    0.34365021845270904
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.723356514632624,
+     "odds": 1.3
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7158121440410737,
+     "odds": 1.29
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7153866275858924,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7044519706355119,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6937495262561655,
+     "odds": 1.3
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6928672812604882,
+     "odds": 1.36
+    },
+    {
+     "name": "1X",
+     "p": 0.6563497815472907,
+     "odds": 1.47
+    },
+    {
+     "name": "1° tempo Under 1.5",
+     "p": 0.6417302230471257,
+     "odds": 1.43
+    }
+   ]
+  },
+  {
+   "id": "31263",
+   "league": "Premier League",
+   "home": "Manchester City",
+   "away": "Brighton",
+   "kickoff": "2026-10-31T15:00:00+00:00",
+   "lh": 2.172251426744305,
+   "la": 1.2660654630097907,
+   "p1x2": [
+    0.5715038759729467,
+    0.22098469361713827,
+    0.20751143040991482
+   ],
+   "top": [
+    {
+     "name": "Under 4.5",
+     "p": 0.7370509865523773,
+     "odds": 1.28
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7180612294505532,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7108726952657712,
+     "odds": 1.27
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.7084605103798568,
+     "odds": 1.27
+    },
+    {
+     "name": "Multigol 1-4",
+     "p": 0.6960982355588063,
+     "odds": 1.29
+    },
+    {
+     "name": "1X + Over 1.5",
+     "p": 0.6905981715413234,
+     "odds": 1.3
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6862460433306399,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6782771070411143,
+     "odds": 1.33
+    }
+   ]
+  },
+  {
+   "id": "31264",
+   "league": "Premier League",
+   "home": "Bournemouth",
+   "away": "Leeds",
+   "kickoff": "2026-10-31T15:00:00+00:00",
+   "lh": 1.5696563763257492,
+   "la": 1.1768607488784546,
+   "p1x2": [
+    0.4524115463089603,
+    0.27371346539868285,
+    0.2738749882923569
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.7262865346013171,
+     "odds": 1.3
+    },
+    {
+     "name": "1X",
+     "p": 0.7261250117076431,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7171968663861888,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7109646627285642,
+     "odds": 1.27
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7094363745067767,
+     "odds": 1.3
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.7038122552940562,
+     "odds": 1.34
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.691755104773642,
+     "odds": 1.33
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.6845954125674361,
+     "odds": 1.31
+    }
+   ]
+  },
+  {
+   "id": "31265",
+   "league": "Premier League",
+   "home": "Brentford",
+   "away": "Nottingham Forest",
+   "kickoff": "2026-10-31T15:00:00+00:00",
+   "lh": 1.677699126233978,
+   "la": 1.2353670382211324,
+   "p1x2": [
+    0.4662849407639137,
+    0.2630258732071123,
+    0.2706891860289741
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.7369741267928878,
+     "odds": 1.27
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7304172197366847,
+     "odds": 1.26
+    },
+    {
+     "name": "1X",
+     "p": 0.7293108139710259,
+     "odds": 1.31
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.709271941400742,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.7005673889734852,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6723537084619484,
+     "odds": 1.34
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6667015357582108,
+     "odds": 1.41
+    },
+    {
+     "name": "Ospite Under 1.5",
+     "p": 0.6498839192788031,
+     "odds": 1.42
+    }
+   ]
+  },
+  {
+   "id": "30878",
+   "league": "LaLiga",
+   "home": "Rayo Vallecano",
+   "away": "Celta Vigo",
+   "kickoff": "2026-10-31T15:15:00+00:00",
+   "lh": 1.3569751959692047,
+   "la": 1.1437873044717404,
+   "p1x2": [
+    0.40390549447479107,
+    0.2935866041563071,
+    0.3025079013689017
+   ],
+   "top": [
+    {
+     "name": "Over 1.5",
+     "p": 0.7255895037500579,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol 2-6",
+     "p": 0.7113812009698773,
+     "odds": 1.27
+    },
+    {
+     "name": "12",
+     "p": 0.7064133958436929,
+     "odds": 1.32
+    },
+    {
+     "name": "1X",
+     "p": 0.6974920986310982,
+     "odds": 1.37
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.6935691973154566,
+     "odds": 1.3
+    },
+    {
+     "name": "1° tempo Under 1.5",
+     "p": 0.6897611745805251,
+     "odds": 1.33
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.6835177472651391,
+     "odds": 1.32
+    },
+    {
+     "name": "Multigol ospite 0-1",
+     "p": 0.683032229388428,
+     "odds": 1.32
+    }
+   ]
+  },
+  {
+   "id": "31659",
+   "league": "Serie A",
+   "home": "Udinese",
+   "away": "Roma",
+   "kickoff": "2026-10-31T17:00:00+00:00",
+   "lh": 1.0112911043112123,
+   "la": 2.0655396284968783,
+   "p1x2": [
+    0.1676208617897234,
+    0.22530135144591465,
+    0.607077786764362
+   ],
+   "top": [
+    {
+     "name": "Casa Under 1.5",
+     "p": 0.7316052131942747,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.7183656654148234,
+     "odds": 1.25
+    },
+    {
+     "name": "X2 + Over 1.5",
+     "p": 0.6910404099586634,
+     "odds": 1.3
+    },
+    {
+     "name": "X2 + Under 4.5",
+     "p": 0.6665587835259357,
+     "odds": 1.35
+    },
+    {
+     "name": "Ospite Under 2.5",
+     "p": 0.6589503706499021,
+     "odds": 1.4
+    },
+    {
+     "name": "Casa Over 0.5",
+     "p": 0.6362509575933214,
+     "odds": 1.45
+    },
+    {
+     "name": "Multigol casa 1-4",
+     "p": 0.6324150987635206,
+     "odds": 1.42
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6300312057790867,
+     "odds": 1.49
+    }
+   ]
+  },
+  {
+   "id": "31266",
+   "league": "Premier League",
+   "home": "Tottenham",
+   "away": "Crystal Palace",
+   "kickoff": "2026-10-31T17:30:00+00:00",
+   "lh": 1.9899455128904415,
+   "la": 1.0526206789047694,
+   "p1x2": [
+    0.5810860722744972,
+    0.23389568633675156,
+    0.18501824138875128
+   ],
+   "top": [
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7222360421466465,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol ospite 0-1",
+     "p": 0.7164095306188091,
+     "odds": 1.26
+    },
+    {
+     "name": "Ospite Under 1.5",
+     "p": 0.7164095306188091,
+     "odds": 1.28
+    },
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.6794032358651105,
+     "odds": 1.35
+    },
+    {
+     "name": "1X + Over 1.5",
+     "p": 0.6723234672101731,
+     "odds": 1.34
+    },
+    {
+     "name": "1X + Under 4.5",
+     "p": 0.6586331757856805,
+     "odds": 1.37
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.6509781188597064,
+     "odds": 1.41
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.6464461825576098,
+     "odds": 1.39
+    }
+   ]
+  },
+  {
+   "id": "30871",
+   "league": "LaLiga",
+   "home": "Real Betis",
+   "away": "Malaga",
+   "kickoff": "2026-10-31T17:30:00+00:00",
+   "lh": 2.3912761488388754,
+   "la": 0.8442556749253676,
+   "p1x2": [
+    0.7088299026477002,
+    0.18495836286740952,
+    0.1062117344848903
+   ],
+   "top": [
+    {
+     "name": "1",
+     "p": 0.7088299026477002,
+     "odds": 1.33
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.7036375172254793,
+     "odds": 1.28
+    },
+    {
+     "name": "Casa Over 1.5",
+     "p": 0.6896418046751086,
+     "odds": 1.33
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.6890602100722009,
+     "odds": 1.31
+    },
+    {
+     "name": "1X + Under 4.5",
+     "p": 0.6872569549767598,
+     "odds": 1.31
+    },
+    {
+     "name": "Over 2.5",
+     "p": 0.6274468273337926,
+     "odds": 1.48
+    },
+    {
+     "name": "Multigol 2-4",
+     "p": 0.6156017770841109,
+     "odds": 1.46
+    },
+    {
+     "name": "Multigol casa 2-4",
+     "p": 0.5949017990497457,
+     "odds": 1.51
+    }
+   ]
+  },
+  {
+   "id": "32309",
+   "league": "Bundesliga",
+   "home": "Bayern Munich",
+   "away": "Borussia Dortmund",
+   "kickoff": "2026-10-31T17:30:00+00:00",
+   "lh": 2.7512693165372486,
+   "la": 1.2094556632336266,
+   "p1x2": [
+    0.6910014875832379,
+    0.17201292529610165,
+    0.13698558712066053
+   ],
+   "top": [
+    {
+     "name": "Multigol 2-5",
+     "p": 0.703177882057318,
+     "odds": 1.28
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7016403365710409,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.693645824331087,
+     "odds": 1.3
+    },
+    {
+     "name": "1",
+     "p": 0.6910014875832379,
+     "odds": 1.32
+    },
+    {
+     "name": "12 + Over 2.5",
+     "p": 0.6791653334071941,
+     "odds": 1.33
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6670453931402163,
+     "odds": 1.35
+    },
+    {
+     "name": "Goal",
+     "p": 0.663176172504044,
+     "odds": 1.42
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.663176172504044,
+     "odds": 1.36
+    }
+   ]
+  },
+  {
+   "id": "31650",
+   "league": "Serie A",
+   "home": "AC Milan",
+   "away": "Inter",
+   "kickoff": "2026-10-31T19:45:00+00:00",
+   "lh": 1.2803746189852254,
+   "la": 1.7724212225898914,
+   "p1x2": [
+    0.2664525006953582,
+    0.2543583350041377,
+    0.47918916430050407
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.7456416649958624,
+     "odds": 1.26
+    },
+    {
+     "name": "Ospite Under 2.5",
+     "p": 0.7379963566384555,
+     "odds": 1.25
+    },
+    {
+     "name": "X2",
+     "p": 0.7335474993046419,
+     "odds": 1.29
+    },
+    {
+     "name": "Casa Over 0.5",
+     "p": 0.7220668052832173,
+     "odds": 1.27
+    },
+    {
+     "name": "Multigol casa 1-4",
+     "p": 0.7120274949439276,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.6809047851093482,
+     "odds": 1.32
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6354070207674627,
+     "odds": 1.48
+    },
+    {
+     "name": "Casa Under 1.5",
+     "p": 0.6337918030056299,
+     "odds": 1.45
+    }
+   ]
+  },
+  {
+   "id": "32020",
+   "league": "Ligue 1",
+   "home": "Troyes",
+   "away": "Le Mans",
+   "kickoff": "2026-10-31T19:45:00+00:00",
+   "lh": 1.4915852509601983,
+   "la": 1.3262628486431445,
+   "p1x2": [
+    0.4000711513806092,
+    0.2745447163055081,
+    0.3253841323138827
+   ],
+   "top": [
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.734532453681808,
+     "odds": 1.25
+    },
+    {
+     "name": "12",
+     "p": 0.7254552836944919,
+     "odds": 1.29
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7186150573958563,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7170828604049222,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.710393943997433,
+     "odds": 1.27
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6887713555314654,
+     "odds": 1.31
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6879645429891897,
+     "odds": 1.37
+    },
+    {
+     "name": "1X",
+     "p": 0.6746158676861174,
+     "odds": 1.39
+    }
+   ]
+  },
+  {
+   "id": "31267",
+   "league": "Premier League",
+   "home": "Aston Villa",
+   "away": "Fulham",
+   "kickoff": "2026-10-31T20:00:00+00:00",
+   "lh": 1.7129031283412521,
+   "la": 1.2108534077946342,
+   "p1x2": [
+    0.4803535276044464,
+    0.26044383207849064,
+    0.2592026403170631
+   ],
+   "top": [
+    {
+     "name": "1X",
+     "p": 0.740797359682937,
+     "odds": 1.27
+    },
+    {
+     "name": "12",
+     "p": 0.7395561679215095,
+     "odds": 1.26
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.73171097833903,
+     "odds": 1.26
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7020570756219567,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.6940253235567024,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6673390392860223,
+     "odds": 1.35
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6643093727031184,
+     "odds": 1.42
+    },
+    {
+     "name": "Ospite Under 1.5",
+     "p": 0.6587081296894962,
+     "odds": 1.4
+    }
+   ]
+  },
+  {
+   "id": "30874",
+   "league": "LaLiga",
+   "home": "Barcelona",
+   "away": "Alaves",
+   "kickoff": "2026-10-31T20:00:00+00:00",
+   "lh": 3.3163728337166716,
+   "la": 0.7979958728831141,
+   "p1x2": [
+    0.8428993717072613,
+    0.10685125181489447,
+    0.05024937647784426
+   ],
+   "top": [
+    {
+     "name": "1 + Over 2.5",
+     "p": 0.7031170786808343,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.6882400996034902,
+     "odds": 1.31
+    },
+    {
+     "name": "1° tempo 1",
+     "p": 0.6604151531290539,
+     "odds": 1.39
+    },
+    {
+     "name": "Multigol 3-6",
+     "p": 0.6556873550596409,
+     "odds": 1.37
+    },
+    {
+     "name": "Casa Over 2.5",
+     "p": 0.6436145086475252,
+     "odds": 1.43
+    },
+    {
+     "name": "Under 4.5",
+     "p": 0.6069079273654443,
+     "odds": 1.55
+    },
+    {
+     "name": "Multigol casa 2-4",
+     "p": 0.6033856105544761,
+     "odds": 1.49
+    },
+    {
+     "name": "Over 3.5",
+     "p": 0.5882752251385632,
+     "odds": 1.6
+    }
+   ]
+  },
+  {
+   "id": "31653",
+   "league": "Serie A",
+   "home": "Como",
+   "away": "Venezia",
+   "kickoff": "2026-11-01T11:30:00+00:00",
+   "lh": 2.5845098819862886,
+   "la": 0.9236061420322038,
+   "p1x2": [
+    0.7235964599748006,
+    0.1716153547598179,
+    0.10478818526538164
+   ],
+   "top": [
+    {
+     "name": "Casa Over 1.5",
+     "p": 0.7295872521455251,
+     "odds": 1.26
+    },
+    {
+     "name": "Under 4.5",
+     "p": 0.7239712771572807,
+     "odds": 1.3
+    },
+    {
+     "name": "1",
+     "p": 0.7235964599748006,
+     "odds": 1.29
+    },
+    {
+     "name": "Multigol 1-4",
+     "p": 0.6868648709805076,
+     "odds": 1.31
+    },
+    {
+     "name": "Over 2.5",
+     "p": 0.6806250247917995,
+     "odds": 1.37
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.6639894174851716,
+     "odds": 1.36
+    },
+    {
+     "name": "1 + Over 1.5",
+     "p": 0.6533261513970129,
+     "odds": 1.38
+    },
+    {
+     "name": "1X + Under 4.5",
+     "p": 0.6426475598097592,
+     "odds": 1.4
+    }
+   ]
+  },
+  {
+   "id": "30875",
+   "league": "LaLiga",
+   "home": "Getafe",
+   "away": "Sevilla",
+   "kickoff": "2026-11-01T13:00:00+00:00",
+   "lh": 0.979819038028718,
+   "la": 1.1108349044432155,
+   "p1x2": [
+    0.30314036673797307,
+    0.32639796051743364,
+    0.37046167274459363
+   ],
+   "top": [
+    {
+     "name": "Multigol 1-3",
+     "p": 0.7033460389362455,
+     "odds": 1.28
+    },
+    {
+     "name": "X2",
+     "p": 0.6968596332620272,
+     "odds": 1.34
+    },
+    {
+     "name": "Multigol ospite 0-1",
+     "p": 0.6950640238292554,
+     "odds": 1.29
+    },
+    {
+     "name": "Ospite Under 1.5",
+     "p": 0.6950640238292554,
+     "odds": 1.32
+    },
+    {
+     "name": "12",
+     "p": 0.6736020394825666,
+     "odds": 1.37
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.6707160648299989,
+     "odds": 1.37
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.6650576227705651,
+     "odds": 1.35
+    },
+    {
+     "name": "X2 + Under 4.5",
+     "p": 0.660242872675417,
+     "odds": 1.36
+    }
+   ]
+  },
+  {
+   "id": "31654",
+   "league": "Serie A",
+   "home": "Frosinone",
+   "away": "Torino",
+   "kickoff": "2026-11-01T14:00:00+00:00",
+   "lh": 1.9222290783394704,
+   "la": 1.6041650780431889,
+   "p1x2": [
+    0.4461079312926174,
+    0.23734435139245244,
+    0.31654771731493014
+   ],
+   "top": [
+    {
+     "name": "Under 4.5",
+     "p": 0.7204571018755679,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.7195548068659011,
+     "odds": 1.25
+    },
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.6977199196040018,
+     "odds": 1.32
+    },
+    {
+     "name": "Goal",
+     "p": 0.6911411305082398,
+     "odds": 1.36
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.6911411305082398,
+     "odds": 1.3
+    },
+    {
+     "name": "Over 2.5",
+     "p": 0.6840048857808562,
+     "odds": 1.4
+    },
+    {
+     "name": "1X",
+     "p": 0.6834522826850697,
+     "odds": 1.37
+    },
+    {
+     "name": "Multigol 1-4",
+     "p": 0.6819770375465841,
+     "odds": 1.32
+    }
+   ]
+  },
+  {
+   "id": "31656",
+   "league": "Serie A",
+   "home": "Lazio",
+   "away": "Cagliari",
+   "kickoff": "2026-11-01T14:00:00+00:00",
+   "lh": 1.9643759115177875,
+   "la": 0.8075139087804669,
+   "p1x2": [
+    0.635269859769537,
+    0.22860895131069367,
+    0.13612118891976932
+   ],
+   "top": [
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7127350781253089,
+     "odds": 1.29
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7113323369223971,
+     "odds": 1.27
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6981898166932935,
+     "odds": 1.35
+    },
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.6863226118862708,
+     "odds": 1.34
+    },
+    {
+     "name": "1X + Over 1.5",
+     "p": 0.678474477723202,
+     "odds": 1.33
+    },
+    {
+     "name": "1X + Multigol 1-4",
+     "p": 0.6611555762120991,
+     "odds": 1.36
+    },
+    {
+     "name": "1° tempo Under 1.5",
+     "p": 0.6455849425776442,
+     "odds": 1.43
+    },
+    {
+     "name": "1",
+     "p": 0.635269859769537,
+     "odds": 1.43
+    }
+   ]
+  },
+  {
+   "id": "32019",
+   "league": "Ligue 1",
+   "home": "Strasbourg",
+   "away": "Auxerre",
+   "kickoff": "2026-11-01T14:00:00+00:00",
+   "lh": 1.8674522304009864,
+   "la": 1.2109388322027432,
+   "p1x2": [
+    0.5169409166294795,
+    0.2468820400477344,
+    0.23617704332278597
+   ],
+   "top": [
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.7125020699370062,
+     "odds": 1.29
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7020825261186979,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.6940484942162641,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6673569585985366,
+     "odds": 1.35
+    },
+    {
+     "name": "Ospite Under 1.5",
+     "p": 0.6586773117959173,
+     "odds": 1.4
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6322286890013136,
+     "odds": 1.42
+    },
+    {
+     "name": "1X + Over 1.5",
+     "p": 0.6318241871915633,
+     "odds": 1.42
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6296777470695942,
+     "odds": 1.49
+    }
+   ]
+  },
+  {
+   "id": "32305",
+   "league": "Bundesliga",
+   "home": "Union Berlin",
+   "away": "FC Cologne",
+   "kickoff": "2026-11-01T14:30:00+00:00",
+   "lh": 1.5176684085091445,
+   "la": 1.4761049141787748,
+   "p1x2": [
+    0.3763091172592331,
+    0.26567815902176506,
+    0.35801272371900184
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.7343218409782348,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7128984312308865,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.7087949593002563,
+     "odds": 1.27
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6486276289321551,
+     "odds": 1.45
+    },
+    {
+     "name": "1X",
+     "p": 0.641987276280998,
+     "odds": 1.48
+    },
+    {
+     "name": "Multigol 2-4",
+     "p": 0.6274520407719644,
+     "odds": 1.43
+    },
+    {
+     "name": "Goal",
+     "p": 0.6135725056034299,
+     "odds": 1.53
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.6135725056034299,
+     "odds": 1.47
+    }
+   ]
+  },
+  {
+   "id": "30877",
+   "league": "LaLiga",
+   "home": "Racing Santander",
+   "away": "Real Madrid",
+   "kickoff": "2026-11-01T15:15:00+00:00",
+   "lh": 1.0894562460774306,
+   "la": 3.0150437960003664,
+   "p1x2": [
+    0.09939478824060563,
+    0.14613440438298395,
+    0.7544708073764104
+   ],
+   "top": [
+    {
+     "name": "12 + Over 2.5",
+     "p": 0.712164174018546,
+     "odds": 1.26
+    },
+    {
+     "name": "2 + Over 1.5",
+     "p": 0.7101335841417518,
+     "odds": 1.27
+    },
+    {
+     "name": "Multigol casa 0-1",
+     "p": 0.7028917657702276,
+     "odds": 1.28
+    },
+    {
+     "name": "Casa Under 1.5",
+     "p": 0.7028917657702276,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.690006020795762,
+     "odds": 1.3
+    },
+    {
+     "name": "Casa Over 0.5",
+     "p": 0.6636006295466692,
+     "odds": 1.39
+    },
+    {
+     "name": "Multigol casa 1-4",
+     "p": 0.6583765054061279,
+     "odds": 1.37
+    },
+    {
+     "name": "Multigol 3-6",
+     "p": 0.6551675116776909,
+     "odds": 1.37
+    }
+   ]
+  },
+  {
+   "id": "32015",
+   "league": "Ligue 1",
+   "home": "Lyon",
+   "away": "Angers",
+   "kickoff": "2026-11-01T16:15:00+00:00",
+   "lh": 2.1889918192935522,
+   "la": 0.8868127590751589,
+   "p1x2": [
+    0.661656296856602,
+    0.20775640839455364,
+    0.13058729474884456
+   ],
+   "top": [
+    {
+     "name": "1X + Over 1.5",
+     "p": 0.7222300394047169,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.709496483296796,
+     "odds": 1.27
+    },
+    {
+     "name": "1X + Under 4.5",
+     "p": 0.6942416731752787,
+     "odds": 1.3
+    },
+    {
+     "name": "1",
+     "p": 0.661656296856602,
+     "odds": 1.39
+    },
+    {
+     "name": "Casa Over 1.5",
+     "p": 0.6427316442167942,
+     "odds": 1.43
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.630265769324281,
+     "odds": 1.49
+    },
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.62567881031855,
+     "odds": 1.47
+    },
+    {
+     "name": "Multigol 2-4",
+     "p": 0.6232314000803543,
+     "odds": 1.44
+    }
+   ]
+  },
+  {
+   "id": "32018",
+   "league": "Ligue 1",
+   "home": "Paris FC",
+   "away": "Monaco",
+   "kickoff": "2026-11-01T16:15:00+00:00",
+   "lh": 1.5050779620608172,
+   "la": 1.3120477218803692,
+   "p1x2": [
+    0.4064872380222193,
+    0.27420479216304067,
+    0.3193079698147401
+   ],
+   "top": [
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7307318543270326,
+     "odds": 1.26
+    },
+    {
+     "name": "12",
+     "p": 0.7257952078369594,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.7196733253114194,
+     "odds": 1.25
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7185235679221352,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7170127429455775,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7117190098115502,
+     "odds": 1.26
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.688125481463999,
+     "odds": 1.37
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6864248094686781,
+     "odds": 1.31
+    }
+   ]
+  },
+  {
+   "id": "31268",
+   "league": "Premier League",
+   "home": "Liverpool",
+   "away": "Arsenal",
+   "kickoff": "2026-11-01T16:30:00+00:00",
+   "lh": 1.2450704693850265,
+   "la": 1.4410748344044324,
+   "p1x2": [
+    0.31382487101072015,
+    0.2819566970894882,
+    0.4042184318997918
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.718043302910512,
+     "odds": 1.29
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.7171446311449723,
+     "odds": 1.31
+    },
+    {
+     "name": "Casa Over 0.5",
+     "p": 0.7120793563703818,
+     "odds": 1.29
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7054165834876579,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.7048610661537367,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol casa 1-4",
+     "p": 0.7030980583049142,
+     "odds": 1.28
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7014343348414317,
+     "odds": 1.31
+    },
+    {
+     "name": "X2",
+     "p": 0.68617512898928,
+     "odds": 1.38
+    }
+   ]
+  },
+  {
+   "id": "32308",
+   "league": "Bundesliga",
+   "home": "Eintracht Frankfurt",
+   "away": "Hamburger SV",
+   "kickoff": "2026-11-01T16:30:00+00:00",
+   "lh": 2.205197604351738,
+   "la": 1.1655082539016932,
+   "p1x2": [
+    0.6005755797460255,
+    0.2162109797985249,
+    0.18321344045544968
+   ],
+   "top": [
+    {
+     "name": "Under 4.5",
+     "p": 0.7496260918599505,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7081149808702318,
+     "odds": 1.27
+    },
+    {
+     "name": "1X + Over 1.5",
+     "p": 0.7066365207292546,
+     "odds": 1.27
+    },
+    {
+     "name": "Multigol 1-4",
+     "p": 0.7064273395126448,
+     "odds": 1.27
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.688235819069343,
+     "odds": 1.34
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6856164821789228,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.6813520205990143,
+     "odds": 1.32
+    },
+    {
+     "name": "Multigol ospite 0-1",
+     "p": 0.6751279070762386,
+     "odds": 1.33
+    }
+   ]
+  },
+  {
+   "id": "31657",
+   "league": "Serie A",
+   "home": "Lecce",
+   "away": "Genoa",
+   "kickoff": "2026-11-01T17:00:00+00:00",
+   "lh": 1.0364857775713965,
+   "la": 1.2641259721695643,
+   "p1x2": [
+    0.29013885958902075,
+    0.3075426856175747,
+    0.4023184547934044
+   ],
+   "top": [
+    {
+     "name": "1° tempo Under 1.5",
+     "p": 0.7227844737111119,
+     "odds": 1.27
+    },
+    {
+     "name": "Multigol casa 0-1",
+     "p": 0.7223394495575801,
+     "odds": 1.25
+    },
+    {
+     "name": "Casa Under 1.5",
+     "p": 0.7223394495575801,
+     "odds": 1.27
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7175138816180965,
+     "odds": 1.28
+    },
+    {
+     "name": "X2",
+     "p": 0.7098611404109791,
+     "odds": 1.33
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.7079715789051301,
+     "odds": 1.27
+    },
+    {
+     "name": "12",
+     "p": 0.6924573143824252,
+     "odds": 1.36
+    },
+    {
+     "name": "Multigol 1-3",
+     "p": 0.6858968508526899,
+     "odds": 1.31
+    }
+   ]
+  },
+  {
+   "id": "30873",
+   "league": "LaLiga",
+   "home": "Elche",
+   "away": "Valencia",
+   "kickoff": "2026-11-01T17:30:00+00:00",
+   "lh": 1.4398257995796524,
+   "la": 1.1965993491567546,
+   "p1x2": [
+    0.4144079299087551,
+    0.28417781122005126,
+    0.3014142588711938
+   ],
+   "top": [
+    {
+     "name": "Over 1.5",
+     "p": 0.751909469276387,
+     "odds": 1.25
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.7280553922761085,
+     "odds": 1.29
+    },
+    {
+     "name": "12",
+     "p": 0.715822188779949,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7047126121369203,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.7001489489528264,
+     "odds": 1.29
+    },
+    {
+     "name": "1X",
+     "p": 0.6985857411288063,
+     "odds": 1.36
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.6977797699047387,
+     "odds": 1.32
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.6946789145078036,
+     "odds": 1.32
+    }
+   ]
+  },
+  {
+   "id": "31655",
+   "league": "Serie A",
+   "home": "Juventus",
+   "away": "Napoli",
+   "kickoff": "2026-11-01T19:45:00+00:00",
+   "lh": 1.4060549952949946,
+   "la": 1.1396328900896087,
+   "p1x2": [
+    0.4180694981517908,
+    0.28946654705010727,
+    0.29246395479810205
+   ],
+   "top": [
+    {
+     "name": "Under 3.5",
+     "p": 0.7477668716154975,
+     "odds": 1.26
+    },
+    {
+     "name": "Over 1.5",
+     "p": 0.7345160633949027,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol 2-6",
+     "p": 0.7190163049308544,
+     "odds": 1.25
+    },
+    {
+     "name": "12",
+     "p": 0.7105334529498929,
+     "odds": 1.32
+    },
+    {
+     "name": "1X",
+     "p": 0.7075360452018981,
+     "odds": 1.33
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7004813983571045,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.6893734259170574,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol ospite 0-1",
+     "p": 0.6845465811664639,
+     "odds": 1.31
+    }
+   ]
+  },
+  {
+   "id": "32016",
+   "league": "Ligue 1",
+   "home": "Marseille",
+   "away": "Toulouse",
+   "kickoff": "2026-11-01T19:45:00+00:00",
+   "lh": 1.879943250263249,
+   "la": 1.3384996767608397,
+   "p1x2": [
+    0.49161552819155907,
+    0.24499560063416845,
+    0.2633888711742726
+   ],
+   "top": [
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7377611355758197,
+     "odds": 1.25
+    },
+    {
+     "name": "1X",
+     "p": 0.7366111288257273,
+     "odds": 1.28
+    },
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.7091353661432573,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6907272614621598,
+     "odds": 1.3
+    },
+    {
+     "name": "12 + Over 1.5",
+     "p": 0.6463495546156176,
+     "odds": 1.39
+    },
+    {
+     "name": "Goal",
+     "p": 0.635248790334692,
+     "odds": 1.48
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.635248790334692,
+     "odds": 1.42
+    },
+    {
+     "name": "Over 2.5",
+     "p": 0.623930190381385,
+     "odds": 1.52
+    }
+   ]
+  },
+  {
+   "id": "30870",
+   "league": "LaLiga",
+   "home": "Athletic Club",
+   "away": "Real Sociedad",
+   "kickoff": "2026-11-01T20:00:00+00:00",
+   "lh": 1.6542799804069557,
+   "la": 1.3165902175602058,
+   "p1x2": [
+    0.442795288165254,
+    0.2629176981053708,
+    0.29428701372937527
+   ],
+   "top": [
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7373391410270195,
+     "odds": 1.25
+    },
+    {
+     "name": "12",
+     "p": 0.7370823018946293,
+     "odds": 1.27
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.7319522284551144,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7223004086417852,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.7207419695893793,
+     "odds": 1.25
+    },
+    {
+     "name": "1X",
+     "p": 0.7057129862706248,
+     "odds": 1.33
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.687183398929716,
+     "odds": 1.31
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6537588953351186,
+     "odds": 1.44
+    }
+   ]
+  },
+  {
+   "id": "31658",
+   "league": "Serie A",
+   "home": "Sassuolo",
+   "away": "Fiorentina",
+   "kickoff": "2026-11-02T17:30:00+00:00",
+   "lh": 1.4801324012101522,
+   "la": 1.6044022289824675,
+   "p1x2": [
+    0.3428101808041841,
+    0.2604316749956082,
+    0.3967581442002076
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.7395683250043916,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.7195696747991136,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7092191107872807,
+     "odds": 1.27
+    },
+    {
+     "name": "X2",
+     "p": 0.6571898191958159,
+     "odds": 1.41
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6283009755373182,
+     "odds": 1.5
+    },
+    {
+     "name": "Goal",
+     "p": 0.627998550567397,
+     "odds": 1.5
+    },
+    {
+     "name": "Goal + Over 1.5",
+     "p": 0.627998550567397,
+     "odds": 1.43
+    },
+    {
+     "name": "Multigol 2-4",
+     "p": 0.6248571258893603,
+     "odds": 1.44
+    }
+   ]
+  },
+  {
+   "id": "31651",
+   "league": "Serie A",
+   "home": "Atalanta",
+   "away": "Parma Calcio 1913",
+   "kickoff": "2026-11-02T19:45:00+00:00",
+   "lh": 2.042637965810696,
+   "la": 0.9244820153973028,
+   "p1x2": [
+    0.6229851117502325,
+    0.22476432349886666,
+    0.15225056475090087
+   ],
+   "top": [
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7368954999849657,
+     "odds": 1.25
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7196698285065593,
+     "odds": 1.25
+    },
+    {
+     "name": "1X + Under 4.5",
+     "p": 0.6938353599731388,
+     "odds": 1.3
+    },
+    {
+     "name": "1X + Over 1.5",
+     "p": 0.6912002449366951,
+     "odds": 1.3
+    },
+    {
+     "name": "Casa Under 2.5",
+     "p": 0.6651440097878624,
+     "odds": 1.38
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6546045456472197,
+     "odds": 1.44
+    },
+    {
+     "name": "Multigol 2-4",
+     "p": 0.6263664042607535,
+     "odds": 1.44
+    },
+    {
+     "name": "1",
+     "p": 0.6229851117502325,
+     "odds": 1.48
+    }
+   ]
+  },
+  {
+   "id": "32014",
+   "league": "Ligue 1",
+   "home": "Lorient",
+   "away": "Brest",
+   "kickoff": "2026-11-02T19:45:00+00:00",
+   "lh": 1.3647720320308012,
+   "la": 1.218103316267102,
+   "p1x2": [
+    0.3898277377355412,
+    0.28920360110966153,
+    0.3209686611547974
+   ],
+   "top": [
+    {
+     "name": "Over 1.5",
+     "p": 0.741851371560486,
+     "odds": 1.27
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.7397227222905888,
+     "odds": 1.27
+    },
+    {
+     "name": "12",
+     "p": 0.7107963988903385,
+     "odds": 1.31
+    },
+    {
+     "name": "Ospite Over 0.5",
+     "p": 0.704209322102465,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol ospite 1-4",
+     "p": 0.6959824811780679,
+     "odds": 1.29
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.6947287579772508,
+     "odds": 1.3
+    },
+    {
+     "name": "Multigol 2-5",
+     "p": 0.694063888027678,
+     "odds": 1.3
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.6872321029983263,
+     "odds": 1.34
+    }
+   ]
+  },
+  {
+   "id": "31269",
+   "league": "Premier League",
+   "home": "Newcastle United",
+   "away": "Everton",
+   "kickoff": "2026-11-02T20:00:00+00:00",
+   "lh": 1.5643514323065293,
+   "la": 1.360878117737291,
+   "p1x2": [
+    0.4111928217542401,
+    0.2679732071452607,
+    0.3208339711004993
+   ],
+   "top": [
+    {
+     "name": "12",
+     "p": 0.7320267928547394,
+     "odds": 1.27
+    },
+    {
+     "name": "1° tempo Over 0.5",
+     "p": 0.7318887565718772,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.7167997676043182,
+     "odds": 1.26
+    },
+    {
+     "name": "Multigol ospite 1-3",
+     "p": 0.6941525818882813,
+     "odds": 1.3
+    },
+    {
+     "name": "1X",
+     "p": 0.6791660288995007,
+     "odds": 1.39
+    },
+    {
+     "name": "Under 3.5",
+     "p": 0.6639790193517245,
+     "odds": 1.42
+    },
+    {
+     "name": "Multigol 2-4",
+     "p": 0.6284913585473726,
+     "odds": 1.43
+    },
+    {
+     "name": "1° tempo Under 1.5",
+     "p": 0.6210403628168444,
+     "odds": 1.48
+    }
+   ]
+  },
+  {
+   "id": "30872",
+   "league": "LaLiga",
+   "home": "Deportivo La Coruna",
+   "away": "Osasuna",
+   "kickoff": "2026-11-02T20:00:00+00:00",
+   "lh": 1.3678100096821835,
+   "la": 1.0431381330896332,
+   "p1x2": [
+    0.42975019530171565,
+    0.29695643368734836,
+    0.273293371010936
+   ],
+   "top": [
+    {
+     "name": "1X",
+     "p": 0.726706628989064,
+     "odds": 1.28
+    },
+    {
+     "name": "Multigol ospite 0-1",
+     "p": 0.719894078277302,
+     "odds": 1.25
+    },
+    {
+     "name": "Ospite Under 1.5",
+     "p": 0.719894078277302,
+     "odds": 1.28
+    },
+    {
+     "name": "Over 1.5",
+     "p": 0.7067377823710175,
+     "odds": 1.33
+    },
+    {
+     "name": "1° tempo Under 1.5",
+     "p": 0.7045521103245337,
+     "odds": 1.31
+    },
+    {
+     "name": "12",
+     "p": 0.7030435663126515,
+     "odds": 1.31
+    },
+    {
+     "name": "Multigol casa 1-3",
+     "p": 0.6951742268070032,
+     "odds": 1.29
+    },
+    {
+     "name": "Multigol 2-6",
+     "p": 0.6948781560874474,
+     "odds": 1.3
+    }
+   ]
+  }
+ ]
+}
