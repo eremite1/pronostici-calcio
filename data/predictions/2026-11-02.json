@@ -1,6 +1,6 @@
 {
  "31269": {
-  "generated": "2026-11-01T09:58:26.129707+00:00",
+  "generated": "2026-11-01T10:28:47.920802+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Newcastle United",
@@ -200,7 +200,7 @@
   }
  },
  "31658": {
-  "generated": "2026-11-01T09:58:26.129707+00:00",
+  "generated": "2026-11-01T10:28:47.920802+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Sassuolo",
@@ -395,12 +395,12 @@
   "pengwin": {
    "market": "X2",
    "odds": 1.45,
-   "p": 0.6573354314650373,
+   "p": 0.6573353423277395,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/sassuolo-fiorentina-statistiche-quote-e-pronostico-2026"
   }
  },
  "31651": {
-  "generated": "2026-11-01T09:58:26.129707+00:00",
+  "generated": "2026-11-01T10:28:47.920802+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Atalanta",
@@ -513,10 +513,10 @@
    "Ospite Under 0.5": 0.397,
    "Ospite Over 1.5": 0.2363,
    "Ospite Under 1.5": 0.7637,
-   "Ospite Over 2.5": 0.0668,
-   "Ospite Under 2.5": 0.9332,
+   "Ospite Over 2.5": 0.0669,
+   "Ospite Under 2.5": 0.9331,
    "1 + Over 1.5": 0.5275,
-   "1 + Over 2.5": 0.4201,
+   "1 + Over 2.5": 0.42,
    "1 + Under 2.5": 0.2029,
    "1 + Under 3.5": 0.3752,
    "1 + Under 4.5": 0.4801,
@@ -595,12 +595,12 @@
   "pengwin": {
    "market": "Casa Over 1.5",
    "odds": 1.5,
-   "p": 0.6051726467196706,
+   "p": 0.6051719621692223,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/atalanta-parma-statistiche-quote-e-pronostico-2026"
   }
  },
  "32014": {
-  "generated": "2026-11-01T09:58:26.129707+00:00",
+  "generated": "2026-11-01T10:28:47.920802+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Lorient",
@@ -633,7 +633,7 @@
    },
    {
     "name": "Multigol ospite 1-4",
-    "p": 0.696,
+    "p": 0.6961,
     "odds": 1.29
    },
    {
@@ -705,7 +705,7 @@
    "Multigol ospite 0-1": 0.656,
    "Multigol ospite 1-2": 0.5798,
    "Multigol ospite 1-3": 0.6689,
-   "Multigol ospite 1-4": 0.696,
+   "Multigol ospite 1-4": 0.6961,
    "Multigol ospite 2-3": 0.3086,
    "Multigol ospite 2-4": 0.3358,
    "Multigol ospite 3-4": 0.1163,
@@ -795,12 +795,12 @@
   "pengwin": {
    "market": "Multigol casa 1-3",
    "odds": 1.45,
-   "p": 0.6943699214261185,
+   "p": 0.6943699935652262,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/lorient-brest-statistiche-quote-e-pronostico-2026"
   }
  },
  "30872": {
-  "generated": "2026-11-01T09:58:26.129707+00:00",
+  "generated": "2026-11-01T10:28:47.920802+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Deportivo La Coruna",
@@ -995,7 +995,7 @@
   "pengwin": {
    "market": "1",
    "odds": null,
-   "p": 0.43018540684854145,
+   "p": 0.4301849069306395,
    "url": "https://www.mondopengwin.it/pronostici/calcio/la-liga/deportivo-osasuna-statistiche-quote-e-pronostico-2026"
   }
  }
