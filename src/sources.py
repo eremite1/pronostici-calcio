@@ -386,7 +386,12 @@ def fallback_league(L, season, prev_teams, now, days_back=7, days_ahead=5):
     def name(n):
         if n in tmap:
             return tmap[n]
-        t = names.match_team(n, universe) if universe else None
+        t = names.match_team(n, universe, min_ratio=0.88, strict=True) if universe else None
+        if not t and universe:
+            t2 = names.match_team(n, universe)
+            # accetta solo se i nomi hanno una parola in comune (evita Le Mans -> Lens)
+            if t2 and set(names.core(n).split()) & set(names.core(t2).split()):
+                t = t2
         if not t:
             t = n
             universe.append(n)
@@ -435,6 +440,7 @@ def fallback_league(L, season, prev_teams, now, days_back=7, days_ahead=5):
             teams.setdefault(t, dict(title=t, history=[]))["history"].append(dict(
                 date=m["datetime"], h_a=side, xG=m["xG"][side], xGA=m["xG"][other], scored=sc, missed=ms,
                 result="w" if sc > ms else ("d" if sc == ms else "l"), ppda={}, deep=0, deep_allowed=0))
+    print("  nomi squadre (fonte -> sistema):", {k: v for k, v in tmap.items() if k != v})
     current = {m["h"]["title"] for m in dates} | {m["a"]["title"] for m in dates}
     for t in current:
         teams.setdefault(t, dict(title=t, history=[]))

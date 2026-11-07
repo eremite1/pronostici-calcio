@@ -270,7 +270,12 @@ def extract(h):
 def recent_articles(days=6):
     sm = get_text(BASE + "/sitemap.xml", tries=4, timeout=90)
     if not sm:
-        return None
+        # sito momentaneamente non raggiungibile: usa gli articoli già letti nelle esecuzioni precedenti
+        cache = load_cache("pengwin.json", {})
+        old = [dict(url=u, lastmod=c.get("lastmod", ""), league_path=u.split("/pronostici/calcio/")[1].split("/")[0],
+                    from_cache=True) for u, c in cache.items() if "/pronostici/calcio/" in u]
+        print(f"  Mondo Pengwin non risponde: uso {len(old)} articoli già letti")
+        return old or None
     since = (dt.date.today() - dt.timedelta(days=days)).isoformat()
     out = []
     for u, l in re.findall(r"<url><loc>([^<]+)</loc><lastmod>([^<]+)</lastmod>", sm):
@@ -291,7 +296,9 @@ def tips_for(league_key, fixtures, teams, articles):
         if a["league_path"] != path:
             continue
         c = cache.get(a["url"])
-        if not c or c.get("lastmod") != a["lastmod"] or c.get("v") != 2:
+        if a.get("from_cache") and not c:
+            continue
+        if not a.get("from_cache") and (not c or c.get("lastmod") != a["lastmod"] or c.get("v") != 2):
             h = get_text(a["url"], tries=3)
             time.sleep(0.5)
             if not h:

@@ -55,7 +55,7 @@ ALIASES = {
     "strasbourg alsace": "Strasbourg", "ogc nice": "Nice", "st etienne": "Saint-Etienne",
     "saint etienne": "Saint-Etienne", "losc lille": "Lille", "lille osc": "Lille", "fc nantes": "Nantes",
     "toulouse fc": "Toulouse", "angers sco": "Angers", "fc lorient": "Lorient", "estac troyes": "Troyes",
-    "le mans fc": "Le Mans", "fc metz": "Metz", "montpellier hsc": "Montpellier", "stade reims": "Reims",
+    "le mans fc": "Le Mans", "le mans": "Le Mans", "fc metz": "Metz", "montpellier hsc": "Montpellier", "stade reims": "Reims",
 }
 
 
@@ -76,7 +76,7 @@ def core(s):
 _ALIAS_N = {norm(k): v for k, v in ALIASES.items()}
 
 
-def match_team(name, candidates):
+def match_team(name, candidates, min_ratio=0.72, strict=False):
     """Restituisce il nome tra `candidates` che corrisponde a `name`, oppure None."""
     if not name or not candidates:
         return None
@@ -94,6 +94,13 @@ def match_team(name, candidates):
             return by_norm[norm(tgt)]
     if c in by_core:
         return by_core[c]
+    if strict:  # solo nomi molto simili: evita Le Mans -> Lens, Paris FC -> Paris Saint Germain
+        best, score = None, 0.0
+        for k, cand in by_core.items():
+            r = difflib.SequenceMatcher(None, c, k).ratio()
+            if r > score:
+                best, score = cand, r
+        return best if score >= min_ratio else None
     # uno contenuto nell'altro (es. "Ipswich Town" / "Ipswich")
     ct = set(c.split())
     hits = [cand for k, cand in by_core.items() if ct and (ct <= set(k.split()) or set(k.split()) <= ct)]
@@ -104,7 +111,7 @@ def match_team(name, candidates):
         r = difflib.SequenceMatcher(None, c, k).ratio()
         if r > score:
             best, score = cand, r
-    return best if score >= 0.72 else None
+    return best if score >= min_ratio else None
 
 
 def player_tokens(name):
