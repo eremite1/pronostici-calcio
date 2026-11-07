@@ -3195,7 +3195,7 @@
   }
  },
  "e401874803": {
-  "generated": "2026-11-07T19:33:58.706733+00:00",
+  "generated": "2026-11-07T19:34:40.395670+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Roma",
@@ -3395,7 +3395,7 @@
   }
  },
  "e401882808": {
-  "generated": "2026-11-07T19:33:58.706733+00:00",
+  "generated": "2026-11-07T19:34:40.395670+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Valencia",
@@ -3595,7 +3595,7 @@
   }
  },
  "e401876407": {
-  "generated": "2026-11-07T19:33:58.706733+00:00",
+  "generated": "2026-11-07T19:34:40.395670+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Paris Saint Germain",
@@ -3790,7 +3790,7 @@
   "pengwin": {
    "market": "1",
    "odds": 1.36,
-   "p": 0.8361614544281981,
+   "p": 0.8361614415194565,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/psg-troyes-statistiche-quote-e-pronostico-2026"
   }
  }
