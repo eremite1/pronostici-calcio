@@ -2995,7 +2995,7 @@
   }
  },
  "e401876411": {
-  "generated": "2026-11-07T17:02:01.968934+00:00",
+  "generated": "2026-11-07T17:32:26.451488+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Auxerre",
@@ -3190,12 +3190,12 @@
   "pengwin": {
    "market": "X2 + Multigol ospite 1-3",
    "odds": 1.46,
-   "p": 0.597753761153238,
+   "p": 0.5977534864118732,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/auxerre-paris-fc-statistiche-quote-e-pronostico-2026-2"
   }
  },
  "e401874803": {
-  "generated": "2026-11-07T17:02:01.968934+00:00",
+  "generated": "2026-11-07T17:32:26.451488+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Roma",
@@ -3272,7 +3272,7 @@
    "Multigol 1-3": 0.4864,
    "Multigol 1-4": 0.677,
    "Multigol 1-5": 0.8131,
-   "Multigol 1-6": 0.894,
+   "Multigol 1-6": 0.8941,
    "Multigol 2-3": 0.4,
    "Multigol 2-4": 0.5906,
    "Multigol 2-5": 0.7267,
@@ -3297,7 +3297,7 @@
    "Casa Under 1.5": 0.2656,
    "Casa Over 2.5": 0.4839,
    "Casa Under 2.5": 0.5161,
-   "Multigol ospite 0-1": 0.7502,
+   "Multigol ospite 0-1": 0.7503,
    "Multigol ospite 1-2": 0.5441,
    "Multigol ospite 1-3": 0.6007,
    "Multigol ospite 1-4": 0.6142,
@@ -3306,8 +3306,8 @@
    "Multigol ospite 3-4": 0.0701,
    "Ospite Over 0.5": 0.6173,
    "Ospite Under 0.5": 0.3827,
-   "Ospite Over 1.5": 0.2498,
-   "Ospite Under 1.5": 0.7502,
+   "Ospite Over 1.5": 0.2497,
+   "Ospite Under 1.5": 0.7503,
    "Ospite Over 2.5": 0.0732,
    "Ospite Under 2.5": 0.9268,
    "1 + Over 1.5": 0.6533,
@@ -3342,7 +3342,7 @@
    "2 + Multigol 1-4": 0.0829,
    "1X + Over 1.5": 0.7896,
    "1X + Over 2.5": 0.6161,
-   "1X + Under 2.5": 0.2751,
+   "1X + Under 2.5": 0.2752,
    "1X + Under 3.5": 0.4506,
    "1X + Under 4.5": 0.6293,
    "1X + Goal": 0.5086,
@@ -3395,7 +3395,7 @@
   }
  },
  "e401882808": {
-  "generated": "2026-11-07T17:02:01.968934+00:00",
+  "generated": "2026-11-07T17:32:26.451488+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Valencia",
@@ -3428,7 +3428,7 @@
    },
    {
     "name": "Ospite Over 1.5",
-    "p": 0.7023,
+    "p": 0.7022,
     "odds": 1.31
    },
    {
@@ -3497,8 +3497,8 @@
    "Casa Under 1.5": 0.7714,
    "Casa Over 2.5": 0.0633,
    "Casa Under 2.5": 0.9367,
-   "Multigol ospite 0-1": 0.2977,
-   "Multigol ospite 1-2": 0.4704,
+   "Multigol ospite 0-1": 0.2978,
+   "Multigol ospite 1-2": 0.4705,
    "Multigol ospite 1-3": 0.682,
    "Multigol ospite 1-4": 0.8115,
    "Multigol ospite 2-3": 0.4705,
@@ -3506,8 +3506,8 @@
    "Multigol ospite 3-4": 0.3411,
    "Ospite Over 0.5": 0.9137,
    "Ospite Under 0.5": 0.0863,
-   "Ospite Over 1.5": 0.7023,
-   "Ospite Under 1.5": 0.2977,
+   "Ospite Over 1.5": 0.7022,
+   "Ospite Under 1.5": 0.2978,
    "Ospite Over 2.5": 0.4432,
    "Ospite Under 2.5": 0.5568,
    "1 + Over 1.5": 0.0877,
@@ -3566,7 +3566,7 @@
    "12 + Under 3.5": 0.4409,
    "12 + Under 4.5": 0.5823,
    "12 + Goal": 0.411,
-   "12 + No Goal": 0.4063,
+   "12 + No Goal": 0.4062,
    "12 + Multigol 1-3": 0.4409,
    "12 + Multigol 2-4": 0.4805,
    "12 + Multigol 1-4": 0.5823,
@@ -3595,7 +3595,7 @@
   }
  },
  "e401876407": {
-  "generated": "2026-11-07T17:02:01.968934+00:00",
+  "generated": "2026-11-07T17:32:26.451488+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Paris Saint Germain",
@@ -3790,7 +3790,7 @@
   "pengwin": {
    "market": "1",
    "odds": 1.36,
-   "p": 0.8361680272401051,
+   "p": 0.8361674609611783,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/psg-troyes-statistiche-quote-e-pronostico-2026"
   }
  }
