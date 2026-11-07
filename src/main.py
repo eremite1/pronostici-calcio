@@ -44,11 +44,16 @@ def run():
         league_status.append(st)
         try:
             cur = sources.understat_league(L["understat"], season)
-            if not cur:
-                warn(f"{L['name']}: dati Understat non disponibili, campionato saltato")
-                st["ok"] = False
-                continue
             prev = sources.understat_league(L["understat"], season - 1, use_cache=True)
+            if not cur or not cur.get("dates"):
+                prev_names = sorted(t["title"] for t in (prev or {}).get("teams", {}).values())
+                cur = sources.fallback_league(L, season, prev_names, now)
+                if not cur:
+                    warn(f"{L['name']}: né Understat né football-data disponibili, campionato saltato")
+                    st["ok"] = False
+                    continue
+                st["notes"].append("Understat non disponibile: xG stimati dai tiri, assenze non pesate")
+                warn("Understat non risponde: uso dati di riserva (expected goals stimati dai tiri)")
             cur_m = sources.understat_matches(cur)
             prev_m = sources.understat_matches(prev)
             teams = sorted(t["title"] for t in cur["teams"].values())

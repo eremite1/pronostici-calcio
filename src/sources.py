@@ -5,6 +5,7 @@ import html as htmlmod
 import io
 import re
 import time
+import zlib
 
 from bs4 import BeautifulSoup
 
@@ -360,3 +361,81 @@ def fantacalcio():
                                                            desc=desc))
         out.append(g)
     return out
+
+
+# ---------------------------------------------------------------- Riserva quando Understat non risponde
+
+XG_SHOT_OFF, XG_SHOT_ON = 0.06, 0.2263  # tarati su 17.800 partite 2021-2026 (correlazione 0,74 con gli xG veri)
+
+
+def _proxy_xg(shots, sot, goals):
+    if shots is None or sot is None:
+        return float(goals)
+    return XG_SHOT_OFF * max(0.0, shots - sot) + XG_SHOT_ON * sot
+
+
+def fallback_league(L, season, prev_teams, now, days_back=7, days_ahead=5):
+    """Costruisce dati nello stesso formato di Understat usando football-data (risultati e tiri) ed ESPN
+    (calendario, orari, risultati recenti). Expected goals stimati dai tiri; niente dati sui giocatori."""
+    fd_rows = fd_season(L["fd"], season)
+    if not fd_rows:
+        return None
+    universe = list(prev_teams)
+    tmap = {}
+
+    def name(n):
+        if n in tmap:
+            return tmap[n]
+        t = names.match_team(n, universe) if universe else None
+        if not t:
+            t = n
+            universe.append(n)
+        tmap[n] = t
+        return t
+
+    dates, played_keys = [], set()
+    for r in fd_rows:
+        h, a = name(r["home"]), name(r["away"])
+        dates.append(dict(id=f"fd{r['date']:%Y%m%d}{zlib.crc32((h + '|' + a).encode()) % 10 ** 6}", isResult=True,
+                          datetime=f"{r['date']:%Y-%m-%d} 15:00:00",
+                          h=dict(title=h), a=dict(title=a), goals=dict(h=r["hg"], a=r["ag"]),
+                          xG=dict(h=_proxy_xg(r["hs"], r["hst"], r["hg"]), a=_proxy_xg(r["as_"], r["ast"], r["ag"]))))
+        played_keys.add((h, a))
+    # fd_rows si aggiorna un paio di volte a settimana: risultati e calendario recenti da ESPN
+    today = now.date()
+    seen = set()
+    for k in range(-days_back, days_ahead + 1):
+        for e in espn_events(L["espn"], today + dt.timedelta(days=k)):
+            if e["id"] in seen or not e.get("when"):
+                continue
+            seen.add(e["id"])
+            h, a = name(e["home"]), name(e["away"])
+            try:
+                when = dt.datetime.fromisoformat(e["when"].replace("Z", "+00:00")).astimezone(UTC)
+            except ValueError:
+                continue
+            if e.get("finished") and e.get("hg") is not None:
+                if (h, a) in played_keys:
+                    continue
+                dates.append(dict(id="e" + e["id"], isResult=True, datetime=when.strftime("%Y-%m-%d %H:%M:%S"),
+                                  h=dict(title=h), a=dict(title=a), goals=dict(h=e["hg"], a=e["ag"]),
+                                  xG=dict(h=float(e["hg"]), a=float(e["ag"]))))
+                played_keys.add((h, a))
+            elif (h, a) not in played_keys:
+                dates.append(dict(id="e" + e["id"], isResult=False, datetime=when.strftime("%Y-%m-%d %H:%M:%S"),
+                                  h=dict(title=h), a=dict(title=a)))
+    # storico per squadra nello stesso formato di Understat
+    teams = {}
+    for m in dates:
+        if not m["isResult"]:
+            continue
+        for side, other in (("h", "a"), ("a", "h")):
+            t = m[side]["title"]
+            sc, ms = int(m["goals"][side]), int(m["goals"][other])
+            teams.setdefault(t, dict(title=t, history=[]))["history"].append(dict(
+                date=m["datetime"], h_a=side, xG=m["xG"][side], xGA=m["xG"][other], scored=sc, missed=ms,
+                result="w" if sc > ms else ("d" if sc == ms else "l"), ppda={}, deep=0, deep_allowed=0))
+    current = {m["h"]["title"] for m in dates} | {m["a"]["title"] for m in dates}
+    for t in current:
+        teams.setdefault(t, dict(title=t, history=[]))
+    return dict(dates=dates, teams={t: v for t, v in teams.items() if t in current}, players=[], fallback=True)
