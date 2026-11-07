@@ -1,0 +1,37 @@
+
+=== Serie A
+  nomi squadre (fonte -> sistema): {'Parma': 'Parma Calcio 1913', 'Milan': 'AC Milan', 'AS Roma': 'Roma', 'Internazionale': 'Inter'}
+ATTENZIONE: Understat non risponde: uso dati di riserva (expected goals stimati dai tiri)
+  forza squadre calcolata su 481 partite (vantaggio casa 1.14x)
+  partite nella finestra: 9
+  pronostici Pengwin trovati: 9
+
+=== Premier League
+  nomi squadre (fonte -> sistema): {'Man United': 'Manchester United', "Nott'm Forest": 'Nottingham Forest', 'Man City': 'Manchester City', 'Newcastle': 'Newcastle United', 'AFC Bournemouth': 'Bournemouth', 'Leeds United': 'Leeds', 'Coventry City': 'Coventry', 'Hull City': 'Hull', 'Ipswich Town': 'Ipswich', 'Brighton & Hove Albion': 'Brighton', 'Tottenham Hotspur': 'Tottenham'}
+ATTENZIONE: Understat non risponde: uso dati di riserva (expected goals stimati dai tiri)
+  forza squadre calcolata su 471 partite (vantaggio casa 1.23x)
+  partite nella finestra: 9
+  pronostici Pengwin trovati: 9
+
+=== LaLiga
+  nomi squadre (fonte -> sistema): {'Vallecano': 'Rayo Vallecano', 'Espanol': 'Espanyol', 'Ath Madrid': 'Atletico Madrid', 'Betis': 'Real Betis', 'Sociedad': 'Real Sociedad', 'Ath Bilbao': 'Athletic Club', 'Celta': 'Celta Vigo', 'Atlético Madrid': 'Atletico Madrid', 'Málaga': 'Malaga', 'Alavés': 'Alaves', 'Racing Santander': 'Santander'}
+ATTENZIONE: Understat non risponde: uso dati di riserva (expected goals stimati dai tiri)
+  forza squadre calcolata su 491 partite (vantaggio casa 1.35x)
+  partite nella finestra: 9
+  pronostici Pengwin trovati: 8
+
+=== Bundesliga
+  nomi squadre (fonte -> sistema): {'Stuttgart': 'VfB Stuttgart', 'Leverkusen': 'Bayer Leverkusen', 'FC Koln': 'FC Cologne', 'Mainz': 'Mainz 05', 'RB Leipzig': 'RasenBallsport Leipzig', "M'gladbach": 'Borussia M.Gladbach', 'Ein Frankfurt': 'Eintracht Frankfurt', 'Dortmund': 'Borussia Dortmund', 'Hamburg': 'Hamburger SV', 'Borussia Mönchengladbach': 'Borussia M.Gladbach', 'SC Paderborn 07': 'Paderborn', 'FC Augsburg': 'Augsburg', 'SC Freiburg': 'Freiburg', 'TSG Hoffenheim': 'Hoffenheim', '1. FC Union Berlin': 'Union Berlin', 'Hamburg SV': 'Hamburger SV', 'SV Elversberg': 'Elversberg'}
+ATTENZIONE: Understat non risponde: uso dati di riserva (expected goals stimati dai tiri)
+  forza squadre calcolata su 379 partite (vantaggio casa 1.33x)
+  partite nella finestra: 8
+  pronostici Pengwin trovati: 8
+
+=== Ligue 1
+  nomi squadre (fonte -> sistema): {'Paris SG': 'Paris Saint Germain', 'AJ Auxerre': 'Auxerre', 'AS Monaco': 'Monaco', 'Paris Saint-Germain': 'Paris Saint Germain', 'Stade Rennais': 'Rennes', 'Le Havre AC': 'Le Havre'}
+ATTENZIONE: Understat non risponde: uso dati di riserva (expected goals stimati dai tiri)
+  forza squadre calcolata su 388 partite (vantaggio casa 1.28x)
+  partite nella finestra: 8
+  pronostici Pengwin trovati: 8
+
+Fatto: 43 partite, 3 schedine, avvisi: 1
