@@ -3195,7 +3195,7 @@
   }
  },
  "e401874803": {
-  "generated": "2026-11-07T18:02:48.552084+00:00",
+  "generated": "2026-11-07T18:33:11.600027+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Roma",
@@ -3314,12 +3314,12 @@
    "1 + Over 2.5": 0.5574,
    "1 + Under 2.5": 0.1623,
    "1 + Under 3.5": 0.3378,
-   "1 + Under 4.5": 0.4722,
+   "1 + Under 4.5": 0.4723,
    "1 + Goal": 0.3722,
    "1 + No Goal": 0.3474,
    "1 + Multigol 1-3": 0.3378,
    "1 + Multigol 2-4": 0.4058,
-   "1 + Multigol 1-4": 0.4722,
+   "1 + Multigol 1-4": 0.4723,
    "X + Over 1.5": 0.1363,
    "X + Over 2.5": 0.0587,
    "X + Under 2.5": 0.1129,
@@ -3395,7 +3395,7 @@
   }
  },
  "e401882808": {
-  "generated": "2026-11-07T18:02:48.552084+00:00",
+  "generated": "2026-11-07T18:33:11.600027+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Valencia",
@@ -3595,7 +3595,7 @@
   }
  },
  "e401876407": {
-  "generated": "2026-11-07T18:02:48.552084+00:00",
+  "generated": "2026-11-07T18:33:11.600027+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Paris Saint Germain",
@@ -3790,7 +3790,7 @@
   "pengwin": {
    "market": "1",
    "odds": 1.36,
-   "p": 0.8361631495521011,
+   "p": 0.8361625843268955,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/psg-troyes-statistiche-quote-e-pronostico-2026"
   }
  }
