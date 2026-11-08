@@ -1,6 +1,6 @@
 {
  "e401874810": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Napoli",
@@ -195,12 +195,12 @@
   "pengwin": {
    "market": "Multigol ospite 1-3",
    "odds": 1.35,
-   "p": 0.6819393068438109,
+   "p": 0.6819399790244631,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/napoli-lazio-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401882814": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Elche",
@@ -233,7 +233,7 @@
    },
    {
     "name": "Under 3.5",
-    "p": 0.6436,
+    "p": 0.6435,
     "odds": 1.46
    },
    {
@@ -265,8 +265,8 @@
    "Under 1.5": 0.1857,
    "Over 2.5": 0.5805,
    "Under 2.5": 0.4195,
-   "Over 3.5": 0.3564,
-   "Under 3.5": 0.6436,
+   "Over 3.5": 0.3565,
+   "Under 3.5": 0.6435,
    "Over 4.5": 0.1875,
    "Under 4.5": 0.8125,
    "Over 5.5": 0.0856,
@@ -274,7 +274,7 @@
    "Goal": 0.6119,
    "No Goal": 0.3881,
    "Multigol 1-2": 0.3595,
-   "Multigol 1-3": 0.5836,
+   "Multigol 1-3": 0.5835,
    "Multigol 1-4": 0.7525,
    "Multigol 1-5": 0.8544,
    "Multigol 1-6": 0.9057,
@@ -292,7 +292,7 @@
    "Multigol casa 0-1": 0.6088,
    "Multigol casa 1-2": 0.5862,
    "Multigol casa 1-3": 0.6927,
-   "Multigol casa 1-4": 0.7286,
+   "Multigol casa 1-4": 0.7287,
    "Multigol casa 2-3": 0.3428,
    "Multigol casa 2-4": 0.3788,
    "Multigol casa 3-4": 0.1424,
@@ -309,8 +309,8 @@
    "Multigol ospite 2-3": 0.4078,
    "Multigol ospite 2-4": 0.4684,
    "Multigol ospite 3-4": 0.2062,
-   "Ospite Over 0.5": 0.8108,
-   "Ospite Under 0.5": 0.1892,
+   "Ospite Over 0.5": 0.8109,
+   "Ospite Under 0.5": 0.1891,
    "Ospite Over 1.5": 0.4959,
    "Ospite Under 1.5": 0.5041,
    "Ospite Over 2.5": 0.2336,
@@ -318,11 +318,11 @@
    "1 + Over 1.5": 0.2457,
    "1 + Over 2.5": 0.201,
    "1 + Under 2.5": 0.0999,
-   "1 + Under 3.5": 0.1945,
+   "1 + Under 3.5": 0.1944,
    "1 + Under 4.5": 0.2348,
    "1 + Goal": 0.1717,
-   "1 + No Goal": 0.1292,
-   "1 + Multigol 1-3": 0.1945,
+   "1 + No Goal": 0.1291,
+   "1 + Multigol 1-3": 0.1944,
    "1 + Multigol 2-4": 0.1796,
    "1 + Multigol 1-4": 0.2348,
    "X + Over 1.5": 0.2011,
@@ -335,12 +335,12 @@
    "X + Multigol 1-3": 0.1212,
    "X + Multigol 2-4": 0.1832,
    "X + Multigol 1-4": 0.1832,
-   "2 + Over 1.5": 0.3675,
-   "2 + Over 2.5": 0.2996,
+   "2 + Over 1.5": 0.3676,
+   "2 + Over 2.5": 0.2997,
    "2 + Under 2.5": 0.1384,
    "2 + Under 3.5": 0.2679,
    "2 + Under 4.5": 0.3345,
-   "2 + Goal": 0.2391,
+   "2 + Goal": 0.2392,
    "2 + No Goal": 0.1989,
    "2 + Multigol 1-3": 0.2679,
    "2 + Multigol 2-4": 0.264,
@@ -351,16 +351,16 @@
    "1X + Under 3.5": 0.3757,
    "1X + Under 4.5": 0.478,
    "1X + Goal": 0.3728,
-   "1X + No Goal": 0.1892,
+   "1X + No Goal": 0.1891,
    "1X + Multigol 1-3": 0.3157,
    "1X + Multigol 2-4": 0.3628,
    "1X + Multigol 1-4": 0.418,
-   "X2 + Over 1.5": 0.5686,
+   "X2 + Over 1.5": 0.5687,
    "X2 + Over 2.5": 0.3795,
-   "X2 + Under 2.5": 0.3197,
+   "X2 + Under 2.5": 0.3196,
    "X2 + Under 3.5": 0.4491,
    "X2 + Under 4.5": 0.5777,
-   "X2 + Goal": 0.4402,
+   "X2 + Goal": 0.4403,
    "X2 + No Goal": 0.2589,
    "X2 + Multigol 1-3": 0.3891,
    "X2 + Multigol 2-4": 0.4472,
@@ -400,7 +400,7 @@
   }
  },
  "e401875018": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Genoa",
@@ -428,12 +428,12 @@
    },
    {
     "name": "Multigol ospite 1-3",
-    "p": 0.7178,
+    "p": 0.7179,
     "odds": 1.25
    },
    {
     "name": "Multigol 2-6",
-    "p": 0.7157,
+    "p": 0.7158,
     "odds": 1.26
    },
    {
@@ -448,7 +448,7 @@
    },
    {
     "name": "1° tempo Under 1.5",
-    "p": 0.685,
+    "p": 0.6849,
     "odds": 1.34
    }
   ],
@@ -481,17 +481,17 @@
    "Multigol 2-3": 0.4819,
    "Multigol 2-4": 0.6179,
    "Multigol 2-5": 0.6867,
-   "Multigol 2-6": 0.7157,
+   "Multigol 2-6": 0.7158,
    "Multigol 3-4": 0.351,
    "Multigol 3-5": 0.4198,
-   "Multigol 3-6": 0.4488,
+   "Multigol 3-6": 0.4489,
    "Multigol 4-5": 0.2048,
    "Multigol 4-6": 0.2338,
    "Multigol 5-6": 0.0978,
    "Multigol 7+": 0.015,
    "Multigol casa 0-1": 0.7536,
    "Multigol casa 1-2": 0.5422,
-   "Multigol casa 1-3": 0.5976,
+   "Multigol casa 1-3": 0.5977,
    "Multigol casa 1-4": 0.6108,
    "Multigol casa 2-3": 0.2302,
    "Multigol casa 2-4": 0.2434,
@@ -502,19 +502,19 @@
    "Casa Under 1.5": 0.7536,
    "Casa Over 2.5": 0.0716,
    "Casa Under 2.5": 0.9284,
-   "Multigol ospite 0-1": 0.5319,
+   "Multigol ospite 0-1": 0.5318,
    "Multigol ospite 1-2": 0.5826,
-   "Multigol ospite 1-3": 0.7178,
+   "Multigol ospite 1-3": 0.7179,
    "Multigol ospite 1-4": 0.7712,
-   "Multigol ospite 2-3": 0.3922,
+   "Multigol ospite 2-3": 0.3923,
    "Multigol ospite 2-4": 0.4456,
    "Multigol ospite 3-4": 0.1886,
-   "Ospite Over 0.5": 0.7937,
-   "Ospite Under 0.5": 0.2063,
-   "Ospite Over 1.5": 0.4681,
-   "Ospite Under 1.5": 0.5319,
-   "Ospite Over 2.5": 0.2111,
-   "Ospite Under 2.5": 0.7889,
+   "Ospite Over 0.5": 0.7938,
+   "Ospite Under 0.5": 0.2062,
+   "Ospite Over 1.5": 0.4682,
+   "Ospite Under 1.5": 0.5318,
+   "Ospite Over 2.5": 0.2112,
+   "Ospite Under 2.5": 0.7888,
    "1 + Over 1.5": 0.1518,
    "1 + Over 2.5": 0.1157,
    "1 + Under 2.5": 0.0999,
@@ -545,19 +545,19 @@
    "2 + Multigol 1-3": 0.3597,
    "2 + Multigol 2-4": 0.3162,
    "2 + Multigol 1-4": 0.43,
-   "1X + Over 1.5": 0.3365,
+   "1X + Over 1.5": 0.3366,
    "1X + Over 2.5": 0.1689,
    "1X + Under 2.5": 0.3231,
    "1X + Under 3.5": 0.3914,
    "1X + Under 4.5": 0.4571,
    "1X + Goal": 0.2857,
-   "1X + No Goal": 0.2063,
+   "1X + No Goal": 0.2062,
    "1X + Multigol 1-3": 0.2998,
    "1X + Multigol 2-4": 0.3017,
    "1X + Multigol 1-4": 0.3655,
    "X2 + Over 1.5": 0.579,
-   "X2 + Over 2.5": 0.3481,
-   "X2 + Under 2.5": 0.4363,
+   "X2 + Over 2.5": 0.3482,
+   "X2 + Under 2.5": 0.4362,
    "X2 + Under 3.5": 0.5829,
    "X2 + Under 4.5": 0.6981,
    "X2 + Goal": 0.3982,
@@ -589,18 +589,18 @@
    "1° tempo X": 0.4254,
    "1° tempo 2": 0.3781,
    "1° tempo Over 0.5": 0.6797,
-   "1° tempo Under 1.5": 0.685,
-   "1° tempo Over 1.5": 0.315
+   "1° tempo Under 1.5": 0.6849,
+   "1° tempo Over 1.5": 0.3151
   },
   "pengwin": {
    "market": "X2 + Over 1.5",
    "odds": 1.65,
-   "p": 0.5789853022421833,
+   "p": 0.5790120762942569,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/genoa-milan-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401874800": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Monza",
@@ -795,12 +795,12 @@
   "pengwin": {
    "market": "Goal",
    "odds": 1.5,
-   "p": 0.644521627968509,
+   "p": 0.6445201626472993,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/monza-atalanta-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401879244": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Brighton",
@@ -995,12 +995,12 @@
   "pengwin": {
    "market": "1X + Over 1.5",
    "odds": 1.5,
-   "p": 0.6164513286541385,
+   "p": 0.6164509660645943,
    "url": "https://www.mondopengwin.it/pronostici/calcio/premier-league/brighton-brentford-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401879243": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Crystal Palace",
@@ -1123,7 +1123,7 @@
    "1 + Goal": 0.1157,
    "1 + No Goal": 0.079,
    "1 + Multigol 1-3": 0.13,
-   "1 + Multigol 2-4": 0.1147,
+   "1 + Multigol 2-4": 0.1148,
    "1 + Multigol 1-4": 0.1532,
    "X + Over 1.5": 0.1788,
    "X + Over 2.5": 0.0714,
@@ -1200,7 +1200,7 @@
   }
  },
  "e401878759": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Ipswich",
@@ -1395,12 +1395,12 @@
   "pengwin": {
    "market": "Goal",
    "odds": null,
-   "p": 0.5948902320410444,
+   "p": 0.5948896389621654,
    "url": "https://www.mondopengwin.it/pronostici/calcio/premier-league/ipswich-town-bournemouth-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401879239": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Sunderland",
@@ -1595,12 +1595,12 @@
   "pengwin": {
    "market": "X2 + Multigol 1-5",
    "odds": 1.4,
-   "p": 0.6164529570312253,
+   "p": 0.6164526043747229,
    "url": "https://www.mondopengwin.it/pronostici/calcio/premier-league/sunderland-chelsea-statistiche-quote-e-pronostico-2026-2"
   }
  },
  "e401876406": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Rennes",
@@ -1795,12 +1795,12 @@
   "pengwin": {
    "market": "X2",
    "odds": 1.65,
-   "p": 0.5700532190848838,
+   "p": 0.5700525542933862,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/rennes-lille-statistiche-quote-e-pronostico-2026-2"
   }
  },
  "e401884738": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "FC Cologne",
@@ -2000,7 +2000,7 @@
   }
  },
  "e401882810": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Real Sociedad",
@@ -2200,7 +2200,7 @@
   }
  },
  "e401876412": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Angers",
@@ -2267,8 +2267,8 @@
    "Under 2.5": 0.4524,
    "Over 3.5": 0.3242,
    "Under 3.5": 0.6758,
-   "Over 4.5": 0.1637,
-   "Under 4.5": 0.8363,
+   "Over 4.5": 0.1638,
+   "Under 4.5": 0.8362,
    "Over 5.5": 0.0716,
    "Under 5.5": 0.9284,
    "Goal": 0.5842,
@@ -2400,7 +2400,7 @@
   }
  },
  "e401876410": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Brest",
@@ -2600,7 +2600,7 @@
   }
  },
  "e401876409": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Le Havre",
@@ -2795,12 +2795,12 @@
   "pengwin": {
    "market": "Multigol casa 1-3",
    "odds": 1.5,
-   "p": 0.6786198306304445,
+   "p": 0.6786199781365445,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/le-havre-lorient-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401876408": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Le Mans",
@@ -2882,13 +2882,13 @@
    "Multigol 2-4": 0.6243,
    "Multigol 2-5": 0.7307,
    "Multigol 2-6": 0.7855,
-   "Multigol 3-4": 0.3963,
+   "Multigol 3-4": 0.3964,
    "Multigol 3-5": 0.5028,
    "Multigol 3-6": 0.5575,
    "Multigol 4-5": 0.279,
    "Multigol 4-6": 0.3338,
    "Multigol 5-6": 0.1612,
-   "Multigol 7+": 0.0379,
+   "Multigol 7+": 0.038,
    "Multigol casa 0-1": 0.6708,
    "Multigol casa 1-2": 0.5763,
    "Multigol casa 1-3": 0.6601,
@@ -2958,7 +2958,7 @@
    "X2 + Over 1.5": 0.6439,
    "X2 + Over 2.5": 0.4477,
    "X2 + Under 2.5": 0.3292,
-   "X2 + Under 3.5": 0.4801,
+   "X2 + Under 3.5": 0.48,
    "X2 + Under 4.5": 0.6252,
    "X2 + Goal": 0.4689,
    "X2 + No Goal": 0.3081,
@@ -2977,7 +2977,7 @@
    "12 + Multigol 1-4": 0.5742,
    "Goal + Over 2.5": 0.4865,
    "Goal + Under 2.5": 0.113,
-   "Goal + Under 3.5": 0.2715,
+   "Goal + Under 3.5": 0.2714,
    "Goal + Over 1.5": 0.5995,
    "No Goal + Over 2.5": 0.109,
    "No Goal + Under 2.5": 0.2915,
@@ -2987,7 +2987,7 @@
    "Dispari": 0.4784,
    "1° tempo 1": 0.2132,
    "1° tempo X": 0.3766,
-   "1° tempo 2": 0.4101,
+   "1° tempo 2": 0.4102,
    "1° tempo Over 0.5": 0.7504,
    "1° tempo Under 1.5": 0.596,
    "1° tempo Over 1.5": 0.404
@@ -2995,12 +2995,12 @@
   "pengwin": {
    "market": "X2 + Over 1.5",
    "odds": 1.4,
-   "p": 0.6439352076446057,
+   "p": 0.6439403191621331,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/le-mans-monaco-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401879240": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Manchester United",
@@ -3109,22 +3109,22 @@
    "Multigol ospite 2-3": 0.3492,
    "Multigol ospite 2-4": 0.3871,
    "Multigol ospite 3-4": 0.1478,
-   "Ospite Over 0.5": 0.7478,
-   "Ospite Under 0.5": 0.2522,
+   "Ospite Over 0.5": 0.7479,
+   "Ospite Under 0.5": 0.2521,
    "Ospite Over 1.5": 0.4005,
    "Ospite Under 1.5": 0.5995,
-   "Ospite Over 2.5": 0.1611,
-   "Ospite Under 2.5": 0.8389,
+   "Ospite Over 2.5": 0.1612,
+   "Ospite Under 2.5": 0.8388,
    "1 + Over 1.5": 0.3888,
    "1 + Over 2.5": 0.3216,
    "1 + Under 2.5": 0.1331,
-   "1 + Under 3.5": 0.265,
-   "1 + Under 4.5": 0.3365,
+   "1 + Under 3.5": 0.2649,
+   "1 + Under 4.5": 0.3364,
    "1 + Goal": 0.2565,
    "1 + No Goal": 0.1981,
-   "1 + Multigol 1-3": 0.265,
+   "1 + Multigol 1-3": 0.2649,
    "1 + Multigol 2-4": 0.2706,
-   "1 + Multigol 1-4": 0.3365,
+   "1 + Multigol 1-4": 0.3364,
    "X + Over 1.5": 0.1996,
    "X + Over 2.5": 0.0838,
    "X + Under 2.5": 0.1698,
@@ -3149,14 +3149,14 @@
    "1X + Over 2.5": 0.4054,
    "1X + Under 2.5": 0.3029,
    "1X + Under 3.5": 0.4348,
-   "1X + Under 4.5": 0.5701,
+   "1X + Under 4.5": 0.57,
    "1X + Goal": 0.4561,
-   "1X + No Goal": 0.2522,
+   "1X + No Goal": 0.2521,
    "1X + Multigol 1-3": 0.3808,
    "1X + Multigol 2-4": 0.4501,
    "1X + Multigol 1-4": 0.516,
-   "X2 + Over 1.5": 0.4419,
-   "X2 + Over 2.5": 0.2848,
+   "X2 + Over 1.5": 0.442,
+   "X2 + Over 2.5": 0.2849,
    "X2 + Under 2.5": 0.2605,
    "X2 + Under 3.5": 0.352,
    "X2 + Under 4.5": 0.4556,
@@ -3189,18 +3189,18 @@
    "1° tempo X": 0.379,
    "1° tempo 2": 0.2593,
    "1° tempo Over 0.5": 0.7561,
-   "1° tempo Under 1.5": 0.5881,
-   "1° tempo Over 1.5": 0.4119
+   "1° tempo Under 1.5": 0.588,
+   "1° tempo Over 1.5": 0.412
   },
   "pengwin": {
    "market": "Goal",
    "odds": 1.5,
-   "p": 0.6294170214855057,
+   "p": 0.6294366517399425,
    "url": "https://www.mondopengwin.it/pronostici/calcio/premier-league/manchester-united-aston-villa-statistiche-quote-e-pronostico-2026-2"
   }
  },
  "e401884741": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Freiburg",
@@ -3400,7 +3400,7 @@
   }
  },
  "e401874808": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Inter",
@@ -3600,7 +3600,7 @@
   }
  },
  "e401882815": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Celta Vigo",
@@ -3800,7 +3800,7 @@
   }
  },
  "e401882807": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Villarreal",
@@ -4000,7 +4000,7 @@
   }
  },
  "e401884742": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Hoffenheim",
@@ -4043,7 +4043,7 @@
    },
    {
     "name": "Multigol ospite 1-4",
-    "p": 0.6656,
+    "p": 0.6655,
     "odds": 1.35
    },
    {
@@ -4079,7 +4079,7 @@
    "Multigol 1-5": 0.8414,
    "Multigol 1-6": 0.9044,
    "Multigol 2-3": 0.4366,
-   "Multigol 2-4": 0.6165,
+   "Multigol 2-4": 0.6166,
    "Multigol 2-5": 0.7332,
    "Multigol 2-6": 0.7963,
    "Multigol 3-4": 0.4019,
@@ -4105,7 +4105,7 @@
    "Multigol ospite 0-1": 0.6945,
    "Multigol ospite 1-2": 0.5691,
    "Multigol ospite 1-3": 0.6446,
-   "Multigol ospite 1-4": 0.6656,
+   "Multigol ospite 1-4": 0.6655,
    "Multigol ospite 2-3": 0.2789,
    "Multigol ospite 2-4": 0.2998,
    "Multigol ospite 3-4": 0.0964,
@@ -4169,12 +4169,12 @@
    "12 + Over 2.5": 0.5572,
    "12 + Under 2.5": 0.221,
    "12 + Under 3.5": 0.443,
-   "12 + Under 4.5": 0.568,
+   "12 + Under 4.5": 0.5681,
    "12 + Goal": 0.4272,
    "12 + No Goal": 0.351,
    "12 + Multigol 1-3": 0.443,
    "12 + Multigol 2-4": 0.4599,
-   "12 + Multigol 1-4": 0.568,
+   "12 + Multigol 1-4": 0.5681,
    "Goal + Over 2.5": 0.4989,
    "Goal + Under 2.5": 0.1018,
    "Goal + Under 3.5": 0.2519,
@@ -4200,7 +4200,7 @@
   }
  },
  "e401875003": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Fiorentina",
@@ -4400,7 +4400,7 @@
   }
  },
  "e401876404": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Lens",
@@ -4595,12 +4595,12 @@
   "pengwin": {
    "market": "Goal",
    "odds": 1.6,
-   "p": 0.6670497904163716,
+   "p": 0.6670493267012086,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/lens-marsiglia-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401882816": {
-  "generated": "2026-11-08T08:43:23.724745+00:00",
+  "generated": "2026-11-08T09:13:41.289494+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Atletico Madrid",
@@ -4613,7 +4613,7 @@
   "top": [
    {
     "name": "X2",
-    "p": 0.7295,
+    "p": 0.7296,
     "odds": 1.27
    },
    {
@@ -4653,11 +4653,11 @@
    }
   ],
   "markets": {
-   "1": 0.2705,
+   "1": 0.2704,
    "X": 0.2236,
    "2": 0.506,
    "1X": 0.494,
-   "X2": 0.7295,
+   "X2": 0.7296,
    "12": 0.7764,
    "Over 0.5": 0.9672,
    "Under 0.5": 0.0328,
@@ -4700,8 +4700,8 @@
    "Casa Under 0.5": 0.2111,
    "Casa Over 1.5": 0.4605,
    "Casa Under 1.5": 0.5395,
-   "Casa Over 2.5": 0.2052,
-   "Casa Under 2.5": 0.7948,
+   "Casa Over 2.5": 0.2051,
+   "Casa Under 2.5": 0.7949,
    "Multigol ospite 0-1": 0.3664,
    "Multigol ospite 1-2": 0.5194,
    "Multigol ospite 1-3": 0.7125,
@@ -4720,7 +4720,7 @@
    "1 + Under 2.5": 0.0596,
    "1 + Under 3.5": 0.1389,
    "1 + Under 4.5": 0.178,
-   "1 + Goal": 0.187,
+   "1 + Goal": 0.1869,
    "1 + No Goal": 0.0835,
    "1 + Multigol 1-3": 0.1389,
    "1 + Multigol 2-4": 0.1481,
@@ -4736,7 +4736,7 @@
    "X + Multigol 2-4": 0.1591,
    "X + Multigol 1-4": 0.1591,
    "2 + Over 1.5": 0.4614,
-   "2 + Over 2.5": 0.4045,
+   "2 + Over 2.5": 0.4046,
    "2 + Under 2.5": 0.1014,
    "2 + Under 3.5": 0.2306,
    "2 + Under 4.5": 0.3159,
@@ -4746,11 +4746,11 @@
    "2 + Multigol 2-4": 0.2713,
    "2 + Multigol 1-4": 0.3159,
    "1X + Over 1.5": 0.4313,
-   "1X + Over 2.5": 0.3113,
+   "1X + Over 2.5": 0.3112,
    "1X + Under 2.5": 0.1828,
    "1X + Under 3.5": 0.262,
    "1X + Under 4.5": 0.3699,
-   "1X + Goal": 0.3778,
+   "1X + Goal": 0.3777,
    "1X + No Goal": 0.1163,
    "1X + Multigol 1-3": 0.2293,
    "1X + Multigol 2-4": 0.3072,
@@ -4787,7 +4787,7 @@
    "Dispari": 0.4833,
    "1° tempo 1": 0.2548,
    "1° tempo X": 0.3397,
-   "1° tempo 2": 0.4054,
+   "1° tempo 2": 0.4055,
    "1° tempo Over 0.5": 0.8114,
    "1° tempo Under 1.5": 0.5032,
    "1° tempo Over 1.5": 0.4968
@@ -4795,7 +4795,7 @@
   "pengwin": {
    "market": "X2 + Goal",
    "odds": 1.7,
-   "p": 0.518420553037147,
+   "p": 0.5184273787296514,
    "url": "https://www.mondopengwin.it/pronostici/calcio/la-liga/atletico-madrid-barcellona-statistiche-quote-e-pronostico-2026-3"
   }
  }
