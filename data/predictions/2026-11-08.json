@@ -4200,7 +4200,7 @@
   }
  },
  "e401875003": {
-  "generated": "2026-11-08T18:23:39.355959+00:00",
+  "generated": "2026-11-08T18:54:10.982817+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Fiorentina",
@@ -4269,8 +4269,8 @@
    "Under 3.5": 0.6878,
    "Over 4.5": 0.1552,
    "Under 4.5": 0.8448,
-   "Over 5.5": 0.0667,
-   "Under 5.5": 0.9333,
+   "Over 5.5": 0.0668,
+   "Under 5.5": 0.9332,
    "Goal": 0.5714,
    "No Goal": 0.4286,
    "Multigol 1-2": 0.3937,
@@ -4336,7 +4336,7 @@
    "X + Multigol 2-4": 0.1835,
    "X + Multigol 1-4": 0.1835,
    "2 + Over 1.5": 0.3768,
-   "2 + Over 2.5": 0.2981,
+   "2 + Over 2.5": 0.298,
    "2 + Under 2.5": 0.1641,
    "2 + Under 3.5": 0.3007,
    "2 + Under 4.5": 0.3689,
@@ -4400,7 +4400,7 @@
   }
  },
  "e401876404": {
-  "generated": "2026-11-08T18:23:39.355959+00:00",
+  "generated": "2026-11-08T18:54:10.982817+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Lens",
@@ -4595,12 +4595,12 @@
   "pengwin": {
    "market": "Goal",
    "odds": 1.6,
-   "p": 0.6673658674908227,
+   "p": 0.6673653549149954,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/lens-marsiglia-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401882816": {
-  "generated": "2026-11-08T18:23:39.355959+00:00",
+  "generated": "2026-11-08T18:54:10.982817+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Atletico Madrid",
@@ -4717,7 +4717,7 @@
    "Ospite Under 2.5": 0.6352,
    "1 + Over 1.5": 0.2405,
    "1 + Over 2.5": 0.2108,
-   "1 + Under 2.5": 0.0595,
+   "1 + Under 2.5": 0.0596,
    "1 + Under 3.5": 0.1388,
    "1 + Under 4.5": 0.1779,
    "1 + Goal": 0.187,
@@ -4795,7 +4795,7 @@
   "pengwin": {
    "market": "X2 + Goal",
    "odds": 1.7,
-   "p": 0.5186364922837328,
+   "p": 0.5186360772476956,
    "url": "https://www.mondopengwin.it/pronostici/calcio/la-liga/atletico-madrid-barcellona-statistiche-quote-e-pronostico-2026-3"
   }
  }
