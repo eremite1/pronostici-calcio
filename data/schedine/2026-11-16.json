@@ -1,0 +1,52 @@
+{
+ "generated": "2026-11-16T20:03:21.441421+00:00",
+ "giorno": [],
+ "prossimi": [
+  {
+   "prob": 0.4051890090475285,
+   "odds": 2.02,
+   "fair": 2.47,
+   "legs": [
+    {
+     "match_id": "e401884736",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Bayern Munich",
+     "away": "FC Cologne",
+     "kickoff": "ven 20/11 20:30",
+     "pick": "Ospite Under 1.5",
+     "p": 0.725665148515502,
+     "odds": 1.27,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401876395",
+     "league": "Ligue 1",
+     "flag": "🇫🇷",
+     "home": "Troyes",
+     "away": "Le Havre",
+     "kickoff": "ven 20/11 20:45",
+     "pick": "Under 3.5",
+     "p": 0.7418102463803463,
+     "odds": 1.27,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401882805",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Athletic Club",
+     "away": "Espanyol",
+     "kickoff": "ven 20/11 21:00",
+     "pick": "Over 1.5",
+     "p": 0.7527115200589601,
+     "odds": 1.25,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  }
+ ]
+}
