@@ -1,6 +1,6 @@
 {
  "e401879233": {
-  "generated": "2026-11-17T13:26:16.084767+00:00",
+  "generated": "2026-11-17T13:59:02.146200+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Manchester City",
@@ -95,7 +95,7 @@
    "Multigol casa 1-4": 0.816,
    "Multigol casa 2-3": 0.4607,
    "Multigol casa 2-4": 0.5623,
-   "Multigol casa 3-4": 0.2927,
+   "Multigol casa 3-4": 0.2926,
    "Casa Over 0.5": 0.8807,
    "Casa Under 0.5": 0.1193,
    "Casa Over 1.5": 0.627,
@@ -195,7 +195,7 @@
   "pengwin": null
  },
  "e401882806": {
-  "generated": "2026-11-17T13:26:16.084767+00:00",
+  "generated": "2026-11-17T13:59:02.146200+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Alaves",
