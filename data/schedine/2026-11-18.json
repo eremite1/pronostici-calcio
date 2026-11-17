@@ -1,0 +1,39 @@
+{
+ "generated": "2026-11-17T23:07:11.680377+00:00",
+ "giorno": [],
+ "prossimi": [
+  {
+   "prob": 0.4495580293413633,
+   "odds": 2.01,
+   "fair": 2.22,
+   "legs": [
+    {
+     "match_id": "e401882797",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Sevilla",
+     "away": "Real Betis",
+     "kickoff": "sab 21/11 18:30",
+     "pick": "X2",
+     "p": 0.6514540990314547,
+     "odds": 1.46,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401882798",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Real Madrid",
+     "away": "Celta Vigo",
+     "kickoff": "sab 21/11 21:00",
+     "pick": "1",
+     "p": 0.6900839675577157,
+     "odds": 1.38,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  }
+ ]
+}
