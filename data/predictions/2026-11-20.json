@@ -1,6 +1,6 @@
 {
  "e401884736": {
-  "generated": "2026-11-17T21:35:47.399594+00:00",
+  "generated": "2026-11-17T22:06:11.922908+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Bayern Munich",
@@ -195,7 +195,7 @@
   "pengwin": null
  },
  "e401876395": {
-  "generated": "2026-11-17T21:35:47.399594+00:00",
+  "generated": "2026-11-17T22:06:11.922908+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Troyes",
@@ -375,7 +375,7 @@
    "Goal + Under 3.5": 0.2961,
    "Goal + Over 1.5": 0.5283,
    "No Goal + Over 2.5": 0.0831,
-   "No Goal + Under 2.5": 0.3887,
+   "No Goal + Under 2.5": 0.3886,
    "No Goal + Under 3.5": 0.4457,
    "No Goal + Over 1.5": 0.2116,
    "Pari": 0.5277,
@@ -390,7 +390,7 @@
   "pengwin": null
  },
  "e401882805": {
-  "generated": "2026-11-17T21:35:47.399594+00:00",
+  "generated": "2026-11-17T22:06:11.922908+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Athletic Club",
