@@ -1,12 +1,12 @@
 {
  "e401884736": {
-  "generated": "2026-11-18T18:58:04.730785+00:00",
+  "generated": "2026-11-18T19:29:36.025236+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Bayern Munich",
   "away": "FC Cologne",
   "kickoff": "2026-11-20T19:30:00+00:00",
-  "lh": 3.669,
+  "lh": 3.668,
   "la": 1.028,
   "fd_home": "Bayern Munich",
   "fd_away": "FC Koln",
@@ -67,8 +67,8 @@
    "Under 2.5": 0.1529,
    "Over 3.5": 0.6893,
    "Under 3.5": 0.3107,
-   "Over 4.5": 0.504,
-   "Under 4.5": 0.496,
+   "Over 4.5": 0.5039,
+   "Under 4.5": 0.4961,
    "Over 5.5": 0.3299,
    "Under 5.5": 0.6701,
    "Goal": 0.6292,
@@ -195,7 +195,7 @@
   "pengwin": null
  },
  "e401876395": {
-  "generated": "2026-11-18T18:58:04.730785+00:00",
+  "generated": "2026-11-18T19:29:36.025236+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Troyes",
@@ -390,7 +390,7 @@
   "pengwin": null
  },
  "e401882805": {
-  "generated": "2026-11-18T18:58:04.730785+00:00",
+  "generated": "2026-11-18T19:29:36.025236+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Athletic Club",
