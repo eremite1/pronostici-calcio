@@ -1,6 +1,6 @@
 {
  "e401884736": {
-  "generated": "2026-11-18T18:27:39.909897+00:00",
+  "generated": "2026-11-18T18:58:04.730785+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Bayern Munich",
@@ -105,7 +105,7 @@
    "Multigol ospite 0-1": 0.7256,
    "Multigol ospite 1-2": 0.5567,
    "Multigol ospite 1-3": 0.6214,
-   "Multigol ospite 1-4": 0.638,
+   "Multigol ospite 1-4": 0.6381,
    "Multigol ospite 2-3": 0.2537,
    "Multigol ospite 2-4": 0.2703,
    "Multigol ospite 3-4": 0.0814,
@@ -195,7 +195,7 @@
   "pengwin": null
  },
  "e401876395": {
-  "generated": "2026-11-18T18:27:39.909897+00:00",
+  "generated": "2026-11-18T18:58:04.730785+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Troyes",
@@ -276,7 +276,7 @@
    "Multigol 2-3": 0.4816,
    "Multigol 2-4": 0.621,
    "Multigol 2-5": 0.6928,
-   "Multigol 2-6": 0.7235,
+   "Multigol 2-6": 0.7236,
    "Multigol 3-4": 0.3561,
    "Multigol 3-5": 0.4278,
    "Multigol 3-6": 0.4586,
@@ -390,7 +390,7 @@
   "pengwin": null
  },
  "e401882805": {
-  "generated": "2026-11-18T18:27:39.909897+00:00",
+  "generated": "2026-11-18T18:58:04.730785+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Athletic Club",
@@ -508,11 +508,11 @@
    "1 + Over 1.5": 0.4291,
    "1 + Over 2.5": 0.327,
    "1 + Under 2.5": 0.211,
-   "1 + Under 3.5": 0.3657,
+   "1 + Under 3.5": 0.3656,
    "1 + Under 4.5": 0.4449,
    "1 + Goal": 0.2334,
    "1 + No Goal": 0.3046,
-   "1 + Multigol 1-3": 0.3657,
+   "1 + Multigol 1-3": 0.3656,
    "1 + Multigol 2-4": 0.336,
    "1 + Multigol 1-4": 0.4449,
    "X + Over 1.5": 0.1808,
