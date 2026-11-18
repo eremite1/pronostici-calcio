@@ -1,0 +1,39 @@
+{
+ "generated": "2026-11-18T23:03:21.584981+00:00",
+ "giorno": [],
+ "prossimi": [
+  {
+   "prob": 0.4518520184697745,
+   "odds": 2.0,
+   "fair": 2.21,
+   "legs": [
+    {
+     "match_id": "e401882804",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Barcelona",
+     "away": "Villarreal",
+     "kickoff": "dom 22/11 14:00",
+     "pick": "1",
+     "p": 0.682760491861568,
+     "odds": 1.39,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401876401",
+     "league": "Ligue 1",
+     "flag": "🇫🇷",
+     "home": "Lorient",
+     "away": "Rennes",
+     "kickoff": "dom 22/11 17:15",
+     "pick": "1X",
+     "p": 0.6618016476580034,
+     "odds": 1.44,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  }
+ ]
+}
