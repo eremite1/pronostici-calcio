@@ -1,6 +1,6 @@
 {
  "e401884736": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Bayern Munich",
@@ -18,7 +18,7 @@
    },
    {
     "name": "Casa Over 2.5",
-    "p": 0.7088,
+    "p": 0.7087,
     "odds": 1.3
    },
    {
@@ -100,8 +100,8 @@
    "Casa Under 0.5": 0.0256,
    "Casa Over 1.5": 0.8807,
    "Casa Under 1.5": 0.1193,
-   "Casa Over 2.5": 0.7088,
-   "Casa Under 2.5": 0.2912,
+   "Casa Over 2.5": 0.7087,
+   "Casa Under 2.5": 0.2913,
    "Multigol ospite 0-1": 0.7256,
    "Multigol ospite 1-2": 0.5567,
    "Multigol ospite 1-3": 0.6214,
@@ -195,7 +195,7 @@
   "pengwin": null
  },
  "e401876395": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Troyes",
@@ -390,7 +390,7 @@
   "pengwin": null
  },
  "e401882805": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Athletic Club",

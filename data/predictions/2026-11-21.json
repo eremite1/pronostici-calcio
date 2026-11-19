@@ -1,6 +1,6 @@
 {
  "e401879233": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Manchester City",
@@ -195,7 +195,7 @@
   "pengwin": null
  },
  "e401882806": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Alaves",
@@ -380,7 +380,7 @@
    "No Goal + Over 1.5": 0.2355,
    "Pari": 0.5238,
    "Dispari": 0.4762,
-   "1° tempo 1": 0.4059,
+   "1° tempo 1": 0.4058,
    "1° tempo X": 0.3966,
    "1° tempo 2": 0.1976,
    "1° tempo Over 0.5": 0.7189,
@@ -390,7 +390,7 @@
   "pengwin": null
  },
  "e401875056": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Como",
@@ -565,7 +565,7 @@
    "12 + Multigol 1-3": 0.4976,
    "12 + Multigol 2-4": 0.4835,
    "12 + Multigol 1-4": 0.6211,
-   "Goal + Over 2.5": 0.4021,
+   "Goal + Over 2.5": 0.4022,
    "Goal + Under 2.5": 0.1023,
    "Goal + Under 3.5": 0.2386,
    "Goal + Over 1.5": 0.5044,
@@ -585,7 +585,7 @@
   "pengwin": null
  },
  "e401874981": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Lazio",
@@ -747,7 +747,7 @@
    "X2 + Under 4.5": 0.4226,
    "X2 + Goal": 0.276,
    "X2 + No Goal": 0.1819,
-   "X2 + Multigol 1-3": 0.2754,
+   "X2 + Multigol 1-3": 0.2755,
    "X2 + Multigol 2-4": 0.2848,
    "X2 + Multigol 1-4": 0.3402,
    "12 + Over 1.5": 0.5728,
@@ -780,7 +780,7 @@
   "pengwin": null
  },
  "e401884732": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Union Berlin",
@@ -869,7 +869,7 @@
    "Multigol 4-6": 0.377,
    "Multigol 5-6": 0.1927,
    "Multigol 7+": 0.0546,
-   "Multigol casa 0-1": 0.5828,
+   "Multigol casa 0-1": 0.5827,
    "Multigol casa 1-2": 0.5869,
    "Multigol casa 1-3": 0.7031,
    "Multigol casa 1-4": 0.7445,
@@ -878,8 +878,8 @@
    "Multigol casa 3-4": 0.1576,
    "Casa Over 0.5": 0.7598,
    "Casa Under 0.5": 0.2402,
-   "Casa Over 1.5": 0.4172,
-   "Casa Under 1.5": 0.5828,
+   "Casa Over 1.5": 0.4173,
+   "Casa Under 1.5": 0.5827,
    "Casa Over 2.5": 0.1729,
    "Casa Under 2.5": 0.8271,
    "Multigol ospite 0-1": 0.4259,
@@ -975,7 +975,7 @@
   "pengwin": null
  },
  "e401884735": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Bayer Leverkusen",
@@ -1061,7 +1061,7 @@
    "Multigol 3-5": 0.5351,
    "Multigol 3-6": 0.6106,
    "Multigol 4-5": 0.3184,
-   "Multigol 4-6": 0.3938,
+   "Multigol 4-6": 0.3939,
    "Multigol 5-6": 0.2059,
    "Multigol 7+": 0.0629,
    "Multigol casa 0-1": 0.2976,
@@ -1170,7 +1170,7 @@
   "pengwin": null
  },
  "e401884731": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Borussia M.Gladbach",
@@ -1365,7 +1365,7 @@
   "pengwin": null
  },
  "e401884734": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Eintracht Frankfurt",
@@ -1560,7 +1560,7 @@
   "pengwin": null
  },
  "e401884728": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Elversberg",
@@ -1755,7 +1755,7 @@
   "pengwin": null
  },
  "e401879238": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Bournemouth",
@@ -1950,7 +1950,7 @@
   "pengwin": null
  },
  "e401878756": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Aston Villa",
@@ -2145,7 +2145,7 @@
   "pengwin": null
  },
  "e401879236": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Chelsea",
@@ -2340,7 +2340,7 @@
   "pengwin": null
  },
  "e401879235": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Coventry",
@@ -2535,7 +2535,7 @@
   "pengwin": null
  },
  "e401878754": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Tottenham",
@@ -2730,7 +2730,7 @@
   "pengwin": null
  },
  "e401882799": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Rayo Vallecano",
@@ -2925,7 +2925,7 @@
   "pengwin": null
  },
  "e401876398": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Nice",
@@ -3120,7 +3120,7 @@
   "pengwin": null
  },
  "e401874967": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Parma Calcio 1913",
@@ -3315,7 +3315,7 @@
   "pengwin": null
  },
  "e401879232": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Newcastle United",
@@ -3451,7 +3451,7 @@
    "X + Multigol 2-4": 0.1727,
    "X + Multigol 1-4": 0.1727,
    "2 + Over 1.5": 0.4385,
-   "2 + Over 2.5": 0.3436,
+   "2 + Over 2.5": 0.3435,
    "2 + Under 2.5": 0.1913,
    "2 + Under 3.5": 0.3453,
    "2 + Under 4.5": 0.4277,
@@ -3510,7 +3510,7 @@
   "pengwin": null
  },
  "e401882797": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Sevilla",
@@ -3705,7 +3705,7 @@
   "pengwin": null
  },
  "e401884729": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Schalke 04",
@@ -3867,7 +3867,7 @@
    "X2 + Under 4.5": 0.6029,
    "X2 + Goal": 0.4458,
    "X2 + No Goal": 0.2821,
-   "X2 + Multigol 1-3": 0.4091,
+   "X2 + Multigol 1-3": 0.409,
    "X2 + Multigol 2-4": 0.465,
    "X2 + Multigol 1-4": 0.5411,
    "12 + Over 1.5": 0.6113,
@@ -3900,7 +3900,7 @@
   "pengwin": null
  },
  "e401875067": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Napoli",
@@ -4095,7 +4095,7 @@
   "pengwin": null
  },
  "e401876399": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Monaco",
@@ -4290,7 +4290,7 @@
   "pengwin": null
  },
  "e401876403": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Lens",
@@ -4365,7 +4365,7 @@
    "No Goal": 0.4104,
    "Multigol 1-2": 0.3515,
    "Multigol 1-3": 0.5754,
-   "Multigol 1-4": 0.7471,
+   "Multigol 1-4": 0.747,
    "Multigol 1-5": 0.8524,
    "Multigol 1-6": 0.9063,
    "Multigol 2-3": 0.453,
@@ -4485,7 +4485,7 @@
   "pengwin": null
  },
  "e401876402": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Lille",
@@ -4680,7 +4680,7 @@
   "pengwin": null
  },
  "e401876396": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Strasbourg",
@@ -4837,7 +4837,7 @@
    "1X + Multigol 1-4": 0.5158,
    "X2 + Over 1.5": 0.4258,
    "X2 + Over 2.5": 0.2824,
-   "X2 + Under 2.5": 0.2312,
+   "X2 + Under 2.5": 0.2313,
    "X2 + Under 3.5": 0.3161,
    "X2 + Under 4.5": 0.4187,
    "X2 + Goal": 0.3656,
@@ -4875,7 +4875,7 @@
   "pengwin": null
  },
  "e401882798": {
-  "generated": "2026-11-19T00:04:15.001767+00:00",
+  "generated": "2026-11-19T00:34:43.213616+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Real Madrid",
@@ -4980,7 +4980,7 @@
    "Multigol ospite 0-1": 0.7933,
    "Multigol ospite 1-2": 0.5157,
    "Multigol ospite 1-3": 0.5587,
-   "Multigol ospite 1-4": 0.5677,
+   "Multigol ospite 1-4": 0.5678,
    "Multigol ospite 2-3": 0.1959,
    "Multigol ospite 2-4": 0.2049,
    "Multigol ospite 3-4": 0.052,
