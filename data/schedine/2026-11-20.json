@@ -1,0 +1,86 @@
+{
+ "generated": "2026-11-19T23:02:24.217886+00:00",
+ "giorno": [
+  {
+   "prob": 0.40506077127572326,
+   "odds": 2.02,
+   "fair": 2.47,
+   "legs": [
+    {
+     "match_id": "e401884736",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Bayern Munich",
+     "away": "FC Cologne",
+     "kickoff": "ven 20/11 20:30",
+     "pick": "Ospite Under 1.5",
+     "p": 0.7255188650906592,
+     "odds": 1.27,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401876395",
+     "league": "Ligue 1",
+     "flag": "🇫🇷",
+     "home": "Troyes",
+     "away": "Le Havre",
+     "kickoff": "ven 20/11 20:45",
+     "pick": "Under 3.5",
+     "p": 0.7416878161327883,
+     "odds": 1.27,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401882805",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Athletic Club",
+     "away": "Espanyol",
+     "kickoff": "ven 20/11 21:00",
+     "pick": "Over 1.5",
+     "p": 0.7527492491000775,
+     "odds": 1.25,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  }
+ ],
+ "prossimi": [
+  {
+   "prob": 0.45182608399788615,
+   "odds": 2.0,
+   "fair": 2.21,
+   "legs": [
+    {
+     "match_id": "e401882804",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Barcelona",
+     "away": "Villarreal",
+     "kickoff": "dom 22/11 14:00",
+     "pick": "1",
+     "p": 0.6826939179207914,
+     "odds": 1.39,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401876401",
+     "league": "Ligue 1",
+     "flag": "🇫🇷",
+     "home": "Lorient",
+     "away": "Rennes",
+     "kickoff": "dom 22/11 17:15",
+     "pick": "1X",
+     "p": 0.6618281958245139,
+     "odds": 1.44,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  }
+ ]
+}
