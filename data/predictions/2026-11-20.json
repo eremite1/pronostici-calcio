@@ -1,6 +1,6 @@
 {
  "e401884736": {
-  "generated": "2026-11-19T09:46:30.659403+00:00",
+  "generated": "2026-11-19T10:16:47.800164+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Bayern Munich",
@@ -78,7 +78,7 @@
    "Multigol 1-4": 0.4835,
    "Multigol 1-5": 0.6576,
    "Multigol 1-6": 0.7938,
-   "Multigol 2-3": 0.2621,
+   "Multigol 2-3": 0.2622,
    "Multigol 2-4": 0.4475,
    "Multigol 2-5": 0.6215,
    "Multigol 2-6": 0.7577,
@@ -152,7 +152,7 @@
    "1X + Under 4.5": 0.4595,
    "1X + Goal": 0.5835,
    "1X + No Goal": 0.3578,
-   "1X + Multigol 1-3": 0.268,
+   "1X + Multigol 1-3": 0.2681,
    "1X + Multigol 2-4": 0.4168,
    "1X + Multigol 1-4": 0.4469,
    "X2 + Over 1.5": 0.1405,
@@ -195,7 +195,7 @@
   "pengwin": null
  },
  "e401876395": {
-  "generated": "2026-11-19T09:46:30.659403+00:00",
+  "generated": "2026-11-19T10:16:47.800164+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Troyes",
@@ -281,7 +281,7 @@
    "Multigol 3-5": 0.4278,
    "Multigol 3-6": 0.4586,
    "Multigol 4-5": 0.2112,
-   "Multigol 4-6": 0.2419,
+   "Multigol 4-6": 0.242,
    "Multigol 5-6": 0.1025,
    "Multigol 7+": 0.0163,
    "Multigol casa 0-1": 0.5721,
@@ -390,7 +390,7 @@
   "pengwin": null
  },
  "e401882805": {
-  "generated": "2026-11-19T09:46:30.659403+00:00",
+  "generated": "2026-11-19T10:16:47.800164+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Athletic Club",
@@ -403,7 +403,7 @@
   "top": [
    {
     "name": "Over 1.5",
-    "p": 0.7527,
+    "p": 0.7528,
     "odds": 1.25
    },
    {
@@ -451,8 +451,8 @@
    "12": 0.7368,
    "Over 0.5": 0.9176,
    "Under 0.5": 0.0824,
-   "Over 1.5": 0.7527,
-   "Under 1.5": 0.2473,
+   "Over 1.5": 0.7528,
+   "Under 1.5": 0.2472,
    "Over 2.5": 0.493,
    "Under 2.5": 0.507,
    "Over 3.5": 0.274,
@@ -577,7 +577,7 @@
    "Dispari": 0.4746,
    "1° tempo 1": 0.4005,
    "1° tempo X": 0.4116,
-   "1° tempo 2": 0.1879,
+   "1° tempo 2": 0.188,
    "1° tempo Over 0.5": 0.696,
    "1° tempo Under 1.5": 0.666,
    "1° tempo Over 1.5": 0.334
