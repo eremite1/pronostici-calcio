@@ -82,5 +82,41 @@
     }
    ]
   }
- ]
+ ],
+ "incrociata": [
+  {
+   "prob": 0.37178688158208967,
+   "odds": 2.25,
+   "fair": 2.69,
+   "legs": [
+    {
+     "match_id": "e401884734",
+     "league": "Bundesliga",
+     "flag": "🇩🇪",
+     "home": "Eintracht Frankfurt",
+     "away": "Hoffenheim",
+     "kickoff": "sab 21/11 15:30",
+     "pick": "Goal + Over 2.5",
+     "p": 0.6091608337134414,
+     "odds": 1.45,
+     "is_real": true,
+     "url": "https://www.mondopengwin.it/pronostici/calcio/bundesliga/francoforte-hoffenheim-statistiche-quote-e-pronostico"
+    },
+    {
+     "match_id": "e401879235",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Coventry",
+     "away": "Crystal Palace",
+     "kickoff": "sab 21/11 16:00",
+     "pick": "X2",
+     "p": 0.6103263062985824,
+     "odds": 1.55,
+     "is_real": true,
+     "url": "https://www.mondopengwin.it/pronostici/calcio/premier-league/coventry-city-crystal-palace-statistiche-quote-e-pronostico-2026"
+    }
+   ]
+  }
+ ],
+ "generated_incrociata": "2026-11-20T11:15:18.650604+00:00"
 }
