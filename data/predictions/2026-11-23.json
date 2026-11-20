@@ -1,6 +1,6 @@
 {
  "e401875009": {
-  "generated": "2026-11-20T11:45:57.888907+00:00",
+  "generated": "2026-11-20T12:16:26.567002+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Monza",
@@ -135,7 +135,7 @@
    "X + Multigol 1-3": 0.1147,
    "X + Multigol 2-4": 0.1778,
    "X + Multigol 1-4": 0.1778,
-   "2 + Over 1.5": 0.4042,
+   "2 + Over 1.5": 0.4043,
    "2 + Over 2.5": 0.3346,
    "2 + Under 2.5": 0.1366,
    "2 + Under 3.5": 0.2722,
@@ -200,7 +200,7 @@
   }
  },
  "e401879237": {
-  "generated": "2026-11-20T11:45:57.888907+00:00",
+  "generated": "2026-11-20T12:16:26.567002+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Brentford",
@@ -393,14 +393,14 @@
    "1° tempo Over 1.5": 0.3718
   },
   "pengwin": {
-   "market": null,
+   "market": "Multigol casa 1-3",
    "odds": null,
-   "p": null,
+   "p": 0.7206435356093477,
    "url": "https://www.mondopengwin.it/pronostici/calcio/premier-league/brentford-everton-statistiche-quote-e-pronostico-2026-2"
   }
  },
  "e401882802": {
-  "generated": "2026-11-20T11:45:57.888907+00:00",
+  "generated": "2026-11-20T12:16:26.567002+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Levante",
