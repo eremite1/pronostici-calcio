@@ -1,0 +1,109 @@
+{
+ "generated": "2026-11-20T23:27:38.784503+00:00",
+ "giorno": [
+  {
+   "prob": 0.4423043153745706,
+   "odds": 2.0,
+   "fair": 2.26,
+   "legs": [
+    {
+     "match_id": "e401879232",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Newcastle United",
+     "away": "Arsenal",
+     "kickoff": "sab 21/11 18:30",
+     "pick": "Under 3.5",
+     "p": 0.6729935784757497,
+     "odds": 1.4,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401875067",
+     "league": "Serie A",
+     "flag": "🇮🇹",
+     "home": "Napoli",
+     "away": "Torino",
+     "kickoff": "sab 21/11 20:45",
+     "pick": "Under 3.5",
+     "p": 0.6572192209862346,
+     "odds": 1.43,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  }
+ ],
+ "prossimi": [
+  {
+   "prob": 0.4409799742768317,
+   "odds": 2.0,
+   "fair": 2.27,
+   "legs": [
+    {
+     "match_id": "e401879235",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Coventry",
+     "away": "Crystal Palace",
+     "kickoff": "sab 21/11 16:00",
+     "pick": "Under 3.5",
+     "p": 0.6541863028889318,
+     "odds": 1.44,
+     "is_real": false,
+     "best": null
+    },
+    {
+     "match_id": "e401879237",
+     "league": "Premier League",
+     "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+     "home": "Brentford",
+     "away": "Everton",
+     "kickoff": "lun 23/11 21:00",
+     "pick": "Under 3.5",
+     "p": 0.6740892805756308,
+     "odds": 1.39,
+     "is_real": false,
+     "best": null
+    }
+   ]
+  }
+ ],
+ "incrociata": [
+  {
+   "prob": 0.6269297000631988,
+   "odds": 2.25,
+   "fair": 1.6,
+   "legs": [
+    {
+     "match_id": "e401882799",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Rayo Vallecano",
+     "away": "Valencia",
+     "kickoff": "sab 21/11 16:15",
+     "pick": "Multigol 1-4",
+     "p": 0.7908706596198369,
+     "odds": 1.5,
+     "is_real": true,
+     "url": "https://www.mondopengwin.it/pronostici/calcio/la-liga/vallecano-valencia-statistiche-quote-e-pronostico-2026"
+    },
+    {
+     "match_id": "e401882798",
+     "league": "LaLiga",
+     "flag": "🇪🇸",
+     "home": "Real Madrid",
+     "away": "Celta Vigo",
+     "kickoff": "sab 21/11 21:00",
+     "pick": "1",
+     "p": 0.792708254425012,
+     "odds": 1.5,
+     "is_real": true,
+     "url": "https://www.mondopengwin.it/pronostici/calcio/la-liga/real-madrid-celta-vigo-statistiche-quote-e-pronostico-2026"
+    }
+   ]
+  }
+ ],
+ "generated_incrociata": "2026-11-20T23:27:38.784503+00:00"
+}
