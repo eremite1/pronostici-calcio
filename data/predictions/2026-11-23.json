@@ -1,6 +1,6 @@
 {
  "e401875009": {
-  "generated": "2026-11-20T00:03:25.293962+00:00",
+  "generated": "2026-11-20T00:33:55.334952+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Monza",
@@ -132,7 +132,7 @@
    "X + Under 4.5": 0.2114,
    "X + Goal": 0.2018,
    "X + No Goal": 0.0392,
-   "X + Multigol 1-3": 0.1013,
+   "X + Multigol 1-3": 0.1014,
    "X + Multigol 2-4": 0.1722,
    "X + Multigol 1-4": 0.1722,
    "2 + Over 1.5": 0.3399,
@@ -176,7 +176,7 @@
    "12 + Multigol 2-4": 0.4258,
    "12 + Multigol 1-4": 0.5124,
    "Goal + Over 2.5": 0.5917,
-   "Goal + Under 2.5": 0.1013,
+   "Goal + Under 2.5": 0.1014,
    "Goal + Under 3.5": 0.263,
    "Goal + Over 1.5": 0.6931,
    "No Goal + Over 2.5": 0.089,
@@ -200,7 +200,7 @@
   }
  },
  "e401879237": {
-  "generated": "2026-11-20T00:03:25.293962+00:00",
+  "generated": "2026-11-20T00:33:55.334952+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Brentford",
@@ -400,7 +400,7 @@
   }
  },
  "e401882802": {
-  "generated": "2026-11-20T00:03:25.293962+00:00",
+  "generated": "2026-11-20T00:33:55.334952+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Levante",
