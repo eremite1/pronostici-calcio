@@ -1,6 +1,6 @@
 {
  "e401884736": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Bayern Munich",
@@ -200,7 +200,7 @@
   }
  },
  "e401876395": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Troyes",
@@ -394,13 +394,13 @@
   },
   "pengwin": {
    "market": null,
-   "odds": null,
+   "odds": 1.4,
    "p": null,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/troyes-le-havre-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401882805": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Athletic Club",

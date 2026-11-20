@@ -1,6 +1,6 @@
 {
  "e401875008": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Juventus",
@@ -194,13 +194,13 @@
   },
   "pengwin": {
    "market": null,
-   "odds": null,
+   "odds": 1.32,
    "p": null,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/juventus-venezia-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401882804": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Barcelona",
@@ -393,14 +393,14 @@
    "1° tempo Over 1.5": 0.5678
   },
   "pengwin": {
-   "market": null,
+   "market": "1",
    "odds": null,
-   "p": null,
+   "p": 0.7659864844575834,
    "url": "https://www.mondopengwin.it/pronostici/calcio/la-liga/barcellona-villarreal-statistiche-quote-e-pronostico-2026-2"
   }
  },
  "e401875047": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Bologna",
@@ -593,14 +593,14 @@
    "1° tempo Over 1.5": 0.3417
   },
   "pengwin": {
-   "market": null,
-   "odds": null,
-   "p": null,
+   "market": "1X + Over 1.5",
+   "odds": 1.48,
+   "p": 0.6137829001528331,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/bologna-udinese-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401874960": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Sassuolo",
@@ -793,14 +793,14 @@
    "1° tempo Over 1.5": 0.3384
   },
   "pengwin": {
-   "market": null,
-   "odds": null,
-   "p": null,
+   "market": "X o Goal",
+   "odds": 1.5,
+   "p": 0.6370324708600927,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/sassuolo-genoa-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401879234": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Hull",
@@ -1000,7 +1000,7 @@
   }
  },
  "e401876397": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Paris FC",
@@ -1194,13 +1194,13 @@
   },
   "pengwin": {
    "market": null,
-   "odds": null,
+   "odds": 1.35,
    "p": null,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/paris-fc-angers-statistiche-quote-e-pronostico-2026-2"
   }
  },
  "e401884733": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Augsburg",
@@ -1395,12 +1395,12 @@
   "pengwin": {
    "market": "Goal",
    "odds": 1.4,
-   "p": 0.6900865591914896,
+   "p": 0.690086517954689,
    "url": "https://www.mondopengwin.it/pronostici/calcio/bundesliga/augsburg-mainz-statistiche-quote-e-pronostico-2"
   }
  },
  "e401882800": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Santander",
@@ -1595,7 +1595,7 @@
   "pengwin": null
  },
  "e401876401": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Lorient",
@@ -1789,13 +1789,13 @@
   },
   "pengwin": {
    "market": null,
-   "odds": null,
+   "odds": 1.3,
    "p": null,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/lorient-rennes-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401878755": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Premier League",
   "flag": "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
   "home": "Liverpool",
@@ -1990,12 +1990,12 @@
   "pengwin": {
    "market": "Goal",
    "odds": 1.5,
-   "p": 0.6414653486934793,
+   "p": 0.6414653205349229,
    "url": "https://www.mondopengwin.it/pronostici/calcio/premier-league/liverpool-manchester-united-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401884730": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Bundesliga",
   "flag": "🇩🇪",
   "home": "Werder Bremen",
@@ -2190,12 +2190,12 @@
   "pengwin": {
    "market": "1X + Multigol 1-3",
    "odds": 1.45,
-   "p": 0.4183682668571681,
+   "p": 0.4183682051284811,
    "url": "https://www.mondopengwin.it/pronostici/calcio/bundesliga/werder-brema-amburgo-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401874989": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "AC Milan",
@@ -2388,14 +2388,14 @@
    "1° tempo Over 1.5": 0.4879
   },
   "pengwin": {
-   "market": null,
-   "odds": null,
-   "p": null,
+   "market": "Goal",
+   "odds": 1.47,
+   "p": 0.6677714319383922,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/milan-frosinone-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401882801": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Osasuna",
@@ -2595,7 +2595,7 @@
   }
  },
  "e401875001": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Serie A",
   "flag": "🇮🇹",
   "home": "Atalanta",
@@ -2788,14 +2788,14 @@
    "1° tempo Over 1.5": 0.464
   },
   "pengwin": {
-   "market": null,
-   "odds": null,
-   "p": null,
+   "market": "Multigol ospite 2-5",
+   "odds": 1.5,
+   "p": 0.6846758654715692,
    "url": "https://www.mondopengwin.it/pronostici/calcio/serie-a/atalanta-inter-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401876400": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "Ligue 1",
   "flag": "🇫🇷",
   "home": "Marseille",
@@ -2988,14 +2988,14 @@
    "1° tempo Over 1.5": 0.4332
   },
   "pengwin": {
-   "market": null,
-   "odds": null,
-   "p": null,
+   "market": "Casa Over 1.5",
+   "odds": 1.45,
+   "p": 0.6578541828956186,
    "url": "https://www.mondopengwin.it/pronostici/calcio/ligue-1/marsiglia-le-mans-statistiche-quote-e-pronostico-2026"
   }
  },
  "e401882803": {
-  "generated": "2026-11-20T17:15:39.139192+00:00",
+  "generated": "2026-11-20T17:18:56.662034+00:00",
   "league": "LaLiga",
   "flag": "🇪🇸",
   "home": "Getafe",
@@ -3188,9 +3188,9 @@
    "1° tempo Over 1.5": 0.3178
   },
   "pengwin": {
-   "market": null,
+   "market": "12",
    "odds": null,
-   "p": null,
+   "p": 0.7416316642661676,
    "url": "https://www.mondopengwin.it/pronostici/calcio/la-liga/getafe-atletico-madrid-statistiche-quote-e-pronostico-2026"
   }
  }
